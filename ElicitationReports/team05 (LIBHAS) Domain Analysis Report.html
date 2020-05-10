@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<meta name=Title content="Domain Analysis Report">
+		<meta name=keywords content="Domain Analysis, Elicitation, Requirements">
+		<link href="../styles/main.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<header>
+			<div class="date"> May 9, 2020 </div>
+			<div class="instructor"> Br. Clements </div>
+			<div class="class"> CS 364 Software Engineering 1</div>
+			<div class="team">Team 5 (LIBHAS)</div>
+		</header>
+		<h1 class="title">Domain Analysis Technique Report</h1>
+		<h2 class="no-top-margin">Overview of the Technique</h2>
+		<div class="indent">
+			<h3 class="no-top-margin">Technique: Top Down</h3>
+			<p>
+				Domain Analysis is a technique to see what others have done to produce solutions similar to the target solution.
+				It can typically be broken into four steps: Identifying similar software; gathering data from said software;
+				analysing said data to find what is useful; and applying said knowledge to our project in such a way that it
+				follows legal and ethical standards. Using this technique will allow for the creation of a standard or template
+				from the data collected that can be reused on our project and future ones. This has the perks of faster development,
+				by providing more stable code as a foundation for additional work. It will also help provide a better product as
+				the analysis can also provide insight into challenges that the product might face. In step 1, the main hurdle is
+				choosing the correct domain and not conflating ideas. This is done by finding a system or software that can be 
+				sufficiently generalized for your purposes. In the process of step 2 it is very important to carefully identify the 
+				applicable operations and objects. This can be completed after the team has a good understanding of the problem that
+				they are trying to solve and the pieces that would solve it. During step 3, making the data mean something can
+				sometimes be tricky, after extraction the data needs to be organized and presented in a way that is understandable
+				and therefore reusable. If the first three steps have been done to the fullest extent, then step 4 should be easy.
+				Application of a model to the software being designed is one of the simplest steps in the process. This is made much
+				more difficult if there was a fault earlier down the line, if the objects chosen do not fit project needs then the
+				analysis has been a failure.
+			</p>
+		</div>
+		<div class="indent">
+            <h3 class="no-top-margin">Contributers</h3>
+            <ul>
+				<li>ILYA Kovalyov (Team Lead)</li>
+				<li>Lance Bunch (Scrum Master)</li>
+				<li>Adam White (QA)</li>
+				<li>Lee Hyeonbeom (Test Manager)</li>
+				<li>Sam Wirthlin (Functional Manager)</li>
+			</ul>
+			<h3>Stakeholders and Customers</h3>
+			<p>A stakeholder is Jordan Hamblin and possible other investors. The customers will be local businesses that will use the app, and the people creating activities.</p>
+			<h3>Carrying out the technique</h3>
+			<p>
+				For this week, we will research the Domain Analysis technique. Our purpose is to be better prepared for the project
+				by analyzing data from other apps that might be related to our project. By applying Domain Analysis we will be able
+				to know the latest trends regarding the application field as well as the features that might be used in the application.
+				We will be collecting data by researching other applications individually and writing the findings into the same Google
+				document. The data will consist of findings regarding possible application features related to functionality, design,
+				and esthetics. As we research the information regarding other applications, we will take notes and will record
+				everything online in Google Docs. [1]
+			</p>
+			<p>The way we will implement the technique will be the following:</p>
+			<ul class="unlabeled">
+				<li>Research the Web to find application with similar functionality that the featured app will have</li>
+				<li>Identify two applications that will be the best fit comparing to our app</li>
+				<li>Make a list of both functional and design features that will be useful in the app based on the sponsor description</li>
+				<li>Make a list of both functional and design features that will be useful in the app based on the sponsor description</li>
+				<li>Document all the features and possible ways and/or technologies to accomplish them</li>
+				<li>Combine everything into one Google document and prepare for the team review</li>
+				<li>After the review, submit the findings</li>
+				<li>Further, combine the findings from the Domain Analysis technique with other techniques and implement them in the application</li>
+			</ul>
+			<h3>Timeframe</h3>
+			<p>All the information will be investigated upon the plan approval on Wednesday, May 6, with the deadline to finish and combine all findings into a Google doc by the night of Friday, May 8. The final report will be available on Saturday, May 9. </p>
+		</div>
+		<h2>Correlated Data</h2>
+		<p>
+			A list of features that would be good to include in our project's functionality would include,but is not limited to the following:
+			<o1>
+				<li>a map api, probably using Google Maps, with additional custom locations for activities</li>
+				<li>functionality to link to other social media accounts</li>
+				<li>an integrated calendar and support for external calendars</li>
+				<li>links to other apps to allow for ease of acces with various aspects of the activities, such as calendaring, transportation, catering, etc.</li>
+			</o1>
+
+		</p>
+		<h2>Conclusion</h2>
+		<p>
+			In conclusion, Many of the features that we will look to incorperate into the app may best be individually outsourced to other free programs or api's.
+			Doing so will reduce development requirements and upkeep, and may allow access to greater resources than we could handle on the company sponsered server.
+		</p>
+
+		<h2>Appendix: Raw data collected</h2>
+
+		<p>
+			Google Maps - This is the best maps API that would be great to use for adding, removing, and searching events. From this
+			screenshot, the most I would love to highlight is the opportunity to search for items on the map (in our case - events).
+			After user searches, all nearby events qualifying to that search query will show on the screen and if a user clicks on
+			them, a small slide window will be displayed on the bottom of the page to let the user see brief (expanded) information
+			about the event. Also it will be a good idea to use Google API in regards to layers, street view, current location, etc. [2]
+		</p>
+		<p>
+			HangTime - the only good thing in this application was the opportunity to log in with Facebook or phone credentials. It
+			might be more convenient for users to use these means to register because first, it’s easier and second, they can link
+			friends from 1)Facebook or 2)their contact list (upon their permission). [3]
+		</p>
+		<p>
+			Virtlo - This application fascinated me by their feature to have a ‘radar’ of the nearby events that is available via
+			camera (picture to the left). I think it would be a great addition to our application (if that’s possible to accomplish
+			for both Android and iOS). Second, this application has a great idea what to include into the registration form: Full
+			Name, Email, username, password, Phone Number. These are the things we might want.Another thing that I liked was a
+			category list. Since there will be multiple events, most of them will belong to different categories and it would be
+			a great opportunity for users to select the categories they are interested in which will display the results on the map. [4]
+		</p>
+		<p>
+			SeeU - this application wasn’t a great source of insights yet it had two different bars - first is the left bar which can
+			slide-in and slide-out to display the available categories with the opportunity to choose between them. Second is the 
+			upper navigation bar which can be also put on the bottom of the screen. There you can: Open the sidebar; Edit your profile
+			info (reset password); Read Safety Tips; See all conversations/events; Add an event; These are the domain analysis features
+			I thought would be best applicable to our application. There are hardly any applications with the functionality we are
+			building so this collective data might help us build the best application for the users. [5]
+		</p>
+		<p>
+			24me - Because our software will be planning the event, I think the most important thing is that the basic understanding
+			of the events I think we need to have an integrated calendar so that users can check the schedule one time. It also has
+			to-do lists and notes. If you set up the schedule, it will send a reminder notification. Also, you can check the price
+			on the application. [6]
+		</p>
+		<p>
+			Google Map(Uber service) - I think there are people who want to attend the event but do not have a ride to get there.
+			In that case, if we can put a functionality to get a ride on the app, they may be able to get a ride easily. They do
+			not have to get the Google Map or Uber app to get a ride. And also, we can put a functionality to share the gas fee
+		</p>
+		<p>
+			Zimride - An American rideshare program that matches inter-city drivers and passengers through private social networks.
+			If the drivers decide to attend the event and have a spot, they can post on the application so that riders can take it
+			and they can share the fee such as gas or entrance fee etc. But the one that I am worried about is that it is hard to
+			check the background. We have information of users but it would not be enough to check whether drivers are qualified
+			to give a ride. So, I would suggest that if someone wants to be a driver, they may need to give additional information
+			for background check.
+		</p>
+		<p>
+			Event Ready - Full-Service event registration & management software for medium to large events that need customized
+			tools & have a special process. They boast management software that helps you keep track of who and what is going on
+			during an event. This seems like it could be a very useful software to constructing events.
+		</p>
+
+		<h2>Appendix: Research Citation</h2>
+        <ol>
+			<li>"Domain analysis", En.wikipedia.org, 2020. [Online]. Available: https://en.wikipedia.org/wiki/Domain_analysis.</li>
+			<li>"Google maps - Transit & food", apps.apple.com, 2020. [Online]. Available: https://apps.apple.com/us/app/google-maps-transit-food/id585027354</li>
+			<li>"Hangtime: Hang with friends", apps.apple.com, 2020. [Online]. Available: https://apps.apple.com/us/app/hangtime-hang-with-friends/id1259437904</li>
+			<li>"Virtlo: Find places around me", apps.apple.com, 2020. [Online]. Available: https://apps.apple.com/us/app/virtlo-find-places-around-me/id1421135861</li>
+			<li>"Seeu: Fun things to do near me", apps.apple.com, 2020. [Online]. Available: https://apps.apple.com/us/app/seeu-fun-things-to-do-near-me/id1401632262</li>
+			<li>"24me Smart Personal Assistant", apps.apple.com, 2020. [Online]. AVailable: https://apps.apple.com/us/app/24me-smart-personal-assistant/id557745942</li>
+		</ol>
+
+	</body>
+</html>
