@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=Title content="Viewpoints Report">
+        <meta name=Keywords content="Viewpoints, Requirments, Elicitation">
+        <link href="../styles/main.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="date"> May , 2020 </div>
+            <div class="instructor"> Br. Clements </div>
+            <div class="class"> CS 364 Software Engineering 1</div>
+            <div class="team">Team 4 (COVID-19 Pandemic)</div>
+        </header>
+        <h1 class="title">CRC- Class Responsibility Collaboration</h1>
+        <h2>Contributors</h2>
+        <ul class="unlabeled">
+            <li>Ethan Nelson (Team lead)</li>
+            <li>Suzy Naegle (Scrum Master)</li>
+            <li>Matthew Tyra (Functional manager)</li>
+            <li>Samuel Despain (Chief Editor)</li>
+        </ul>
+        <h2>Stakeholders and Customers</h2>
+        <p>Stakeholders: The stakeholders are the businesses that will benefit from this application</p>
+        <p>Customers: Users that will set up events as well as businesses that will benefit from increased exposure
+</p>
+        <h2 class="no-top-margin">Overview of the Technique</h2>
+        <div class="indent">
+            <p>CRC (Class Responsibility Collaborator Cards) act very similar to how classes interact in a UML deign. An example of what a card would look like is shown in Figure 1.</p>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+            </table>
+            <span>Fig 1: An example of card information placement.</span>
+            <p>There are three parts to a CRC; the Class Name, Responsibilities and Collaborators.</p>
+            <p>A class represents a collection of similar objects, [1] this can be a person, place, thing or idea. This is
+what the card is centered around.</p>
+            <p>A responsibility is anything that a class knows or does.[1] This describes the information that the class
+holds. </p>
+            <p>When a class has a role or responsibilities to fulfill but does not have the resources or information to do
+so it has collaborators. Just like how in a UML diagram classes interact to share information and data the
+CRC has collaborators to help it fulfill its roles. </p>
+            <p>An example of different CRC’s can be seen in Figure 2.</p>
+            <img src="team4-resources/fig2.png" width=50%><br>
+            <span>Figure 2 [1]</span>
+            <p>Class Responsibility Collaboration is a technique to better envision different classes in object-oriented
+programming. Often used with cards, this approach allows programmers to step away from the oftenlimiting procedural mode of thought in order to appreciate the flow of objects in programming. A single
+CRC card is used to represent an object class [2]. The name of the class goes onto the top of the card,
+responsibilities of the class goes on the left side, and the collaborators with the class goes on the right
+side. The name of the class can be anything you want, but usually the name is indicator of what the
+object will do (Ex: Student). Responsibilities involves something that the class knows or does (Ex: A
+Student has a name; a student can change their classes). collaborators are other classes that interact
+with the class in order to fulfill its responsibilities (Ex: A student interacts with their teachers; a student
+interacts with their counselor). Using CRC cards in this way allows programmers to see the big picture
+and how classes relate to one another [3].</p>
+            <p>“The ability to quickly organize and spatially address index cards proves most valuable when a design is
+incomplete or poorly understood. We have watched designers repeatedly refer to a card they intended
+to write by pointing to where they will put it when completed.</p>
+            <p>Design with the cards tends to progress from knowns to unknowns, as opposed to top-down or bottom
+up. We have observed two teams arriving at essentially the same design through nearly opposite
+sequences, one starting with device drivers, the other with high-level models. The problem demanded a
+certain set of capabilities which both teams discovered in the course of fulfilling the requirements of the
+design.”[4]
+</p>
+            <p>Rather than remain in a procedural mode of thought CRC cards encourage people to embrace a more
+object-oriented form of collaboration [5]. Many people criticize CRC cards for a lack of written design;
+however, because they make designs seem obvious, written designs are normally not necessary unless a
+more permanent record be required, in which case one card for each class can be written out in full and
+retained as documentation [5].</p>
+        </div>
+
+        <h2>Technique Plan</h2>
+        <div class="indent">
+            <ol>
+                <li>Using the information we collected on the app from previous techniques, we plan to
+each come up with 2 different CRC’s (Thursday)</li>
+                <li>Fill out CRC responsibilities and collaborators for other teammates (Friday)</li>
+                <li>Review CRC’s as a group (Friday)</li>
+                <li>Follow up: Send CRC card ideas to other teams to see what feedback they have</li>
+            </ol>
+        </div>
+
+        <h2>Correlated Data</h2>
+        <div class="indent">
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: Event/Activity</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Create new
+instance of event</li>
+                            <li>Create and push
+reminders</li>
+                            <li>Show who is
+coming, event
+information and
+other details</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>User</li>
+                            <li>Event list</li>
+                            <li>Attendee List</li>
+                            <li>Location</li>
+                        </ul>
+                    </td>
+            </table>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: Friend List</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Keep track of users’ friends</li>
+                            <li>Creates messaging shortcut to avoid searching</li>
+                            <li>Link activity information and send info to friend suggestions</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>User</li>
+                        </ul>
+                    </td>
+            </table>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: User</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Join an event</li>
+                            <li>Add people to</li>
+                            <li>Have filters to filter out events/deals they do not fit the criteria of</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Event List</li>
+                            <li>Friend List</li>
+                            <li>Location</li>
+                        </ul>
+                    </td>
+            </table>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: Business owner</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>make an event for their business</li>
+                            <li>make a location page for their business</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Event</li>
+                            <li>Location</li>
+                        </ul>
+                    </td>
+            </table>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: Location</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Coordinates - where the business is</li>
+                            <li>track record - previous events or deals held at business</li>
+                            <li>Reviews - by users about the location or the track record</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Business Owner</li>
+                            <li>User</li>
+                            <li>Event</li>
+                        </ul>
+                    </td>
+            </table><table>
+                <tr>
+                    <th colspan=2>Class Name: Attendee list</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>List people who
+joined an event
+</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>User</li>
+                            <li>Event</li>
+                        </ul>
+                    </td>
+            </table>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: Reviews/ratings of users</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Hold the reviews users have made for an event or user</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>User</li>
+                            <li>Event</li>
+                        </ul>
+                    </td>
+            </table>
+            <table>
+                <tr>
+                    <th colspan=2>Class Name: Business owner list</th>
+                </tr>
+                <tr>
+                    <td>Responsibilities</td>
+                    <td>Collaborators</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>Determine which Business Owners are close to user</li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Business Owner</li>
+                            <li>User</li>
+                            <li>Event List</li>
+                        </ul>
+                    </td>
+            </table>
+        </div>
+
+
+        <h2>Appendix: Research Citation</h2>
+        <ol>
+            <li>Amber, S., 1998. CRC Modeling: Bridging The Communication Gap Between Developers And
+Users. [ebook] Available at: <http://www.uml.org.cn/UMLApplication/pdf/crcModeling.pdf>
+[Accessed 12 May 2020].</li>
+            <li>D. Wells, CRC Cards. [Online]. Available:
+http://www.extremeprogramming.org/rules/crccards.html. [Accessed: 12-May-2020].</li>
+            <li>Class Responsibility Collaborator (CRC) Models: An Agile Introduction. [Online]. Available:
+http://agilemodeling.com/artifacts/crcModel.htm. [Accessed: 12-May-2020].</li>
+            <li>Beck, K. and Cunningham, W., 1989. A Laboratory For Teachingobject-Oriented Thinking.
+[online] Available at: <http://c2.com/doc/oopsla89/paper.html#cards> [Accessed 13 May 2020].</li>
+            <li>Wells, D. (n.d.). Retrieved May 13, 2020, from
+http://www.extremeprogramming.org/rules/crccards.html.</li>
+        </ol>
+    </body>
+</html>
