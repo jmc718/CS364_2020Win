@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta name=Title content="Top Down Report">
+        <meta name=Keywords content="Top Down, Requirments, Elicitation">
+        <link href="../styles/main.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>DOCUMENT LOGISTICS</h1>
+        <h2>Title Page</h2>
+        <h2>Table of Contents</h2>
+        <h2>Table of Figures</h2>
+        <h2>Table of Tables</h2>
+        <h2>Revision History</h2>
+        <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
+        <h1>THE INTRODUCTION</h1>
+        <h2>Purpose</h2>
+        <p>This should reference and describe the product, not the company,
+           customer, or the SRS document.</p>
+        <h2>Scope – CONOP, Use cases</h2>
+        <p>You are putting boundary's of what the product is and in rare case
+           what it is not.</p>
+        <p>You should introduce the Concept of Operations and Use Cases</p>
+        <h2>Product Overview</h2>
+        <p>Perspective –</p>
+        <p> CONOP, ROI, Architecture, Stakeholders, Business Scope, Legal
+           Functions – Overall characteristics & features, non-formal, mapped from
+           elicitation data User Characteristics – who is using the application, user
+           stories, workflows, etc. Limitations - what it will not do, storage &
+           performance constrains, etc. </p>
+        <h2>Definitions – titles, terms.</h2>
+        <p>If you give a name to anything it should be defined here.</p>
+        <h1>REFERENCES</h1>
+        <h2>These are all the documents that you will reference.</h2>
+        <h2>Internal Reference</h2>
+        <p>If not already done so, title your elicitation data reports from each team</p>
+        <p>The Raw elicitation data should be in other document(s), which is referenced in this section, it should not be in the SRS.</p>
+        <h2>External References</h2>
+        <p>Any document that is referenced within the SRS, i.e.: IDE, Interface documents, specs, legal, etc., should be also listed</p>
+        <h1>SPECIFICATION</h1>
+        <h2>3.1 External interfaces</h2>
+        <p>You reference the external interface, here you are specifying specifics about that interface.</p>
+        <p>Much like elicitation data, you are collecting and reporting information that will be used to create requirements.</p>
+        <p>You can include requirements in this section</p>
+        <h2>3.2 Functions</h2>
+        <p>From the features or product functions, you will be deriving components of the system. These components will be named and are sub-system elements of the product. These components can be categorized as Front-End, Middleware, Backend, and Database. (Don’t use the category names, just mentioned).</p>
+        <h2>3.3 Usability Requirements</h2>
+        <p>More than HCI Usability, includes Interfaces and fulfilling the users needs</p>
+        <h2>3.4 Performance requirements</h2>
+        <p>This is an expansion of the limitations with additional information.</p>
+        <p>Magic numbers are ok here as explanations to requirements</p>
+        <h2>3.5 Logical database requirements</h2>
+        <p>Backend and database components</p>
+        <h2>3.6 Design constraints</h2>
+        <p>System and Component requirements dealing with End to End (Full-Stack)</p>
+        <h2>3.7 Software system attributes</h2>
+        <p>Requirements that don’t fit neatly in a single component.</p>
+        <h2>3.8 Supporting information</h2>
+        <p>Kitchen sink, Summary of the Elicitation data</p>
+        <h1>VERIFICATION</h1>
+        <h2>Verification uses similar specific wording.</h2>
+        <p>i.e.: The system shall allow users to withdraw cash</p>
+        <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
+        <h2>Next how will that happen</h2>
+        <p>Provide a brief description of what needs to be verified.</p>
+        <p>Then provide additional detail on the information needed to do the verification.</p>
+        <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
+        <p>User will enter verification information and request from the system specified amount, if user has sufficient funds, the system will then return to the user cash, and update user account amount.</p>
+        <p>If there isn't sufficient funds, the system will notify the user, system will not return any cash</p>
+        <p>Verification section can be a separate section or a sub-section in the same section as the requirements. (Should map 1-to-1 or 1-to-n, avoid n-to-1, don’t use n-to-m)</p>
+        <h1>APPENDICES</h1>
+        <h2>5.1 Assumptions and dependencies</h2>
+        <p>There are going to be some assumptions that you will not get from the user, stakeholders, and customer.</p>
+        <p>These usually are cross-referenced or supported by limitations and decisions that needed to be made outside of the elicitation data or other fore mentioned information.</p>
+        <h2>5.2 Acronyms and abbreviations</h2>
+        <p>TLAs’ home</p>
+    </body>
+</html>
