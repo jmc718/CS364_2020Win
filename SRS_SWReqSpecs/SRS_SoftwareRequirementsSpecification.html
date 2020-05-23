@@ -2,76 +2,147 @@
     <head>
         <meta name=Title content="Top Down Report">
         <meta name=Keywords content="Top Down, Requirments, Elicitation">
-        <link href="../styles/main.css" rel="stylesheet"/>
+        <link href="../styles/srs.css" rel="stylesheet"/>
     </head>
     <body>
-        <h1>DOCUMENT LOGISTICS</h1>
-        <h2>Title Page</h2>
-        <h2>Table of Contents</h2>
-        <h2>Table of Figures</h2>
-        <h2>Table of Tables</h2>
-        <h2>Revision History</h2>
+        <h1>Title Page</h2>
+        <h1>Table of Contents</h2>
+        <h1>Table of Figures</h2>
+        <h1>Table of Tables</h2>
+        <h1>Revision History</h2>
         <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
-        <h1>THE INTRODUCTION</h1>
-        <h2>Purpose</h2>
-        <p>This should reference and describe the product, not the company,
-           customer, or the SRS document.</p>
-        <h2>Scope – CONOP, Use cases</h2>
-        <p>You are putting boundary's of what the product is and in rare case
-           what it is not.</p>
-        <p>You should introduce the Concept of Operations and Use Cases</p>
-        <h2>Product Overview</h2>
-        <p>Perspective –</p>
-        <p> CONOP, ROI, Architecture, Stakeholders, Business Scope, Legal
-           Functions – Overall characteristics & features, non-formal, mapped from
-           elicitation data User Characteristics – who is using the application, user
-           stories, workflows, etc. Limitations - what it will not do, storage &
-           performance constrains, etc. </p>
-        <h2>Definitions – titles, terms.</h2>
-        <p>If you give a name to anything it should be defined here.</p>
-        <h1>REFERENCES</h1>
-        <h2>These are all the documents that you will reference.</h2>
-        <h2>Internal Reference</h2>
-        <p>If not already done so, title your elicitation data reports from each team</p>
-        <p>The Raw elicitation data should be in other document(s), which is referenced in this section, it should not be in the SRS.</p>
-        <h2>External References</h2>
-        <p>Any document that is referenced within the SRS, i.e.: IDE, Interface documents, specs, legal, etc., should be also listed</p>
-        <h1>SPECIFICATION</h1>
-        <h2>3.1 External interfaces</h2>
-        <p>You reference the external interface, here you are specifying specifics about that interface.</p>
-        <p>Much like elicitation data, you are collecting and reporting information that will be used to create requirements.</p>
-        <p>You can include requirements in this section</p>
-        <h2>3.2 Functions</h2>
-        <p>From the features or product functions, you will be deriving components of the system. These components will be named and are sub-system elements of the product. These components can be categorized as Front-End, Middleware, Backend, and Database. (Don’t use the category names, just mentioned).</p>
-        <h2>3.3 Usability Requirements</h2>
-        <p>More than HCI Usability, includes Interfaces and fulfilling the users needs</p>
-        <h2>3.4 Performance requirements</h2>
-        <p>This is an expansion of the limitations with additional information.</p>
-        <p>Magic numbers are ok here as explanations to requirements</p>
-        <h2>3.5 Logical database requirements</h2>
-        <p>Backend and database components</p>
-        <h2>3.6 Design constraints</h2>
-        <p>System and Component requirements dealing with End to End (Full-Stack)</p>
-        <h2>3.7 Software system attributes</h2>
-        <p>Requirements that don’t fit neatly in a single component.</p>
-        <h2>3.8 Supporting information</h2>
-        <p>Kitchen sink, Summary of the Elicitation data</p>
-        <h1>VERIFICATION</h1>
-        <h2>Verification uses similar specific wording.</h2>
-        <p>i.e.: The system shall allow users to withdraw cash</p>
-        <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
-        <h2>Next how will that happen</h2>
-        <p>Provide a brief description of what needs to be verified.</p>
-        <p>Then provide additional detail on the information needed to do the verification.</p>
-        <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
-        <p>User will enter verification information and request from the system specified amount, if user has sufficient funds, the system will then return to the user cash, and update user account amount.</p>
-        <p>If there isn't sufficient funds, the system will notify the user, system will not return any cash</p>
-        <p>Verification section can be a separate section or a sub-section in the same section as the requirements. (Should map 1-to-1 or 1-to-n, avoid n-to-1, don’t use n-to-m)</p>
-        <h1>APPENDICES</h1>
-        <h2>5.1 Assumptions and dependencies</h2>
-        <p>There are going to be some assumptions that you will not get from the user, stakeholders, and customer.</p>
-        <p>These usually are cross-referenced or supported by limitations and decisions that needed to be made outside of the elicitation data or other fore mentioned information.</p>
-        <h2>5.2 Acronyms and abbreviations</h2>
-        <p>TLAs’ home</p>
+        <h1><span class="id">1</span>Introduction</h1>
+        <div class="indent">
+           <h2><span class="id">1.1</span>Purpose</h2>
+           <div class="indent">
+              <p>This should reference and describe the product, not the company,
+                 customer, or the SRS document.</p>
+           </div>
+           <h2><span class="id">1.2</span>Scope – CONOP, Use cases</h2>
+           <div class="indent">
+              <p>You are putting boundary's of what the product is and in rare case
+                 what it is not.</p>
+              <p>You should introduce the Concept of Operations and Use Cases</p>
+           </div>
+           <h2><span class="id">1.3</span>Product Overview</h2>
+           <div class="indent">
+              <p>Perspective –</p>
+              <p> CONOP, ROI, Architecture, Stakeholders, Business Scope, Legal
+                 Functions – Overall characteristics & features, non-formal,
+                 mapped from elicitation data User Characteristics – who is
+                 using the application, user stories, workflows, etc.
+                 Limitations - what it will not do, storage & performance
+                 constrains, etc. </p>
+           </div>
+           <h2><span class="id">1.4</span>Definitions – titles, terms.</h2>
+           <div class="indent">
+              <p>If you give a name to anything it should be defined here.</p>
+           </div>
+        </div>
+        <h1><span class="id">2</span>References</h1>
+        <div class="indent">
+           <h2><span class="id">2.1</span>These are all the documents that you will reference.</h2>
+           <div class="indent">
+
+           </div>
+           <h2><span class="id">2.2</span>Internal Reference</h2>
+           <div class="indent">
+              <p>If not already done so, title your elicitation data reports from
+                 each team</p>
+              <p>The Raw elicitation data should be in other document(s), which is
+                 referenced in this section, it should not be in the SRS.</p>
+           </div>
+           <h2><span class="id">2.3</span>External References</h2>
+           <div class="indent">
+              <p>Any document that is referenced within the SRS, i.e.: IDE,
+                 Interface documents, specs, legal, etc., should be also listed</p>
+           </div>
+        </div>
+        <h1><span class="id">3</span>SPECIFICATION</h1>
+        <div class="indent">
+           <h2><span class="id">3.1</span> External interfaces</h2>
+           <div class="indent">
+              <p>You reference the external interface, here you are specifying
+                 specifics about that interface.</p>
+              <p>Much like elicitation data, you are collecting and reporting
+                 information that will be used to create requirements.</p>
+              <p>You can include requirements in this section</p>
+           </div>
+           <h2><span class="id">3.2</span> Functions</h2>
+           <div class="indent">
+              <p>From the features or product functions, you will be deriving
+                 components of the system. These components will be named and are
+                 sub-system elements of the product. These components can be
+                 categorized as Front-End, Middleware, Backend, and Database.
+                 (Don’t use the category names, just mentioned).</p>
+           </div>
+           <h2><span class="id">3.3</span> Usability Requirements</h2>
+           <div class="indent">
+              <p>More than HCI Usability, includes Interfaces and fulfilling the
+                 users needs</p>
+           </div>
+           <h2><span class="id">3.4</span> Performance requirements</h2>
+           <div class="indent">
+              <p>This is an expansion of the limitations with additional
+                 information.</p>
+              <p>Magic numbers are ok here as explanations to requirements</p>
+           </div>
+           <h2><span class="id">3.5</span> Logical database requirements</h2>
+           <div class="indent">
+              <p>Backend and database components</p>
+           </div>
+           <h2><span class="id">3.6</span> Design constraints</h2>
+           <div class="indent">
+              <p>System and Component requirements dealing with End to End
+                 (Full-Stack)</p>
+           </div>
+           <h2><span class="id">3.7</span> Software system attributes</h2>
+           <div class="indent">
+              <p>Requirements that don’t fit neatly in a single component.</p>
+           </div>
+           <h2><span class="id">3.8</span> Supporting information</h2>
+           <div class="indent">
+              <p>Kitchen sink, Summary of the Elicitation data</p>
+           </div>
+        </div>
+        <h1><span class="id">4</span>VERIFICATION</h1>
+        <div class="indent">
+           <h2><span class="id">4.1</span>Verification uses similar specific wording.</h2>
+           <div class="indent">
+              <p>i.e.: The system shall allow users to withdraw cash</p>
+              <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
+           </div>
+           <h2><span class="id">4.2</span>Next how will that happen</h2>
+           <div class="indent">
+              <p>Provide a brief description of what needs to be verified.</p>
+              <p>Then provide additional detail on the information needed to do
+                 the verification.</p>
+              <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
+              <p>User will enter verification information and request from the
+                 system specified amount, if user has sufficient funds, the
+                 system will then return to the user cash, and update user
+                 account amount.</p>
+              <p>If there isn't sufficient funds, the system will notify the
+                 user, system will not return any cash</p>
+              <p>Verification section can be a separate section or a sub-section
+                 in the same section as the requirements. (Should map 1-to-1 or
+                 1-to-n, avoid n-to-1, don’t use n-to-m)</p>
+           </div>
+        </div>
+        <h1><span class="id">5</span>APPENDICES</h1>
+        <div class="indent">
+           <h2><span class="id">5.1</span> Assumptions and dependencies</h2>
+           <div class="indent">
+              <p>There are going to be some assumptions that you will not get from
+                 the user, stakeholders, and customer.</p>
+              <p>These usually are cross-referenced or supported by limitations and
+                 decisions that needed to be made outside of the elicitation
+                 data or other fore mentioned information.</p>
+           </div>
+           <h2><span class="id">5.2</span> Acronyms and abbreviations</h2>
+           <div class="indent">
+              <p>TLAs’ home</p>
+           </div>
+        </div>
     </body>
 </html>
