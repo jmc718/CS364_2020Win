@@ -1,148 +1,289 @@
 <html>
-    <head>
-        <meta name=Title content="Top Down Report">
-        <meta name=Keywords content="Top Down, Requirments, Elicitation">
-        <link href="../styles/srs.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <h1>Title Page</h2>
-        <h1>Table of Contents</h2>
-        <h1>Table of Figures</h2>
-        <h1>Table of Tables</h2>
-        <h1>Revision History</h2>
-        <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
-        <h1><span class="id">1</span>Introduction</h1>
-        <div class="indent">
-           <h2><span class="id">1.1</span>Purpose</h2>
-           <div class="indent">
-              <p>This should reference and describe the product, not the company,
-                 customer, or the SRS document.</p>
-           </div>
-           <h2><span class="id">1.2</span>Scope – CONOP, Use cases</h2>
-           <div class="indent">
-              <p>You are putting boundary's of what the product is and in rare case
-                 what it is not.</p>
-              <p>You should introduce the Concept of Operations and Use Cases</p>
-           </div>
-           <h2><span class="id">1.3</span>Product Overview</h2>
-           <div class="indent">
-              <p>Perspective –</p>
-              <p> CONOP, ROI, Architecture, Stakeholders, Business Scope, Legal
-                 Functions – Overall characteristics & features, non-formal,
-                 mapped from elicitation data User Characteristics – who is
-                 using the application, user stories, workflows, etc.
-                 Limitations - what it will not do, storage & performance
-                 constrains, etc. </p>
-           </div>
-           <h2><span class="id">1.4</span>Definitions – titles, terms.</h2>
-           <div class="indent">
-              <p>If you give a name to anything it should be defined here.</p>
-           </div>
-        </div>
-        <h1><span class="id">2</span>References</h1>
-        <div class="indent">
-           <h2><span class="id">2.1</span>These are all the documents that you will reference.</h2>
-           <div class="indent">
+   <head>
+      <meta name=Title content="Top Down Report">
+      <meta name=Keywords content="Top Down, Requirments, Elicitation">
+      <link href="../styles/srs.css" rel="stylesheet"/>
+   </head>
+   <body>
+      <h1>Title Page</h1>
+      <h1>Table of Contents</h1>
+      <h1>Table of Figures</h1>
+      <h1>Table of Tables</h1>
+      <h1>Revision History</h1>
+      <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
+      <h1><span class="id">1</span>Introduction</h1>
+      <p>"Local Activity App" is a mobile application. It is an application
+         that allows users to see local activities. These activities are
+         different events put on by local businesses. Normal users would open
+         the app and see a page that has a list of these different promotions
+         from businesses. This q creates a convenient method for people, and
+         business to easily arrange local activities that brings revenue to
+         the local economy and provides recreation for the local residents.</p>
+      <div class="indent">
+         <h2><span class="id">1.1</span>Purpose</h2>
+         <p>The purpose of "Local Activity App" is to provide the users two
+            way experience by allowing them to view and choose to
+            participate in current activities or create and publish their
+            own activity. By choosing to participate in a current activity
+            the user can send a participation request, which must be
+            approved by the activity owner. On the other hand, if the user
+            choose to create their own activity, the user has the option to
+            set that activity as a date or  determine a group participation
+            size. Finally, the users can have access on a list of promotion
+            offered by local business and create their activity. </p>
+         <p>Additionally the business will pay for having their promotions
+            listed in the "Local Activity App". This document will propose
+            the different requirements identified in order to  make the
+            "Local Activity App" a functional application. </p>
+         <h2><span class="id">1.2</span>Scope – CONOP, Use cases</h2>
+         <p>The Local Activity App is an application for people to post
+            activities/dates and for people to find and join those
+            activities/dates. Businesses can also pay for a select spot on
+            the application for others to view their activities. </p>
+         <p class="list-title">The application will allow everyday users to:</p>
+         <ul>
+            <li>View activities posted </li>
+            <li>Join an activity</li>
+            <li>Chat with those in the activity to establish details</li>
+            <li>Post an activity</li>
+            <li>Post a date</li>
+            <li>Join a date</li>
+            <li>The user that posted the activity/date would have control of
+               it</li>
+         </ul>
+         <p class="list-title">The application will allow business to:</p>
+         <ul>
+            <li>Post activities that feature their businesses</li>
+            <li>Pay for select spots of where their activity will appear </li>
+         </ul>
+         <p>This application will help people meet new friends and do fun
+            activities together. It will also allow those users to post and
+            go on dates. Businesses will have the ability to promote their
+            deals and activities for a price. This will create revenue from
+            the application. </p>
+         <h2><span class="id">1.3</span>Product Overview</h2>
+         <p>This application is a social app that will provide opportunities
+            to meet new people while doing fun activities. Activities will be
+            able to be created by businesses and individuals in order to
+            facilitate these opportunities. Funding for the app will come in
+            the form of businesses bidding for priority listings for their
+            sponsored activities. The application will provide a simple
+            experience so that focus can be placed on the activities and
+            social connections of participants themselves </p>
+         <div class="indent">
+            <h3><span class="id">1.3.1</span>Product Perspective</h3>
+            <p>The application is like Mutual and Facebook in that it allows
+               for the formation of social connections and event planning. </p>
+            <div class="indent">
+               <h4><span class="id">1.3.1.1</span> System Interfaces</h4>
+               <p>The application includes system interfaces for storing
+                  application data on a server </p>
+               <h4><span class="id">1.3.1.2</span> User Interfaces </h4>
+               <p>The application includes interfaces for creating and
+                  joining activities, bidding on priority listings, and
+                  activity feed navigation. </p>
+               <h4><span class="id">1.3.1.3</span>Hardware Interfaces </h4>
+               <p>The application will be available to any user with a modern
+                  smart phone </p>
+               <h4><span class="id">1.3.1.4</span>Software Interfaces </h4>
+               <p>Third party business software that companies wish to link
+                  to, and social media apps, specifically Twitter, Facebook,
+                  and Instagram </p>
+               <h4><span class="id">1.3.1.5</span>Communication Interfaces </h4>
+               <p>The application will enable communication using group chats
+                  for specific activities and a direct line to a support team
+                  should help be needed. These will all be available through
+                  the user interface. </p>
+               <h4><span class="id">1.3.1.6</span>Memory </h4>
+               <p>Each activity will remain open and viewable from its
+                  creation date until the completion of the activity based on
+                  the date and time entered. After an activity has been closed
+                  a history will be able to be reviewed for up to a month,
+                  after which access to activity history will no longer be
+                  possible. For legal purposes, a record of every activity and
+                  messages over chat will be kept for 3 years. </p>
+               <h4><span class="id">1.3.1.7</span>Operations </h4>
+               <p>Operations will include push notifications regarding
+                  activities, events, messages, etc. Participants will
+                  voluntarily join activities and events but then be
+                  automatically removed at the conclusion of the event.
+                  Regular automatic synchronizations with the server will be
+                  made to update memory and records.  </p>
+               <h4><span class="id">1.3.1.8</span>Site Adaptation
+                  Requirement</h4>
+               <p>All chat and activity data will be formatted for transport.
+                  All chat and activity history data over 5,000 and over 1
+                  month will be deleted starting with oldest first.</p>
+            </div>
+            <h3><span class="id">1.3.2</span>Product Functions</h3>
+            <p>The Local Activity App will allow people to make and join
+               activities or dates and meet new people. The application
+               provides features to post or join an activity or date, have
+               communication within the event, businesses to pay and have an
+               event featured, and for those who make an event for them to
+               have control over it. </p>
+            <div class="indent">
+               <h4>1.3.2.1 Create an Event </h4>
+               <p>A user will be able to select the option to create an
+                  event.</p>
+               <h4>1.3.2.1.1 Control Over Event </h4>
+               <p>Size, who to accept </p>
+               <h4>1.3.2.2 Join an Event </h4>
+               <p>A user can scroll through a list of  </p>
+               <h4>1.3.2.3 Businesses Pay to Post an Event </h4>
+               <p>Ability to pick selected spot </p>
+               <h4>1.3.2.4 Chat Within the Event </h4>
+            </div>
+            <h3>1.3.3 User Characteristics </h3>
+            <p>This section will list the specific users of the application
+               and list a description of how it will help meet their needs.</p>
+            <div class="indent">
+               <h4>1.3.3.1 Businesses </h4>
+               <p>The software will be utilized to allow businesses to
+                  advertise activities that they host and increase publicity
+                  and revenue. </p>
+               <h4>1.3.3.2 Generic People </h4>
+               <p>The software will be utilized to allow everyday people to
+                  participate in fun activities and establish social
+                  connections with other individuals. </p>
+            </div>
+            <h3>1.3.4 Limitations </h3>
+            <p>The following may present limitations on the functional and
+               non-functional aspects of the application. </p>
+            <div class="indent">
+               <h4>1.3.4.1 hardware required for system administration </h4>
+               <h4>1.3.4.2 OS in use on the device </h4>
+               <h4>1.3.4.3 connection issues between clients and server </h4>
+               <h4>1.3.4.4 Federal and third-party regulations  </h4>
+            </div>
+         </div>
+         <h2><span class="id">1.4</span>Definitions – titles, terms.</h2>
+         <p>If you give a name to anything it should be defined here.</p>
+         <div class="indent">
+         </div>
+      </div>
+      <h1><span class="id">2</span>References</h1>
+      <div class="indent">
+         <h2><span class="id">2.1</span>These are all the documents that you
+            will reference.</h2>
+         <div class="indent">
 
-           </div>
-           <h2><span class="id">2.2</span>Internal Reference</h2>
-           <div class="indent">
-              <p>If not already done so, title your elicitation data reports from
-                 each team</p>
-              <p>The Raw elicitation data should be in other document(s), which is
-                 referenced in this section, it should not be in the SRS.</p>
-           </div>
-           <h2><span class="id">2.3</span>External References</h2>
-           <div class="indent">
-              <p>Any document that is referenced within the SRS, i.e.: IDE,
-                 Interface documents, specs, legal, etc., should be also listed</p>
-           </div>
-        </div>
-        <h1><span class="id">3</span>SPECIFICATION</h1>
-        <div class="indent">
-           <h2><span class="id">3.1</span> External interfaces</h2>
-           <div class="indent">
-              <p>You reference the external interface, here you are specifying
-                 specifics about that interface.</p>
-              <p>Much like elicitation data, you are collecting and reporting
-                 information that will be used to create requirements.</p>
-              <p>You can include requirements in this section</p>
-           </div>
-           <h2><span class="id">3.2</span> Functions</h2>
-           <div class="indent">
-              <p>From the features or product functions, you will be deriving
-                 components of the system. These components will be named and are
-                 sub-system elements of the product. These components can be
-                 categorized as Front-End, Middleware, Backend, and Database.
-                 (Don’t use the category names, just mentioned).</p>
-           </div>
-           <h2><span class="id">3.3</span> Usability Requirements</h2>
-           <div class="indent">
-              <p>More than HCI Usability, includes Interfaces and fulfilling the
-                 users needs</p>
-           </div>
-           <h2><span class="id">3.4</span> Performance requirements</h2>
-           <div class="indent">
-              <p>This is an expansion of the limitations with additional
-                 information.</p>
-              <p>Magic numbers are ok here as explanations to requirements</p>
-           </div>
-           <h2><span class="id">3.5</span> Logical database requirements</h2>
-           <div class="indent">
-              <p>Backend and database components</p>
-           </div>
-           <h2><span class="id">3.6</span> Design constraints</h2>
-           <div class="indent">
-              <p>System and Component requirements dealing with End to End
-                 (Full-Stack)</p>
-           </div>
-           <h2><span class="id">3.7</span> Software system attributes</h2>
-           <div class="indent">
-              <p>Requirements that don’t fit neatly in a single component.</p>
-           </div>
-           <h2><span class="id">3.8</span> Supporting information</h2>
-           <div class="indent">
-              <p>Kitchen sink, Summary of the Elicitation data</p>
-           </div>
-        </div>
-        <h1><span class="id">4</span>VERIFICATION</h1>
-        <div class="indent">
-           <h2><span class="id">4.1</span>Verification uses similar specific wording.</h2>
-           <div class="indent">
-              <p>i.e.: The system shall allow users to withdraw cash</p>
-              <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
-           </div>
-           <h2><span class="id">4.2</span>Next how will that happen</h2>
-           <div class="indent">
-              <p>Provide a brief description of what needs to be verified.</p>
-              <p>Then provide additional detail on the information needed to do
-                 the verification.</p>
-              <p>i.e.: Verify that the system shall allow user to withdraw cash</p>
-              <p>User will enter verification information and request from the
-                 system specified amount, if user has sufficient funds, the
-                 system will then return to the user cash, and update user
-                 account amount.</p>
-              <p>If there isn't sufficient funds, the system will notify the
-                 user, system will not return any cash</p>
-              <p>Verification section can be a separate section or a sub-section
-                 in the same section as the requirements. (Should map 1-to-1 or
-                 1-to-n, avoid n-to-1, don’t use n-to-m)</p>
-           </div>
-        </div>
-        <h1><span class="id">5</span>APPENDICES</h1>
-        <div class="indent">
-           <h2><span class="id">5.1</span> Assumptions and dependencies</h2>
-           <div class="indent">
-              <p>There are going to be some assumptions that you will not get from
-                 the user, stakeholders, and customer.</p>
-              <p>These usually are cross-referenced or supported by limitations and
-                 decisions that needed to be made outside of the elicitation
-                 data or other fore mentioned information.</p>
-           </div>
-           <h2><span class="id">5.2</span> Acronyms and abbreviations</h2>
-           <div class="indent">
-              <p>TLAs’ home</p>
-           </div>
-        </div>
-    </body>
+         </div>
+         <h2><span class="id">2.2</span>Internal Reference</h2>
+         <p>If not already done so, title your elicitation data reports from
+            each team</p>
+         <p>The Raw elicitation data should be in other document(s), which is
+            referenced in this section, it should not be in the SRS.</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">2.3</span>External References</h2>
+         <p>Any document that is referenced within the SRS, i.e.: IDE,
+            Interface documents, specs, legal, etc., should be also listed</p>
+         <div class="indent">
+         </div>
+      </div>
+      <h1><span class="id">3</span>SPECIFICATION</h1>
+      <div class="indent">
+         <h2><span class="id">3.1</span> External interfaces</h2>
+         <p>You reference the external interface, here you are specifying
+            specifics about that interface.</p>
+         <p>Much like elicitation data, you are collecting and reporting
+            information that will be used to create requirements.</p>
+         <p>You can include requirements in this section</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">3.2</span> Functions</h2>
+         <p>From the features or product functions, you will be deriving
+            components of the system. These components will be named and are
+            sub-system elements of the product. These components can be
+            categorized as Front-End, Middleware, Backend, and Database.
+            (Don’t use the category names, just mentioned).</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">3.3</span> Usability Requirements</h2>
+         <p>More than HCI Usability, includes Interfaces and fulfilling the
+            users needs</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">3.4</span> Performance requirements</h2>
+         <p>This section will specify the performance requirements of the
+            app.</p>
+         <div class="indent">
+            <h3><span class="id">3.4.1</span>Commercial:</h3>
+            <p>This section enumerates the specific functional requirements
+               that apply to commercial users. </p>
+            <div class="indent">
+               <h4><span class="id">3.4.1.1</span>Businesses shall be able
+                  to list up to 1000 events.</h4>
+               <h4><span class="id">3.4.1.2</span>Activities shall be removed
+                  when they become obsolete.</h4>
+            </div>
+            <h3><span class="id">3.4.2</span>Consumer:</h3>
+            <p>This section enumerates the specific functional requirements
+               that apply to consumer users. </p>
+            <div class="indent">
+               <h4><span class="id">3.4.2.1</span>The Consumer shall be able
+                  to view the activities they will participate in.</h4>
+               <h4><span class="id">3.4.2.2</span>The Consumer shall be unable
+                  to double book onetime events.</h4>
+            </div>
+         </div>
+         <h2><span class="id">3.5</span> Logical database requirements</h2>
+         <p>Backend and database components</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">3.6</span> Design constraints</h2>
+         <p>System and Component requirements dealing with End to End
+            (Full-Stack)</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">3.7</span> Software system attributes</h2>
+         <p>Requirements that don’t fit neatly in a single component.</p>
+         <div class="indent">
+         </div>
+         <h2><span class="id">3.8</span> Supporting information</h2>
+         <div class="indent">
+            <p>Kitchen sink, Summary of the Elicitation data</p>
+         </div>
+      </div>
+      <h1><span class="id">4</span>VERIFICATION</h1>
+      <div class="indent">
+         <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
+         <p>This subsection will detail how each commercial and consumer
+            operational requirement will be verified.</p>
+         <div class="indent">
+            <h3><span class="id">4.4.1</span>Commercial</h3>
+            <div class="indent">
+               <h4><span class="id">4.4.1.1</span>Verify that businesses shall
+                  be able to list up to 1000 events by tracking the total number
+                  of a businesses events. (Req. 3.4.1.1)</h4>
+               <h4><span class="id">4.4.1.2</span>Verify that activities shall
+                  be removed when they become obsolete by monitoring the traffic
+                  of the event within a determined time period. (Req. 3.4.1.2)</h4>
+            </div>
+         </div>
+         <h3><span class="id">4.4.2</span>Consumer</h3>
+         <div class="indent">
+            <h4><span class="id">4.4.1.1</span>Verify that the Consumer shall be
+               able to view the activities they will participate in.</h4>
+            <h4><span class="id">4.4.2.2</span>Verify that the Consumer shall be
+               unable to double book onetime events.</h4>
+         </div>
+      </div>
+      <h1><span class="id">5</span>APPENDICES</h1>
+      <div class="indent">
+         <h2><span class="id">5.1</span> Assumptions and dependencies</h2>
+         <div class="indent">
+            <p>There are going to be some assumptions that you will not get from
+               the user, stakeholders, and customer.</p>
+            <p>These usually are cross-referenced or supported by limitations and
+               decisions that needed to be made outside of the elicitation
+               data or other fore mentioned information.</p>
+         </div>
+         <h2><span class="id">5.2</span> Acronyms and abbreviations</h2>
+         <div class="indent">
+            <p>TLAs’ home</p>
+         </div>
+      </div>
+   </body>
 </html>
