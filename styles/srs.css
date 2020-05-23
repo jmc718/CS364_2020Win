@@ -28,12 +28,12 @@ header > div {
     font-size: 11px;
 }
 
-h1, h2, h3, {
+h1, h2, h3 {
     font-weight: bold;
     margin: 10px 0 0 0;
 }
 
-h4, h5 {
+h4, h5, h6 {
     font-weight: unset;
     margin: 0;
 }
@@ -66,6 +66,11 @@ h4, h4 span  {
 h5, h5 span  {
     font-size: 12px;
     margin: 0;
+}
+
+h6, h6 span {
+    font-size: 10px;
+    margin:0;
 }
 
 span.id {
