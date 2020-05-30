@@ -28,7 +28,7 @@ header > div {
     font-size: 11px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4.big {
     font-weight: bold;
     margin: 10px 0 0 0;
 }
