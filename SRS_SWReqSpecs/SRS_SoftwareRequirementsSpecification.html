@@ -14,92 +14,208 @@
     <h1>Revision History</h1>
     <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
     <h1><span class="id">1</span>Introduction</h1>
-    <p>"Local Activity App" is a mobile application. It is an application that allows users to see local activities. These activities are different events put on by local businesses. Normal users would open the app and see a page that has a list of these
-        different promotions from businesses. This q creates a convenient method for people, and business to easily arrange local activities that brings revenue to the local economy and provides recreation for the local residents.</p>
+    <p>Uvents is a mobile application that brings the community together by
+       allowing personal users to create events, which can be set as a group event
+       or a date event;  commercial users to list their promotions, which can be
+       seen by the personal users and added to their events; and admin users to
+       manager event policies.  </p>
     <div class="indent">
         <h2><span class="id">1.1</span>Purpose</h2>
-        <p>The purpose of "Local Activity App" is to provide the users two way experience by allowing them to view and choose to participate in current activities or create and publish their own activity. By choosing to participate in a current activity
-            the user can send a participation request, which must be approved by the activity owner. On the other hand, if the user choose to create their own activity, the user has the option to set that activity as a date or determine a group participation
-            size. Finally, the users can have access on a list of promotion offered by local business and create their activity. </p>
-        <p>Additionally the business will pay for having their promotions listed in the "Local Activity App". This document will propose the different requirements identified in order to make the "Local Activity App" a functional application. </p>
-        <h2><span class="id">1.2</span>Scope – CONOP, Use cases</h2>
-        <p>The Local Activity App is an application for people to post activities/dates and for people to find and join those activities/dates. Businesses can also pay for a select spot on the application for others to view their activities. </p>
-        <p class="list-title">The application will allow everyday users to:</p>
+        <p>The purpose of Uvents is to provide personal users two way experience
+           by allowing them choose to participate in event created by other users and
+           publish their own events. Additionally, the users can have access on a list
+           of promotion offered by local business and add those promotions to their
+           events. Uvents will receive revenue by having commercial users paying to
+           have their promotions listed in the application. Finally, Uvents provides a
+           convenient way for people to easily arrange local events that brings
+           revenue to the local economy and provides recreation for the local
+           residents. </p>
+        <h2><span class="id">1.2</span>Scope</h2>
+        <p>Uvents is an application for people to post activities/dates and for
+           people to find and join those activities/dates. Businesses can also pay for
+           a select spot on the application for consumer users to view their
+           activities. </p>
+        <p class="list-title">The application will allow consumer users to: </p>
         <ul>
-            <li>View activities posted </li>
-            <li>Join an activity</li>
-            <li>Chat with those in the activity to establish details</li>
-            <li>Post an activity</li>
-            <li>Post a date</li>
-            <li>Join a date</li>
-            <li>The user that posted the activity/date would have control of it
-            </li>
+           <li>View activities posted </li>
+           <li>Join an event </li>
+           <li>Chat with those in the activity to establish details </li>
+           <li>Post a group event </li>
+           <li>Post a one on one date with the opposite sex </li>
+           <li>Post a group date for 4-6 couples </li>
+           <li>Join a date </li>
+           <li>The consumer user that posted the event/date would have control
+              of said event </li>
         </ul>
-        <p class="list-title">The application will allow business to:</p>
+        <p class="list-title">The application will allow commercial users to:</p>
         <ul>
             <li>Post activities that feature their businesses</li>
             <li>Pay for select spots of where their activity will appear </li>
         </ul>
-        <p>This application will help people meet new friends and do fun activities together. It will also allow those users to post and go on dates. Businesses will have the ability to promote their deals and activities for a price. This will create revenue
-            from the application. </p>
+        <p>Uvents will help people meet new friends while experiencing an event
+           together. Uvents will also allow those consumer users to post a date
+           or sign up for a date. Businesses will have the ability to promote
+           their events for a price. This feature will create revenue from the
+           application. </p>
         <h2><span class="id">1.3</span>Product Overview</h2>
-        <p>This application is a social app that will provide opportunities to meet new people while doing fun activities. Activities will be able to be created by businesses and individuals in order to facilitate these opportunities. Funding for the app
-            will come in the form of businesses bidding for priority listings for their sponsored activities. The application will provide a simple experience so that focus can be placed on the activities and social connections of participants themselves
-        </p>
+        <p>Uvents is a social app that will provide opportunities to meet new
+           people while doing fun activities. Events will be able to be created by
+           businesses and individuals in order to facilitate these opportunities.
+           Businesses can create events which can be joined. Funding for the app will
+           come in the form of businesses bidding for priority listings for their
+           sponsored activities. The application will provide a simple experience so
+           that focus can be placed on the activities and social connections of
+           participants themselves.  </p>
         <div class="indent">
             <h3><span class="id">1.3.1</span>Product Perspective</h3>
-            <p>The application is like Mutual and Facebook in that it allows for the formation of social connections and event planning. </p>
+            <p>The application is like Mutual and Facebook in that it allows for
+               the formation of social connections and event planning. </p>
             <div class="indent">
-                <h4><span class="id">1.3.1.1</span> System Interfaces</h4>
-                <p>The application includes system interfaces for storing application data on a server </p>
-                <h4><span class="id">1.3.1.2</span> User Interfaces </h4>
-                <p>The application includes interfaces for creating and joining activities, bidding on priority listings, and activity feed navigation. </p>
-                <h4><span class="id">1.3.1.3</span>Hardware Interfaces </h4>
-                <p>The application will be available to any user with a modern smart phone </p>
-                <h4><span class="id">1.3.1.4</span>Software Interfaces </h4>
-                <p>Third party business software that companies wish to link to, and social media apps, specifically Twitter, Facebook, and Instagram </p>
-                <h4><span class="id">1.3.1.5</span>Communication Interfaces </h4>
-                <p>The application will enable communication using group chats for specific activities and a direct line to a support team should help be needed. These will all be available through the user interface. </p>
-                <h4><span class="id">1.3.1.6</span>Memory </h4>
-                <p>Each activity will remain open and viewable from its creation date until the completion of the activity based on the date and time entered. After an activity has been closed a history will be able to be reviewed for up to a month, after
-                    which access to activity history will no longer be possible. For legal purposes, a record of every activity and messages over chat will be kept for 3 years. </p>
-                <h4><span class="id">1.3.1.7</span>Operations </h4>
-                <p>Operations will include push notifications regarding activities, events, messages, etc. Participants will voluntarily join activities and events but then be automatically removed at the conclusion of the event. Regular automatic synchronizations
-                    with the server will be made to update memory and records. </p>
-                <h4><span class="id">1.3.1.8</span>Site Adaptation Requirement
-                </h4>
-                <p>All chat and activity data will be formatted for transport. All chat and activity history data over 5,000 and over 1 month will be deleted starting with oldest first.</p>
+                <h4 class="big"><span class="id">1.3.1.1</span> System Interfaces</h4>
+                <p> Database will receive calls from the server to run data
+                   transactions within the application. </p>
+                <p> Server system will handle communication between client side
+                   and server-side devices to distribute and manage dynamic
+                   application content.</p>
+                <h4 class="big"><span class="id">1.3.1.2</span> User Interfaces </h4>
+                <p>User interfaces will include a separate interface for
+                   consumers, commercial, and admins, each providing controlling
+                   operations to access relevant content. </p>
+                <p>Consumers -- TBD  </p>
+                <p>Commercial -- TBD </p>
+                <p>Admin -- TBD      </p>
+                <h4 class="big"><span class="id">1.3.1.3</span>Hardware Interfaces </h4>
+                <p>Uvents will be available to any user with a modern smart
+                   phone. Interfacing for iOS, Android, and the Web will be
+                   included. </p>
+                <h4 class="big"><span class="id">1.3.1.4</span>Software Interfaces </h4>
+                <p>Third party business software that companies wish to link to,
+                   and social media apps, specifically Twitter, Facebook, and
+                   Instagram. </p>
+                <p> Database management software will be used to retrieve, edit
+                   and store the application data, such as, the consumer’s
+                   personal data, sponsor data, and content. </p>
+                <div class="indent">
+                   <p>Name: SQL/NoSQL  </p>
+                   <p>Mnemonic: Store and retrieve application data  </p>
+                   <p>Specification number: Current Distribution  </p>
+                   <p>Version number: Current Distribution  </p>
+                   <p>Source: Current Distribution </p>
+                </div>
+                <h4 class="big"><span class="id">1.3.1.5</span>Communication Interfaces </h4>
+                <p>The system will use HTTPS to interact with the back-end system</p>
+                <h4 class="big"><span class="id">1.3.1.6</span>Memory </h4>
+                <p>There are no specific restraints for the system.</p>
+                <h4 class="big"><span class="id">1.3.1.7</span>Operations </h4>
+                <p>For consumer purposes, the application will be able to be
+                   refreshed.</p>
+                <p>The system will handle commercial revenue collection</p>
+                <p>The system will handle updating the bidding interface</p>
+                <p>Events will sync each time the system is open.</p>
+                <p>All user sign-in will be kept on the server.</p>
+                <p>The system will allow for password recovery.</p>
+                <p>The system will keep a back-up of events in case of system
+                   failure.</p>
+                <h4 class="big"><span class="id">1.3.1.8</span>Site Adaptation Requirement</h4>
+                <p>No special adaptation required</p>
             </div>
             <h3><span class="id">1.3.2</span>Product Functions</h3>
-            <p>The Local Activity App will allow people to make and join activities or dates and meet new people. The application provides features to post or join an activity or date, have communication within the event, businesses to pay and have an event
-                featured, and for those who make an event for them to have control over it. </p>
+            <p>Uvents will allow people to make and join activities or dates and
+               meet new people. The application provides features to post or join an
+               activity or date, have communication within the event, businesses
+               to pay and have an event featured, and for those who make an
+               event for them to have control over it.</p>
             <div class="indent">
-                <h4>1.3.2.1 Create an Event </h4>
-                <p>A user will be able to select the option to create an event.
-                </p>
-                <h4>1.3.2.1.1 Control Over Event </h4>
-                <p>Size, who to accept </p>
-                <h4>1.3.2.2 Join an Event </h4>
-                <p>A user can scroll through a list of </p>
-                <h4>1.3.2.3 Businesses Pay to Post an Event </h4>
-                <p>Ability to pick selected spot </p>
-                <h4>1.3.2.4 Chat Within the Event </h4>
+               <h4 class="big"><span class="id">1.3.2.1</span> Consumer</h4>
+               <p>A user the utilizes the application for recreation actives. A
+                  Consumer can join events However does not create events.
+                  Uvents will include the following functions for these consumer
+                  users. </p>
+               <p class="list-title">List of Consumer Functions</p>
+               <ul>
+                  <li>Login                 </li>
+                  <li>Create New Account    </li>
+                  <li>Logout                </li>
+                  <li>Design                </li>
+                  <li>Home                  </li>
+                  <li>Discover              </li>
+                  <li>My Events             </li>
+                  <li>Message               </li>
+                  <li>Profile               </li>
+                  <li>Create Event          </li>
+                  <li>Edit Event            </li>
+                  <li>Accept Invite to Event</li>
+                  <li>Filter/Sorting        </li>
+                  <li>Location              </li>
+                  <li>Notifications         </li>
+                  <li>Promos/Discounts      </li>
+                  <li>Settings              </li>
+               </ul>
+               <h4 class="big"><span class="id">1.3.2.2</span> Commercial</h4>
+                <p>Businesses which pay for event listings possibly including
+                   discounts to the consumers are referred to as commercial
+                   users. Uvents will include the following functions for these
+                   commercial users. </p>
+                <p class="list-title">List of Commercial Functions</p>
+                <ul>
+                   <li>TBD</li>
+                </ul>
+                <h4 class="big"><span class="id">1.3.2.3</span> Admin</h4>
+                <p>The support team in charge of maintaining, updating and
+                   servicing the application. Uvents will include the following
+                   functions for these Admin users. </p>
+                <p class="list-title">List of Admin Functions</p>
+                <ul>
+                   <li>TBD</li>
+                </ul>
             </div>
-            <h3>1.3.3 User Characteristics </h3>
-            <p>This section will list the specific users of the application and list a description of how it will help meet their needs.</p>
+            <h3><span class="id">1.3.3</span> User Characteristics </h3>
+            <p>Uvents will have 3 types of users: consumer, commercial, and
+               admin. The following describes how each of thier needs will be met.</p>
             <div class="indent">
-                <h4>1.3.3.1 Businesses </h4>
-                <p>The software will be utilized to allow businesses to advertise activities that they host and increase publicity and revenue. </p>
-                <h4>1.3.3.2 Generic People </h4>
-                <p>The software will be utilized to allow everyday people to participate in fun activities and establish social connections with other individuals. </p>
+               <h4 class="big"><span class="id">1.3.3.1</span> Consumer </h4>
+               <p>The Consumers perceive the application as a way to be notified
+                  of events in their relative location.  The application will be
+                  a platform where the Consumer receive notifications of the  </p>
+               <h4 class="big"><span class="id">1.3.3.2</span>Commercial</h4>
+               <p>From the perspective of the Commercial user this app will be a
+                  platform where they can advertise events, activities, and
+                  products that the businesses offer. This will help them to
+                  attract customers and increase visibility with the public. As
+                  an example, Fat Cats could purchase an event listing slot in
+                  the app and advertise their movie theater, then consumers who
+                  use the app to find ideas for group events and dates would see
+                  that event listing. </p>
+               <h4 class="big"><span class="id">1.3.3.3</span>Admin</h4>
+               <p>The administrator perceives the app as a medium for businesses
+                  to attract users with promotions and events.  Admin has
+                  certain duties and obligations which must be fulfilled. To
+                  fulfill these duties, they would like the app to be easy to
+                  update and manipulate. The Admin seeks to make the app
+                  profitable by attracting and retaining users and businesses.  To
+                  retain users, it is crucial that the administrator can fulfil
+                  the needs of both users and businesses. </p>
             </div>
-            <h3>1.3.4 Limitations </h3>
-            <p>The following may present limitations on the functional and non-functional aspects of the application. </p>
+            <h3><span class="id">1.3.4</span> Limitations </h3>
+            <p>The following may present limitations on the functional and
+               non-functional aspects of the application. </p>
             <div class="indent">
-                <h4>1.3.4.1 hardware required for system administration </h4>
-                <h4>1.3.4.2 OS in use on the device </h4>
-                <h4>1.3.4.3 connection issues between clients and server </h4>
-                <h4>1.3.4.4 Federal and third-party regulations </h4>
+               <h4><span class="id">1.3.4.1</span> hardware required for system
+                  administration </h4>
+               <h4><span class="id">1.3.4.2</span> OS in use on the device </h4>
+               <h4><span class="id">1.3.4.3</span> connection issues between
+                  clients and server </h4>
+               <h4><span class="id">1.3.4.4</span> Federal and third-party
+                  regulations </h4>
+               <h4><span class="id">1.3.4.5</span> Personal account information
+                  will not be available for public viewing</h4>
+               <h4><span class="id">1.3.4.6</span> Consumer and Commercial
+                  accounts will be distinct
+                   and separate.</h4>
+               <h4><span class="id">1.3.4.7</span> The application will not
+                  handle or provide any product delivery options to customers.</h4>
+               <h4><span class="id">1.3.4.8</span> Commercial accounts will not
+                  be able view private information of consumer accounts</h4>
             </div>
         </div>
         <h2><span class="id">1.4</span>Definitions – titles, terms.</h2>
@@ -282,8 +398,27 @@
             <h3><span class="id">3.2.16</span>Notification</h3>
             <p>This feature shall allow the consumer to receive notifications/alerts.</p>
             <div class="indent">
+<<<<<<< HEAD
                 <h4><span class="id">3.2.16.1</span>The consumer shall receive a notification when they are invited to an event.</h4>
                 <h4><span class="id">3.2.16.2</span>The consumer shall receive a notification when their request to join an event has been accepted</h4>
+=======
+                <h3>Customer</h3>
+                <h4><span class="id">3.2.9.1</span>Leave ratings on business activities </h4>
+                <h4><span class="id">3.2.9.2</span>Edit Profile</h4>
+                <h4><span class="id">3.2.9.3</span>Reporting option for fake or scam accounts</h4>
+                <h4><span class="id">3.2.9.4</span>Show image of user when they sign up for events, so they can be easily identified</h4>
+            </div>
+            <div class="indent">
+                <h3>Business</h3>
+                <h4><span class="id">3.2.9.5</span>Business-User view past event ratings</h4>
+                <h4><span class="id">3.2.9.6</span>Business-User create profile with personal information as name, number, email.</h4>
+                <h4><span class="id">3.2.9.7</span>Business-User create profile with business information as business name, business address, business tags, business profile picture, business number, and billing information.</h4>
+                <h4><span class="id">3.2.9.8</span>Business-User edit account information</h4>
+                <h4><span class="id">3.2.9.9</span>Button to report users who have canceled last minute or did not show up​</h4>
+                <h4><span class="id">3.2.9.10</span>Edit Profile</h4>
+                <h4><span class="id">3.2.9.11</span>Reporting option for fake or scam accounts
+                </h4>
+>>>>>>> refs/remotes/origin/2.1-SRS-version-1
             </div>
             <h3><span class="id">3.2.17</span>Promos/Discounts</h3>
             <p>This feature shall allow the consumer to see the available discounts/promos listed for the events.</p>
@@ -305,20 +440,29 @@
         </div>
 
         <h2><span class="id">3.4</span> Performance requirements</h2>
-        <p>This section will specify the performance requirements of the app.
-        </p>
+        <p> Specification of the performance requirements of the app. </p>
         <div class="indent">
             <h3><span class="id">3.4.1</span>Commercial:</h3>
-            <p>This section enumerates the specific functional requirements that apply to commercial users. </p>
             <div class="indent">
-                <h4><span class="id">3.4.1.1</span>Businesses shall be able to list up to 1000 events.</h4>
-                <h4><span class="id">3.4.1.2</span>Activities shall be removed when they become obsolete.</h4>
+               <h4><span class="id">3.4.1.1</span> The system shall allow the
+                  number of accounts to be supported. </h4>
+               <h4><span class="id">3.4.1.2 </span>The system shall allow the
+                  number of events to be supported. </h4>
+               <h4><span class="id">3.4.1.3 </span>The system shall accommodate
+                  event creation in 3 to 4 seconds. </h4>
+               <h4><span class="id">3.4.1.4 </span>The system shall pull up and
+                  display events in 3 to 4 seconds.</h4>
             </div>
             <h3><span class="id">3.4.2</span>Consumer:</h3>
-            <p>This section enumerates the specific functional requirements that apply to consumer users. </p>
             <div class="indent">
-                <h4><span class="id">3.4.2.1</span>The Consumer shall be able to view the activities they will participate in.</h4>
-                <h4><span class="id">3.4.2.2</span>The Consumer shall be unable to double book onetime events.</h4>
+               <h4><span class="id">3.4.2.1 </span>The system shall accommodate
+                  group event creation in 3 to 4 seconds. </h4>
+               <h4><span class="id">3.4.2.2 </span>The system shall pull up and
+                  display group event in 3 to 4 seconds. </h4>
+               <h4><span class="id">3.4.2.3 </span>The application shall
+                  launch in no more than 3 seconds.</h4>
+               <h4><span class="id">3.4.2.4 </span>The application shall not
+                  restrict the user from shutting down the app.</h4>
             </div>
         </div>
 
@@ -486,18 +630,30 @@
     <h1><span class="id">4</span>VERIFICATION</h1>
     <div class="indent">
         <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
-        <p>This subsection shall detail how each commercial and consumer operational requirement shall be verified.</p>
+        <p>All performance requierments must be verified.</p>
         <div class="indent">
-            <h3><span class="id">4.4.1</span>Commercial</h3>
+            <h3><span class="id">4.4.1</span>Commercial:</h3>
             <div class="indent">
-                <h4><span class="id">4.4.1.1</span>Verify that businesses shall be able to list up to 1000 events by tracking the total number of a businesses events. (Req. 3.4.1.1)</h4>
-                <h4><span class="id">4.4.1.2</span>Verify that activities shall be removed when they become obsolete by monitoring the traffic of the event within a determined time period. (Req. 3.4.1.2)</h4>
+               <h4><span class="id">4.4.1.1 </span>Verify that the system shall
+                  allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
+               <h4><span class="id">4.4.1.2 </span>Verify that the system shall
+                  allow the number of events to be supported. (Req. 3.4.1.2) </h4>
+               <h4><span class="id">4.4.1.3 </span>Verify that the system shall
+                  accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
+               <h4><span class="id">4.4.1.4 </span>Verify that the system shall
+                  pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
             </div>
         </div>
-        <h3><span class="id">4.4.2</span>Consumer</h3>
+        <h3><span class="id">4.4.2</span>Consumer:</h3>
         <div class="indent">
-            <h4><span class="id">4.4.1.1</span>Verify that the Consumer shall be able to view the activities they will participate in.</h4>
-            <h4><span class="id">4.4.2.2</span>Verify that the Consumer shall be unable to double book onetime events.</h4>
+           <h4><span class="id">4.4.2.1 </span>Verify that the system shall
+              accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+           <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull
+              up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+           <h4><span class="id">4.4.2.3 </span>Verify that the application shall
+              launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
+           <h4><span class="id">4.4.2.4 </span>The application shall not
+              restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
         </div>
 
         <h2><span class="id">4.6</span> Design constraints Verification</h2>
