@@ -200,18 +200,22 @@
             <p>The following may present limitations on the functional and
                non-functional aspects of the application. </p>
             <div class="indent">
-                <h4>1.3.4.1 hardware required for system administration </h4>
-                <h4>1.3.4.2 OS in use on the device </h4>
-                <h4>1.3.4.3 connection issues between clients and server </h4>
-                <h4>1.3.4.4 Federal and third-party regulations </h4>
-                <h4>1.3.4.5 Personal account information will not be available
-                   for public viewing</h4>
-                <h4>1.3.4.6 Consumer and Commercial accounts will be distinct
+               <h4><span class="id">1.3.4.1</span> hardware required for system
+                  administration </h4>
+               <h4><span class="id">1.3.4.2</span> OS in use on the device </h4>
+               <h4><span class="id">1.3.4.3</span> connection issues between
+                  clients and server </h4>
+               <h4><span class="id">1.3.4.4</span> Federal and third-party
+                  regulations </h4>
+               <h4><span class="id">1.3.4.5</span> Personal account information
+                  will not be available for public viewing</h4>
+               <h4><span class="id">1.3.4.6</span> Consumer and Commercial
+                  accounts will be distinct
                    and separate.</h4>
-                <h4>1.3.4.7 The application will not handle or provide any
-                   product delivery options to customers.</h4>
-                <h4>1.3.4.8 Commercial accounts will not be able view private
-                   information of consumer accounts</h4>
+               <h4><span class="id">1.3.4.7</span> The application will not
+                  handle or provide any product delivery options to customers.</h4>
+               <h4><span class="id">1.3.4.8</span> Commercial accounts will not
+                  be able view private information of consumer accounts</h4>
             </div>
         </div>
         <h2><span class="id">1.4</span>Definitions – titles, terms.</h2>
@@ -455,7 +459,7 @@
                 <h4><span class="id">3.2.9.8</span>Business-User edit account information</h4>
                 <h4><span class="id">3.2.9.9</span>Button to report users who have canceled last minute or did not show up​</h4>
                 <h4><span class="id">3.2.9.10</span>Edit Profile</h4>
-                <h4><span class="id">3.2.9.11</span>Reporting option for fake or scam accounts​
+                <h4><span class="id">3.2.9.11</span>Reporting option for fake or scam accounts
                 </h4>
             </div>
 
@@ -479,20 +483,29 @@
         </div>
 
         <h2><span class="id">3.4</span> Performance requirements</h2>
-        <p>This section will specify the performance requirements of the app.
-        </p>
+        <p> Specification of the performance requirements of the app. </p>
         <div class="indent">
             <h3><span class="id">3.4.1</span>Commercial:</h3>
-            <p>This section enumerates the specific functional requirements that apply to commercial users. </p>
             <div class="indent">
-                <h4><span class="id">3.4.1.1</span>Businesses shall be able to list up to 1000 events.</h4>
-                <h4><span class="id">3.4.1.2</span>Activities shall be removed when they become obsolete.</h4>
+               <h4><span class="id">3.4.1.1</span> The system shall allow the
+                  number of accounts to be supported. </h4>
+               <h4><span class="id">3.4.1.2 </span>The system shall allow the
+                  number of events to be supported. </h4>
+               <h4><span class="id">3.4.1.3 </span>The system shall accommodate
+                  event creation in 3 to 4 seconds. </h4>
+               <h4><span class="id">3.4.1.4 </span>The system shall pull up and
+                  display events in 3 to 4 seconds.</h4>
             </div>
             <h3><span class="id">3.4.2</span>Consumer:</h3>
-            <p>This section enumerates the specific functional requirements that apply to consumer users. </p>
             <div class="indent">
-                <h4><span class="id">3.4.2.1</span>The Consumer shall be able to view the activities they will participate in.</h4>
-                <h4><span class="id">3.4.2.2</span>The Consumer shall be unable to double book onetime events.</h4>
+               <h4><span class="id">3.4.2.1 </span>The system shall accommodate
+                  group event creation in 3 to 4 seconds. </h4>
+               <h4><span class="id">3.4.2.2 </span>The system shall pull up and
+                  display group event in 3 to 4 seconds. </h4>
+               <h4><span class="id">3.4.2.3 </span>The application shall
+                  launch in no more than 3 seconds.</h4>
+               <h4><span class="id">3.4.2.4 </span>The application shall not
+                  restrict the user from shutting down the app.</h4>
             </div>
         </div>
 
@@ -660,18 +673,30 @@
     <h1><span class="id">4</span>VERIFICATION</h1>
     <div class="indent">
         <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
-        <p>This subsection shall detail how each commercial and consumer operational requirement shall be verified.</p>
+        <p>All performance requierments must be verified.</p>
         <div class="indent">
-            <h3><span class="id">4.4.1</span>Commercial</h3>
+            <h3><span class="id">4.4.1</span>Commercial:</h3>
             <div class="indent">
-                <h4><span class="id">4.4.1.1</span>Verify that businesses shall be able to list up to 1000 events by tracking the total number of a businesses events. (Req. 3.4.1.1)</h4>
-                <h4><span class="id">4.4.1.2</span>Verify that activities shall be removed when they become obsolete by monitoring the traffic of the event within a determined time period. (Req. 3.4.1.2)</h4>
+               <h4><span class="id">4.4.1.1 </span>Verify that the system shall
+                  allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
+               <h4><span class="id">4.4.1.2 </span>Verify that the system shall
+                  allow the number of events to be supported. (Req. 3.4.1.2) </h4>
+               <h4><span class="id">4.4.1.3 </span>Verify that the system shall
+                  accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
+               <h4><span class="id">4.4.1.4 </span>Verify that the system shall
+                  pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
             </div>
         </div>
-        <h3><span class="id">4.4.2</span>Consumer</h3>
+        <h3><span class="id">4.4.2</span>Consumer:</h3>
         <div class="indent">
-            <h4><span class="id">4.4.1.1</span>Verify that the Consumer shall be able to view the activities they will participate in.</h4>
-            <h4><span class="id">4.4.2.2</span>Verify that the Consumer shall be unable to double book onetime events.</h4>
+           <h4><span class="id">4.4.2.1 </span>Verify that the system shall
+              accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+           <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull
+              up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+           <h4><span class="id">4.4.2.3 </span>Verify that the application shall
+              launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
+           <h4><span class="id">4.4.2.4 </span>The application shall not
+              restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
         </div>
 
         <h2><span class="id">4.6</span> Design constraints Verification</h2>
