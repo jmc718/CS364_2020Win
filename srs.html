@@ -72,67 +72,80 @@
     </p>
 
     <h1>3. Specific Requirements</h1>
-    <h2>3.1 External interfaces</h2>
+    <h2>3.1 External Interfaces</h2>
     <h3>3.1.1 Amazon AWS Database</h3>
         <div class="indent">
             <p>An Amazon AWS Database service shall be used to store user data from the application.</p>
             <ul class="unlabeled">
-                <li>3.1.1.1 The database shall store consumer user accounts, commercial user accounts, admin user accounts, events, group events, and related data.</li>
-                <li>3.1.1.2 Input to the database shall come from consumer users and commercial users.</li>
-                <li>3.1.1.3 Output from the database shall be displayed to consumer users and commercial users in multiple areas of the application.</li>
-                <li>3.1.1.4 The database shall store information about connected consumer user social media accounts [3.1.3-3.1.5].</li>
-                <li>3.1.1.5 The database shall store information about monthly bidding and commercial user payment histories [3.1.6].</li>
+                <li>3.1.1.1 The database shall store consumer user accounts [2.5].</li>
+                <li>3.1.1.2 The database shall store commercial user accounts [2.5].</li>
+                <li>3.1.1.3 The database shall store admin user accounts [2.5].</li>
+                <li>3.1.1.4 The database shall store events.</li>
+                <li>3.1.1.5 The database shall store group events.</li>
+                <li>3.1.1.6 The database shall store monthly bidding information for commercial user accounts.</li>
+                <li>3.1.1.7 The database shall store information about connected consumer user social media accounts [3.1.3-3.1.5].</li>
+                <li>3.1.1.8 Upon request commercial users shall receive a report of their bidding history [2.6].</li>
             </ul>
         </div>
-        <h3>3.1.2 Google Maps API/GPS interface</h3>
+        <h3>3.1.2 Google Maps API/GPS</h3>
         <div class="indent">
             <p>Google Maps API will be used to map the available local events and group events posted by commercial users and consumer users.</p>
             <ul class="unlabeled">
-                <li>3.1.2.1 The map feature shall allow consumer users to view local events and group events.</li>
-                <li>3.1.2.2 The map feature shall allow consumer users and commercial users to add event and group event locations.</li>
-                <li>3.1.2.3 The map feature shall allow consumer users to view their distance from event and group event locations.</li>
-                <li>3.1.2.4 The map feature shall allow consumer users to view directions to event and group event locations.</li>
+                <li>3.1.2.1 The map feature shall allow consumer users to view local events. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                <li>3.1.2.2 The map feature shall allow consumer users to view group events. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                <li>3.1.2.3 The map feature shall allow consumer users to add event locations. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                <li>3.1.2.4 The map feature shall allow commercial users to add group event locations. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                <li>3.1.2.5 The map feature shall allow consumer users to view their distance from local event locations.</li>
+                <li>3.1.2.6 The map feature shall allow consumer users to view their distance from local group event locations.</li>
+                <li>3.1.2.7 The map feature shall allow consumer users to view directions to local event locations</li>
+                <li>3.1.2.8 The map feature shall allow consumer users to view directions to local group event locations.</li>
             </ul>
         </div>
         <h3>3.1.3 Facebook</h3>
         <div class="indent">
-            <p>This section outlines the requirements that will need to be followed to implement Facebook’s API according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
+            <p>[2.3 (6 & 7), Requirements Workshop 8a, Card Sorting 3]</p>
+            <p>Facebook’s API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
             <ul class="unlabeled">
-                <li>3.1.3.1 Registered/anonymous users shall have the availability to share events on the Facebook platform if logged into the user’s portal.</li>
-                <li>3.1.3.2 Stakeholders/vendors shall have access to information being shared about their business pertaining to shared activities.</li>
-                <li>3.1.3.3 An event shall contain a picture of the product or a logo of the vendor.</li>
-                <li>3.1.3.4 A deal shall contain the time until expiration.</li>
-                <li>3.1.3.5 Shared activities that do not include a vendor shall have the availability to upload an image.</li>
+                <li>3.1.3.1 Consumer users shall have the ability to share events on the Facebook platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                <li>3.1.3.2 Commercial users shall have access to information being shared about their business pertaining to group events. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                <li>3.1.3.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
+                <li>3.1.3.4 Group events that do not include a commercial user shall have the availability to upload an image. [Card Sorting 3]</li>
             </ul>
         </div>
         <h3>3.1.4 Instagram </h3>
         <div class="indent">
-            <p>This section outlines the requirements that will need to be followed to implement Instagram's API according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
+            <p>[2.3 (6 & 7), Requirements Workshop 8a, Domain Analysis 2, Card Sorting 3]</p>
+            <p>Instagram's API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
             <ul class="unlabeled">
-                <li>3.1.4.1 Consumer users shall have the ability to share events on the Instagram platform if logged into the user’s portal.</li>
-                <li>3.1.4.2 Commercial users shall have access to information being shared about their business pertaining to shared activities.</li>
-                <li>3.1.4.3 An event shall contain a picture of the product or a logo of the vendor.</li>
-                <li>3.1.4.4 A deal shall contain the time until expiration.</li>
-                <li>3.1.4.5 Shared activities that do not include a vendor shall have the availability to upload an image.</li>
+                <li>3.1.4.1 Consumer users shall have the ability to share events on the Instagram platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                <li>3.1.4.2 Commercial users shall have access to information being shared about their business pertaining to group events. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                <li>3.1.4.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
+                <li>3.1.4.4 Group events that do not include a commercial user shall have the availability to upload an image. [2.3 (6 & 7), Card Sorting 3]</li>
             </ul>
         </div>
         <h3>3.1.5 Twitter</h3>
         <div class="indent">
-            <p>This section outlines the requirements that will need to be followed to implement Twitter’s API according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
+            <p>[2.3 (6 & 7), Requirements Workshop 8a, Domain Analysis 2, Card Sorting 3]</p>
+            <p>Twitter’s API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
             <ul class="unlabeled">
-                <li>3.1.5.1 Consumers users shall have the ability to share events on the Twitter platform if logged into the user’s portal. </li>
-                <li>3.1.5.2 Commercial users shall have access to information being shared about their business pertaining to shared activities.</li>
-                <li>3.1.5.3 An event shall contain a picture of the product or a logo of the vendor.</li>
-                <li>3.1.5.4 A deal shall contain the time until expiration.</li>
-                <li>3.1.5.5 Shared activities that do not include a vendor shall have the availability to upload an image.</li>
+                <li>3.1.5.1 Consumer users shall have the ability to share events on the Twitter platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                <li>3.1.5.2 Commercial users shall have access to information being shared about their business pertaining to shared activities. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                <li>3.1.5.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
+                <li>3.1.5.4 Group events that do not include a commercial user shall have the availability to upload an image. [2.3 (6 & 7), Card Sorting 3]</li>
             </ul>
         </div>
-        <h3>3.1.6 PayPal and Google Pay</h3>
+        <h3>3.1.6 PayPal</h3>
         <div class="indent">
-            <p>PayPal Developer and Google Pay APIs shall be used by commercial users to place bids.</p>
+            <p>PayPal Developer API shall be used by commercial users to place bids.</p>
             <ul class="unlabeled">
-                <li>3.1.6.1 Both APIs shall allow businesses to place their bids each month.</li>
-                <li>3.1.6.2 Upon request, commercial users shall receive a report of bidding history.</li>
+                <li>3.1.6.1 API shall allow commercial users to pay their bids each month. [Requirements Workshop 6, Domain Analysis 2]</li>
+            </ul>
+        </div>
+        <h3>3.17Google Pay</h3>
+        <div class="indent">
+            <p>Google Pay API shall be used by commercial users to place bids.</p>
+            <ul class="unlabeled">
+                <li>3.1.7.1 API shall allow commercial users to pay their bids each month. [Requirements Workshop 6, Domain Analysis 2]</li>
             </ul>
         </div>
     <h2>3.2 Functions</h2>
