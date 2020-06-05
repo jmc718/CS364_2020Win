@@ -12,12 +12,22 @@ html {
     background: lightgray;
 }
 
-body {
+div.page {
     max-width: 600px;
-    margin: auto;
+    height: 800px;
     background: white;
+    margin: auto;
+    margin-bottom: 10px;
     padding: 60px;
     line-height: 1.5;
+    position: relative;
+}
+
+div.page-number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 14px;
 }
 
 header {
