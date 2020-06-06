@@ -1,1062 +1,1199 @@
 <html>
 
-   <head>
-      <meta name=Title content="Top Down Report">
-      <meta name=Keywords content="Top Down, Requirments, Elicitation">
-      <link href="../styles/srs.css" rel="stylesheet" />
-      <script src="../scripts/jquery-3.5.1.min.js"></script>
-      <script>
-       $(document).ready(function(){
-           let pageNumber = 1;
-           let pages = document.getElementsByClassName('page');
-           for (let page of pages) {
-               /* $(page).prepend(`<div class="page-number">${pageNumber++}</dov>`) */
-               $(page).append(`<div class="page-number">${pageNumber++}</dov>`)
-           }       });
-      </script>
-   </head>
+<head>
+    <meta name=Title content="Top Down Report">
+    <meta name=Keywords content="Top Down, Requirments, Elicitation">
+    <link href="../styles/srs.css" rel="stylesheet" />
+    <script src="../scripts/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let pageNumber = 1;
+            let pages = document.getElementsByClassName('page');
+            for (let page of pages) {
+                /* $(page).prepend(`<div class="page-number">${pageNumber++}</dov>`) */
+                $(page).append(`<div class="page-number">${pageNumber++}</dov>`)
+            }
+        });
+    </script>
 
-   <body>
-      <div class="page title-page">
-         <h1>Title Page</h1>
-      </div>
-      <div class="page table-of-contents">
-         <h1>Table of Contents</h1>
-      </div>
-      <div class="page revision-history">
-         <h1>Revision History</h1>
-         <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
-      </div>
-      <div class="page">
-         <h1><span class="id">1</span>Introduction</h1>
-         <p>Uvents is a mobile application that brings the community together by allowing personal users to create events, which can be set as a group event or a date event; commercial users to list their promotions, which can be seen by the personal users and
-            added to their events; and admin users to manager event policies. </p>
-         <div class="indent">
+</head>
+
+<body>
+    <div class="page title-page">
+        <h1>Title Page</h1>
+    </div>
+    <div class="page table-of-contents">
+        <h1>Table of Contents</h1><br><br>
+        <div class="center">
+            <a href="#Introduction" class="s1"> 1. INTRODUCTION </a>
+            <div class="indent">
+                <a href="#Purpose" class="s2">1.1 Purpose</a><br>
+                <a href="#Scope" class="s2"> 1.2 Scope</a><br>
+                <a href="#Poverview" class="s2">1.3 Product Overview </a> <br>
+                <div class="indent">
+                    <a href="#Pperspective">1.3.1 Product perspective </a><br>
+                    <a href="#Pfunction">1.3.2 Product Functions </a><br>
+                    <a href="#user">1.3.2 User Characteristics</a><br>
+                    <a href="#Limitations">1.3.4 Limitations </a><br>
+                </div>
+                <a href="#Definitions" class="s2">1.4 Definitions </a><br><br>
+            </div>
+            <a href="#Refrences" class="s1">2. REFERENCES </a><br><br>
+            <a href="#SRequirements" class="s1">3. SPECIFIC REQUIREMENTS</a>
+            <div class="indent">
+                <a href="#Interface" class="s2">3.1 External Interface </a><br>
+                <a href="#Functions" class="s2">3.2 Functions </a><br>
+                <a href="#Usability" class="s2">3.3 Usability Requirements </a><br>
+                <a href="#Performance" class="s2">3.4 Performance Requirements</a><br>
+                <a href="#Database" class="s2">3.5 Logical Database Requirements </a><br>
+                <a href="#Design" class="s2">3.6 Design Constraints </a><br>
+                <a href="#System" class="s2"> 3.7 Software System Attributes</a><br>
+                <a href="#Info" class="s2"> 3.8 Supporting information</a><br><br>
+            </div>
+            <a href="#Verification" class="s1">4. VERIFICATION </a><br><br>
+            <a href="#Appendices" class="s1">5. APPENDICES</a>
+            <div class="indent">
+                <a href="#Assumptions" class="s2">5.1 Assumptions and Dependencies  </a><br>
+                <a href="#Acronyms" class="s2">5.2 Acronyms and Abbreviations </a>
+            </div>
+        </div>
+    </div>
+    <div class="page revision-history">
+        <h1>Revision History</h1>
+        <p>Table that keeps track of the revisions, at least 1 entry per Draft.</p>
+    </div>
+    <div class="page">
+        <a name="Introduction"></a>
+        <h1><span class="id">1</span>Introduction</h1>
+        <p>Uvents is a mobile application that brings the community together by allowing personal users to create events, which can be set as a group event or a date event; commercial users to list their promotions, which can be seen by the personal users
+            and added to their events; and admin users to manager event policies. </p>
+        <div class="indent">
             <h2><span class="id">1.1</span>Purpose</h2>
-            <p>The purpose of Uvents is to provide personal users two way experience by allowing them choose to participate in event created by other users and publish their own events. Additionally, the users can have access on a list of promotion offered by
-               local business and add those promotions to their events. Uvents will receive revenue by having commercial users paying to have their promotions listed in the application. Finally, Uvents provides a convenient way for people to easily arrange
-               local events that brings revenue to the local economy and provides recreation for the local residents. </p>
+            <a name="Purpose"></a>
+            <p>The purpose of Uvents is to provide personal users two way experience by allowing them choose to participate in event created by other users and publish their own events. Additionally, the users can have access on a list of promotion offered
+                by local business and add those promotions to their events. Uvents will receive revenue by having commercial users paying to have their promotions listed in the application. Finally, Uvents provides a convenient way for people to easily
+                arrange local events that brings revenue to the local economy and provides recreation for the local residents. </p>
             <h2><span class="id">1.2</span>Scope</h2>
+            <a name="Scope"></a>
             <p>Uvents is an application for people to post activities/dates and for people to find and join those activities/dates. Businesses can also pay for a select spot on the application for consumer users to view their activities. </p>
             <p class="list-title">The application will allow consumer users to: </p>
             <ul>
-               <li>View activities posted </li>
-               <li>Join an event </li>
-               <li>Chat with those in the activity to establish details </li>
-               <li>Post a group event </li>
-               <li>Post a one on one date with the opposite sex </li>
-               <li>Post a group date for 4-6 couples </li>
-               <li>Join a date </li>
-               <li>The consumer user that posted the event/date would have control of said event </li>
+                <li>View activities posted </li>
+                <li>Join an event </li>
+                <li>Chat with those in the activity to establish details </li>
+                <li>Post a group event </li>
+                <li>Post a one on one date with the opposite sex </li>
+                <li>Post a group date for 4-6 couples </li>
+                <li>Join a date </li>
+                <li>The consumer user that posted the event/date would have control of said event </li>
             </ul>
             <p class="list-title">The application will allow commercial users to:</p>
             <ul>
-               <li>Post activities that feature their businesses</li>
-               <li>Pay for select spots of where their activity will appear </li>
+                <li>Post activities that feature their businesses</li>
+                <li>Pay for select spots of where their activity will appear </li>
             </ul>
             <p>Uvents will help people meet new friends while experiencing an event together. Uvents will also allow those consumer users to post a date or sign up for a date. Businesses will have the ability to promote their events for a price. This feature
-               will create revenue from the application. </p>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+                will create revenue from the application. </p>
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2><span class="id">1.3</span>Product Overview</h2>
-            <p>Uvents is a social app that will provide opportunities to meet new people while doing fun activities. Events will be able to be created by businesses and individuals in order to facilitate these opportunities. Businesses can create events which
-               can be joined. Funding for the app will come in the form of businesses bidding for priority listings for their sponsored activities. The application will provide a simple experience so that focus can be placed on the activities and social
-               connections of participants themselves. </p>
+            <a name="Poverview"></a>
+            <p>Uvents is a social app that will provide opportunities to meet new people while doing fun activities. Events will be able to be created by businesses and individuals in order to facilitate these opportunities. Businesses can create events
+                which can be joined. Funding for the app will come in the form of businesses bidding for priority listings for their sponsored activities. The application will provide a simple experience so that focus can be placed on the activities and
+                social connections of participants themselves. </p>
             <div class="indent">
-               <h3><span class="id">1.3.1</span>Product Perspective</h3>
-               <p>The application is like Mutual and Facebook in that it allows for the formation of social connections and event planning. </p>
-               <div class="indent">
-                  <h4 class="big"><span class="id">1.3.1.1</span> System Interfaces</h4>
-                  <p> Database will receive calls from the server to run data transactions within the application. </p>
-                  <p> Server system will handle communication between client side and server-side devices to distribute and manage dynamic application content.</p>
-                  <h4 class="big"><span class="id">1.3.1.2</span> User Interfaces </h4>
-                  <p>User interfaces will include a separate interface for consumers, commercial, and admins, each providing controlling operations to access relevant content. </p>
-                  <p>Consumers -- TBD </p>
-                  <p>Commercial -- TBD </p>
-                  <p>Admin -- TBD </p>
-                  <h4 class="big"><span class="id">1.3.1.3</span>Hardware Interfaces </h4>
-                  <p>Uvents will be available to any user with a modern smart phone. Interfacing for iOS, Android, and the Web will be included. </p>
-                  <h4 class="big"><span class="id">1.3.1.4</span>Software Interfaces </h4>
-                  <p>Third party business software that companies wish to link to, and social media apps, specifically Twitter, Facebook, and Instagram. </p>
-                  <p> Database management software will be used to retrieve, edit and store the application data, such as, the consumer’s personal data, sponsor data, and content. </p>
-                  <div class="indent">
-                     <p>Name: SQL/NoSQL </p>
-                     <p>Mnemonic: Store and retrieve application data </p>
-                     <p>Specification number: Current Distribution </p>
-                     <p>Version number: Current Distribution </p>
-                     <p>Source: Current Distribution </p>
-                  </div>
-               </div>
+                <h3><span class="id">1.3.1</span>Product Perspective</h3>
+                <a name="#Pperspective"></a>
+                <p>The application is like Mutual and Facebook in that it allows for the formation of social connections and event planning. </p>
+                <div class="indent">
+                    <h4 class="big"><span class="id">1.3.1.1</span> System Interfaces</h4>
+                    <p> Database will receive calls from the server to run data transactions within the application. </p>
+                    <p> Server system will handle communication between client side and server-side devices to distribute and manage dynamic application content.</p>
+                    <h4 class="big"><span class="id">1.3.1.2</span> User Interfaces </h4>
+                    <p>User interfaces will include a separate interface for consumers, commercial, and admins, each providing controlling operations to access relevant content. </p>
+                    <p>Consumers -- TBD </p>
+                    <p>Commercial -- TBD </p>
+                    <p>Admin -- TBD </p>
+                    <h4 class="big"><span class="id">1.3.1.3</span>Hardware Interfaces </h4>
+                    <p>Uvents will be available to any user with a modern smart phone. Interfacing for iOS, Android, and the Web will be included. </p>
+                    <h4 class="big"><span class="id">1.3.1.4</span>Software Interfaces </h4>
+                    <p>Third party business software that companies wish to link to, and social media apps, specifically Twitter, Facebook, and Instagram. </p>
+                    <p> Database management software will be used to retrieve, edit and store the application data, such as, the consumer’s personal data, sponsor data, and content. </p>
+                    <div class="indent">
+                        <p>Name: SQL/NoSQL </p>
+                        <p>Mnemonic: Store and retrieve application data </p>
+                        <p>Specification number: Current Distribution </p>
+                        <p>Version number: Current Distribution </p>
+                        <p>Source: Current Distribution </p>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <div class="indent">
-                  <h4 class="big"><span class="id">1.3.1.5</span>Communication Interfaces </h4>
-                  <p>The system will use HTTPS to interact with the back-end system</p>
-                  <h4 class="big"><span class="id">1.3.1.6</span>Memory </h4>
-                  <p>There are no specific restraints for the system.</p>
-                  <h4 class="big"><span class="id">1.3.1.7</span>Operations </h4>
-                  <p>For consumer purposes, the application will be able to be refreshed.
-                  </p>
-                  <p>The system will handle commercial revenue collection</p>
-                  <p>The system will handle updating the bidding interface</p>
-                  <p>Events will sync each time the system is open.</p>
-                  <p>All user sign-in will be kept on the server.</p>
-                  <p>The system will allow for password recovery.</p>
-                  <p>The system will keep a back-up of events in case of system failure.
-                  </p>
-                  <h4 class="big"><span class="id">1.3.1.8</span>Site Adaptation Requirement</h4>
-                  <p>No special adaptation required</p>
-               </div>
-               <h3><span class="id">1.3.2</span>Product Functions</h3>
-               <p>Uvents will allow people to make and join activities or dates and meet new people. The application provides features to post or join an activity or date, have communication within the event, businesses to pay and have an event featured, and
-                  for those who make an event for them to have control over it.</p>
-               <div class="indent">
-                  <h4 class="big"><span class="id">1.3.2.1</span> Consumer</h4>
-                  <p>A user the utilizes the application for recreation actives. A Consumer can join events However does not create events. Uvents will include the following functions for these consumer users. </p>
-                  <p class="list-title">List of Consumer Functions</p>
-                  <ul>
-                     <li>Login </li>
-                     <li>Create New Account </li>
-                     <li>Logout </li>
-                     <li>Design </li>
-                     <li>Home </li>
-                     <li>Discover </li>
-                     <li>My Events </li>
-                     <li>Message </li>
-                     <li>Profile </li>
-                     <li>Create Event </li>
-                     <li>Edit Event </li>
-                     <li>Accept Invite to Event</li>
-                     <li>Filter/Sorting </li>
-                  </ul>
-               </div>
+                <div class="indent">
+                    <h4 class="big"><span class="id">1.3.1.5</span>Communication Interfaces </h4>
+                    <p>The system will use HTTPS to interact with the back-end system</p>
+                    <h4 class="big"><span class="id">1.3.1.6</span>Memory </h4>
+                    <p>There are no specific restraints for the system.</p>
+                    <h4 class="big"><span class="id">1.3.1.7</span>Operations </h4>
+                    <p>For consumer purposes, the application will be able to be refreshed.
+                    </p>
+                    <p>The system will handle commercial revenue collection</p>
+                    <p>The system will handle updating the bidding interface</p>
+                    <p>Events will sync each time the system is open.</p>
+                    <p>All user sign-in will be kept on the server.</p>
+                    <p>The system will allow for password recovery.</p>
+                    <p>The system will keep a back-up of events in case of system failure.
+                    </p>
+                    <h4 class="big"><span class="id">1.3.1.8</span>Site Adaptation Requirement</h4>
+                    <p>No special adaptation required</p>
+                </div>
+                <h3><span class="id">1.3.2</span>Product Functions</h3>
+                <a name="Pfunction"></a>
+                <p>Uvents will allow people to make and join activities or dates and meet new people. The application provides features to post or join an activity or date, have communication within the event, businesses to pay and have an event featured,
+                    and for those who make an event for them to have control over it.</p>
+                <div class="indent">
+                    <h4 class="big"><span class="id">1.3.2.1</span> Consumer</h4>
+                    <p>A user the utilizes the application for recreation actives. A Consumer can join events However does not create events. Uvents will include the following functions for these consumer users. </p>
+                    <p class="list-title">List of Consumer Functions</p>
+                    <ul>
+                        <li>Login </li>
+                        <li>Create New Account </li>
+                        <li>Logout </li>
+                        <li>Design </li>
+                        <li>Home </li>
+                        <li>Discover </li>
+                        <li>My Events </li>
+                        <li>Message </li>
+                        <li>Profile </li>
+                        <li>Create Event </li>
+                        <li>Edit Event </li>
+                        <li>Accept Invite to Event</li>
+                        <li>Filter/Sorting </li>
+                    </ul>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <div class="indent">
-                  <ul>
-                     <li>Location </li>
-                     <li>Notifications </li>
-                     <li>Promos/Discounts </li>
-                     <li>Settings </li>
-                  </ul>
-                  <h4 class="big"><span class="id">1.3.2.2</span> Commercial</h4>
-                  <p>Businesses which pay for event listings possibly including discounts to the consumers are referred to as commercial users. Uvents will include the following functions for these commercial users. </p>
-                  <p class="list-title">List of Commercial Functions</p>
-                  <ul>
-                     <li>TBD</li>
-                  </ul>
-                  <h4 class="big"><span class="id">1.3.2.3</span> Admin</h4>
-                  <p>The support team in charge of maintaining, updating and servicing the application. Uvents will include the following functions for these Admin users. </p>
-                  <p class="list-title">List of Admin Functions</p>
-                  <ul>
-                     <li>TBD</li>
-                  </ul>
-               </div>
-               <h3><span class="id">1.3.3</span> User Characteristics </h3>
-               <p>Uvents will have 3 types of users: consumer, commercial, and admin. The following describes how each of thier needs will be met.</p>
-               <div class="indent">
-                  <h4 class="big"><span class="id">1.3.3.1</span> Consumer </h4>
-                  <p>The Consumers perceive the application as a way to be notified of events in their relative location. The application will be a platform where the Consumer receive notifications of the </p>
-                  <h4 class="big"><span class="id">1.3.3.2</span>Commercial</h4>
-                  <p>From the perspective of the Commercial user this app will be a platform where they can advertise events, activities, and products that the businesses offer. This will help them to attract customers and increase visibility with the public.
-                     As an example, Fat Cats could purchase an event listing slot in the app and advertise their movie theater, then consumers who use the app to find ideas for group events and dates would see that event listing. </p>
-                  <h4 class="big"><span class="id">1.3.3.3</span>Admin</h4>
-                  <p>The administrator perceives the app as a medium for businesses to attract users with promotions and events. Admin has certain duties and obligations which must be fulfilled. To fulfill these duties, they would like the app to be easy to
-                     update and manipulate. The Admin seeks to make the app profitable by attracting and retaining users and businesses. To retain users, it is crucial that the administrator can fulfil the needs of both users and businesses. </p>
-               </div>
+                <div class="indent">
+                    <ul>
+                        <li>Location </li>
+                        <li>Notifications </li>
+                        <li>Promos/Discounts </li>
+                        <li>Settings </li>
+                    </ul>
+                    <h4 class="big"><span class="id">1.3.2.2</span> Commercial</h4>
+                    <p>Businesses which pay for event listings possibly including discounts to the consumers are referred to as commercial users. Uvents will include the following functions for these commercial users. </p>
+                    <p class="list-title">List of Commercial Functions</p>
+                    <ul>
+                        <li>TBD</li>
+                    </ul>
+                    <h4 class="big"><span class="id">1.3.2.3</span> Admin</h4>
+                    <p>The support team in charge of maintaining, updating and servicing the application. Uvents will include the following functions for these Admin users. </p>
+                    <p class="list-title">List of Admin Functions</p>
+                    <ul>
+                        <li>TBD</li>
+                    </ul>
+                </div>
+                <h3><span class="id">1.3.3</span> User Characteristics </h3>
+                <a name="user"></a>
+                <p>Uvents will have 3 types of users: consumer, commercial, and admin. The following describes how each of thier needs will be met.</p>
+                <div class="indent">
+                    <h4 class="big"><span class="id">1.3.3.1</span> Consumer </h4>
+                    <p>The Consumers perceive the application as a way to be notified of events in their relative location. The application will be a platform where the Consumer receive notifications of the </p>
+                    <h4 class="big"><span class="id">1.3.3.2</span>Commercial</h4>
+                    <p>From the perspective of the Commercial user this app will be a platform where they can advertise events, activities, and products that the businesses offer. This will help them to attract customers and increase visibility with the
+                        public. As an example, Fat Cats could purchase an event listing slot in the app and advertise their movie theater, then consumers who use the app to find ideas for group events and dates would see that event listing. </p>
+                    <h4 class="big"><span class="id">1.3.3.3</span>Admin</h4>
+                    <p>The administrator perceives the app as a medium for businesses to attract users with promotions and events. Admin has certain duties and obligations which must be fulfilled. To fulfill these duties, they would like the app to be easy
+                        to update and manipulate. The Admin seeks to make the app profitable by attracting and retaining users and businesses. To retain users, it is crucial that the administrator can fulfil the needs of both users and businesses. </p>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <h3><span class="id">1.3.4</span> Limitations </h3>
-               <p>The following may present limitations on the functional and non-functional aspects of the application. </p>
-               <div class="indent">
-                  <h4><span class="id">1.3.4.1</span> hardware required for system administration </h4>
-                  <h4><span class="id">1.3.4.2</span> OS in use on the device </h4>
-                  <h4><span class="id">1.3.4.3</span> connection issues between clients and server </h4>
-                  <h4><span class="id">1.3.4.4</span> Federal and third-party regulations </h4>
-                  <h4><span class="id">1.3.4.5</span> Personal account information will not be available for public viewing</h4>
-                  <h4><span class="id">1.3.4.6</span> Consumer and Commercial accounts will be distinct and separate.</h4>
-                  <h4><span class="id">1.3.4.7</span> The application will not handle or provide any product delivery options to customers.</h4>
-                  <h4><span class="id">1.3.4.8</span> Commercial accounts will not be able view private information of consumer accounts</h4>
-               </div>
+                <h3><span class="id">1.3.4</span> Limitations </h3>
+                <a name="Limitations"></a>
+                <p>The following may present limitations on the functional and non-functional aspects of the application. </p>
+                <div class="indent">
+                    <h4><span class="id">1.3.4.1</span> hardware required for system administration </h4>
+                    <h4><span class="id">1.3.4.2</span> OS in use on the device </h4>
+                    <h4><span class="id">1.3.4.3</span> connection issues between clients and server </h4>
+                    <h4><span class="id">1.3.4.4</span> Federal and third-party regulations </h4>
+                    <h4><span class="id">1.3.4.5</span> Personal account information will not be available for public viewing</h4>
+                    <h4><span class="id">1.3.4.6</span> Consumer and Commercial accounts will be distinct and separate.</h4>
+                    <h4><span class="id">1.3.4.7</span> The application will not handle or provide any product delivery options to customers.</h4>
+                    <h4><span class="id">1.3.4.8</span> Commercial accounts will not be able view private information of consumer accounts</h4>
+                </div>
             </div>
             <h2><span class="id">1.4</span>Definitions – titles, terms.</h2>
+            <a name="Definitions"></a>
             <p>If you give a name to anything it should be defined here.</p>
             <div class="indent">
-               <h3><span class="id">1.4.1</span>Activity--Something the users can attend to entertain or participate in.</h3>
-               <h3><span class="id">1.4.2</span>Activity Owner--The person who creates the activit</h3>
-               <h3><span class="id">1.4.3</span>Business--The customer who uses the application to advertise activities.</h3>
-               <h3><span class="id">1.4.4</span>Communication Interfaces--A subsection of the User interface that deals with messages and other communication between users.</h3>
-               <h3><span class="id">1.4.5</span>Customer--A person who uses the application to plan events or activities</h3>
-               <h3><span class="id">1.4.6</span>Date--An event that is meant for pairs of people, typically a boy and a girl paired together.</h3>
-               <h3><span class="id">1.4.7</span>Event--An occasion centered around an activity for the user to plan or join</h3>
-               <h3><span class="id">1.4.8</span>Foreign Key--A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.</h3>
-               <h3><span class="id">1.4.9</span>Hardware Interface--The hardware needed to access the applicatio</h3>
-               <h3><span class="id">1.4.10</span>Memory--Memory is where and how information will be stored in the application and its servers.</h3>
-               <h3><span class="id">1.4.11</span>My Events--A list of events that the user has signed up for</h3>
+                <h3><span class="id">1.4.1</span>Activity--Something the users can attend to entertain or participate in.</h3>
+                <h3><span class="id">1.4.2</span>Activity Owner--The person who creates the activit</h3>
+                <h3><span class="id">1.4.3</span>Business--The customer who uses the application to advertise activities.</h3>
+                <h3><span class="id">1.4.4</span>Communication Interfaces--A subsection of the User interface that deals with messages and other communication between users.</h3>
+                <h3><span class="id">1.4.5</span>Customer--A person who uses the application to plan events or activities</h3>
+                <h3><span class="id">1.4.6</span>Date--An event that is meant for pairs of people, typically a boy and a girl paired together.</h3>
+                <h3><span class="id">1.4.7</span>Event--An occasion centered around an activity for the user to plan or join</h3>
+                <h3><span class="id">1.4.8</span>Foreign Key--A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables.</h3>
+                <h3><span class="id">1.4.9</span>Hardware Interface--The hardware needed to access the applicatio</h3>
+                <h3><span class="id">1.4.10</span>Memory--Memory is where and how information will be stored in the application and its servers.</h3>
+                <h3><span class="id">1.4.11</span>My Events--A list of events that the user has signed up for</h3>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <h3><span class="id">1.4.12</span>Operations--This refers to automatic functions that the application will have, notifications, Event deletion, and synchronizations are all examples of operations.</h3>
-               <h3><span class="id">1.4.13</span>Primary Key--A primary key is either an existing table column or a column that is specifically generated by the database according to a defined sequence.</h3>
-               <h3><span class="id">1.4.14</span>Priority Listing--Certain activities will be given priority and placed higher in the list of activities depending on the amount of money the business pays.</h3>
-               <h3><span class="id">1.4.15</span>Promotion--An activity offered by a business that has an incentive for the user to host an event there.</h3>
-               <h3><span class="id">1.4.16</span>Social App--An application designed for interaction between persons</h3>
-               <h3><span class="id">1.4.17</span>Software Interface--This refers to the third part software that applications will have to interact with.</h3>
-               <h3><span class="id">1.4.18</span>System Interface--Something the users can attend to entertain or participate in.</h3>
-               <h3><span class="id">1.4.19</span>Table--The table is where the data will be stored, and retrieved from, on the server.</h3>
-               <h3><span class="id">1.4.20</span>Uevent--The name of the application being created.</h3>
-               <h3><span class="id">1.4.21</span>User--The customer who uses the application to plan and join events</h3>
-               <h3><span class="id">1.4.22</span>User Interface--the means by
-                  which the user and a computer system interact, in particular the use of
-                  input devices and software.</h3>
+                <h3><span class="id">1.4.12</span>Operations--This refers to automatic functions that the application will have, notifications, Event deletion, and synchronizations are all examples of operations.</h3>
+                <h3><span class="id">1.4.13</span>Primary Key--A primary key is either an existing table column or a column that is specifically generated by the database according to a defined sequence.</h3>
+                <h3><span class="id">1.4.14</span>Priority Listing--Certain activities will be given priority and placed higher in the list of activities depending on the amount of money the business pays.</h3>
+                <h3><span class="id">1.4.15</span>Promotion--An activity offered by a business that has an incentive for the user to host an event there.</h3>
+                <h3><span class="id">1.4.16</span>Social App--An application designed for interaction between persons</h3>
+                <h3><span class="id">1.4.17</span>Software Interface--This refers to the third part software that applications will have to interact with.</h3>
+                <h3><span class="id">1.4.18</span>System Interface--Something the users can attend to entertain or participate in.</h3>
+                <h3><span class="id">1.4.19</span>Table--The table is where the data will be stored, and retrieved from, on the server.</h3>
+                <h3><span class="id">1.4.20</span>Uevent--The name of the application being created.</h3>
+                <h3><span class="id">1.4.21</span>User--The customer who uses the application to plan and join events</h3>
+                <h3><span class="id">1.4.22</span>User Interface--the means by which the user and a computer system interact, in particular the use of input devices and software.</h3>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <h1><span class="id">2</span>References</h1>
-         <p>Below is a list of all resources that will be referenced. After any sentence that requires a reference there will
-            be brackets with the reference subsection number in it.</p>
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <h1><span class="id">2</span>References</h1>
+        <a name="References"></a>
+        <p>Below is a list of all resources that will be referenced. After any sentence that requires a reference there will be brackets with the reference subsection number in it.</p>
+        <div class="indent">
             <h2>2.1 Internal References</h2>
             <div class="indent">
-               <h3>2.1.1 Prototyping Elicitation Report: </h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team03%20Prototyping%20Report.html>
+                <h3>2.1.1 Prototyping Elicitation Report: </h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team03%20Prototyping%20Report.html>
                       
                      https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team03%20Prototyping%20Report.html
                   </a>
-               </p>
-               <h3>2.1.2 Survey Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team2-Survey-Technique/Team2-SurveyTechnique.html>
+                </p>
+                <h3>2.1.2 Survey Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team2-Survey-Technique/Team2-SurveyTechnique.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team2-Survey-Technique/Team2-SurveyTechnique.html
                   </a>
-               </p>
-               <h3>2.1.3. Questionnaire Elicitation Report: </h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team03_Questionnaire_Elicitation_Report/Team03_QuestionnaireReport.html>
+                </p>
+                <h3>2.1.3. Questionnaire Elicitation Report: </h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team03_Questionnaire_Elicitation_Report/Team03_QuestionnaireReport.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team03_Questionnaire_Elicitation_Report/Team03_QuestionnaireReport.html
                   </a>
-               </p>
-               <h3>2.1.4. Bottom-Up Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team2-BottomUp-Technique.html>
+                </p>
+                <h3>2.1.4. Bottom-Up Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team2-BottomUp-Technique.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team2-BottomUp-Technique.html
                   </a>
-               </p>
-               <h3>2.1.5. Top-Down Elicitation Report: </h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team1-Top-Down-Report.html>
+                </p>
+                <h3>2.1.5. Top-Down Elicitation Report: </h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team1-Top-Down-Report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team1-Top-Down-Report.html
                   </a>
-               </p>
-               <h3>2.1.6. Task Analysis Elicitation Report: </h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team03%20Task%20Analysis%20Report.html>
+                </p>
+                <h3>2.1.6. Task Analysis Elicitation Report: </h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team03%20Task%20Analysis%20Report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team03%20Task%20Analysis%20Report.html
                   </a>
-               </p>
-               <h3>2.1.7. Interviews Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team%205%20(LIBHAS)%20Interview%20Report.html>
+                </p>
+                <h3>2.1.7. Interviews Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team%205%20(LIBHAS)%20Interview%20Report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team%205%20(LIBHAS)%20Interview%20Report.html
                   </a>
-               </p>
-               <h3>2.1.8. Laddering Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team1-Laddering-Technique-Report.html>
+                </p>
+                <h3>2.1.8. Laddering Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team1-Laddering-Technique-Report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team1-Laddering-Technique-Report.html
                   </a>
-               </p>
-               <h3>2.1.9. Requirements Workshop Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Requirements%20Workshop%20Team%206.html>
+                </p>
+                <h3>2.1.9. Requirements Workshop Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Requirements%20Workshop%20Team%206.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Requirements%20Workshop%20Team%206.html
                   </a>
-               </p>
+                </p>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <h3>2.1.10. Viewpoints Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team1-Viewpoints-Report.html>
+                <h3>2.1.10. Viewpoints Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team1-Viewpoints-Report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team1-Viewpoints-Report.html
                   </a>
-               </p>
-               <h3>2.1.11. Brainstorming Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team%207-Brainstorming.html>
+                </p>
+                <h3>2.1.11. Brainstorming Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team%207-Brainstorming.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.1-elicitation-techniques-empathy-reports/ElicitationReports/Team%207-Brainstorming.html
                   </a>
-               </p>
-               <h3>2.1.12. Apprenticeship Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team%206%20Apprenticeship.html>
+                </p>
+                <h3>2.1.12. Apprenticeship Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team%206%20Apprenticeship.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team%206%20Apprenticeship.html
                   </a>
-               </p>
-               <h3>2.1.13. Domain Analysis Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/team05%20(LIBHAS)%20Domain%20Analysis%20Report.html>
+                </p>
+                <h3>2.1.13. Domain Analysis Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/team05%20(LIBHAS)%20Domain%20Analysis%20Report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/team05%20(LIBHAS)%20Domain%20Analysis%20Report.html
                   </a>
-               </p>
-               <h3>2.1.14. Ethnography Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team7-ethnography.html>
+                </p>
+                <h3>2.1.14. Ethnography Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team7-ethnography.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.2-elicitation-techniques-analysis-reports/ElicitationReports/Team7-ethnography.html
                   </a>
-               </p>
-               <h3>2.1.15. Protocol Analysis Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team%205%20(LIBHAS)%20Protocal%20Analysis%20report.html>
+                </p>
+                <h3>2.1.15. Protocol Analysis Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team%205%20(LIBHAS)%20Protocal%20Analysis%20report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team%205%20(LIBHAS)%20Protocal%20Analysis%20report.html
                   </a>
-               </p>
-               <h3>2.1.16. Card Sorting Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team%206%20Card%20Sorting.html>
+                </p>
+                <h3>2.1.16. Card Sorting Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team%206%20Card%20Sorting.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team%206%20Card%20Sorting.html
                   </a>
-               </p>
-               <h3>2.1.17. Goal Based Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team2-GoalBased-Technique.html>
+                </p>
+                <h3>2.1.17. Goal Based Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team2-GoalBased-Technique.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team2-GoalBased-Technique.html
                   </a>
-               </p>
-               <h3>2.1.18. Scenario Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team4-Scenario.html>
+                </p>
+                <h3>2.1.18. Scenario Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team4-Scenario.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/Team4-Scenario.html
                   </a>
-               </p>
-               <h3>2.1.19. Introspection Elicitation Report:</h3>
-               <p>
-                  <a
-                      href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/team7-introspection.html/report.html>
+                </p>
+                <h3>2.1.19. Introspection Elicitation Report:</h3>
+                <p>
+                    <a href=http://htmlpreview.github.io/?https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/team7-introspection.html/report.html>
                       https://github.com/BroClements/CS364_2020Win/blob/1.3-elicitation-techniques-data-documentation-reports/ElicitationReports/team7-introspection.html/report.html
                   </a>
-               </p>
+                </p>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2>2.2 External References</h2>
             <div class="indent">
-               <h3>2.2.1.</h3>
-               <p>ISO/IEC/IEEE, "Systems and software engineering — Requirements engineering," International Organization for
-                  Standardization (ISO)/International Electrotechnical Commission/ Institute of Electrical and Electronics
-                  Engineers, pp. 1-86, Dec. 2011
-               </p>
-               <h3>2.2.2. Project Sponsor Video</h3>
-               <p>https://www.youtube.com/watch?v=Lz1ZkP5HK9o&feature=youtu.be</p>
+                <h3>2.2.1.</h3>
+                <p>ISO/IEC/IEEE, "Systems and software engineering — Requirements engineering," International Organization for Standardization (ISO)/International Electrotechnical Commission/ Institute of Electrical and Electronics Engineers, pp. 1-86, Dec.
+                    2011
+                </p>
+                <h3>2.2.2. Project Sponsor Video</h3>
+                <p>https://www.youtube.com/watch?v=Lz1ZkP5HK9o&feature=youtu.be</p>
             </div>
             <h1><span class="id">3</span>SPECIFICATION</h1>
+            <a name="SRequirements"></a>
             <div class="indent">
-               <h2><span class="id">3.1</span> External interfaces</h2>
-               <div class="indent">
-                  <h3>3.1.1 Amazon AWS Database</h3>
-                  <div class="indent">
-                     <p>An Amazon AWS Database service shall be used to store user data from the application.</p>
-                     <ul class="unlabeled">
-                        <li>3.1.1.1 The database shall store consumer user accounts [2.5].</li>
-                        <li>3.1.1.2 The database shall store commercial user accounts [2.5].</li>
-                        <li>3.1.1.3 The database shall store admin user accounts [2.5].</li>
-                        <li>3.1.1.4 The database shall store events.</li>
-                        <li>3.1.1.5 The database shall store group events.</li>
-                        <li>3.1.1.6 The database shall store monthly bidding information for commercial user accounts.</li>
-                        <li>3.1.1.7 The database shall store information about connected consumer user social media accounts [3.1.3-3.1.5].</li>
-                        <li>3.1.1.8 Upon request commercial users shall receive a report of their bidding history [2.6].</li>
-                     </ul>
-                  </div>
-                  <h3>3.1.2 Google Maps API/GPS</h3>
-                  <div class="indent">
-                     <p>Google Maps API will be used to map the available local events and group events posted by commercial users and consumer users.</p>
-                     <ul class="unlabeled">
-                        <li>3.1.2.1 The map feature shall allow consumer users to view local events. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
-                        <li>3.1.2.2 The map feature shall allow consumer users to view group events. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
-                        <li>3.1.2.3 The map feature shall allow consumer users to add event locations. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
-                        <li>3.1.2.4 The map feature shall allow commercial users to add group event locations. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
-                        <li>3.1.2.5 The map feature shall allow consumer users to view their distance from local event locations.</li>
-                        <li>3.1.2.6 The map feature shall allow consumer users to view their distance from local group event locations.</li>
-                     </ul>
-                  </div>
-               </div>
+                <h2><span class="id">3.1</span> External interfaces</h2>
+                <a name="Interface"></a>
+                <div class="indent">
+                    <h3>3.1.1 Amazon AWS Database</h3>
+                    <div class="indent">
+                        <p>An Amazon AWS Database service shall be used to store user data from the application.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.1.1 The database shall store consumer user accounts [2.5].</li>
+                            <li>3.1.1.2 The database shall store commercial user accounts [2.5].</li>
+                            <li>3.1.1.3 The database shall store admin user accounts [2.5].</li>
+                            <li>3.1.1.4 The database shall store events.</li>
+                            <li>3.1.1.5 The database shall store group events.</li>
+                            <li>3.1.1.6 The database shall store monthly bidding information for commercial user accounts.</li>
+                            <li>3.1.1.7 The database shall store information about connected consumer user social media accounts [3.1.3-3.1.5].</li>
+                            <li>3.1.1.8 Upon request commercial users shall receive a report of their bidding history [2.6].</li>
+                        </ul>
+                    </div>
+                    <h3>3.1.2 Google Maps API/GPS</h3>
+                    <div class="indent">
+                        <p>Google Maps API will be used to map the available local events and group events posted by commercial users and consumer users.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.2.1 The map feature shall allow consumer users to view local events. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                            <li>3.1.2.2 The map feature shall allow consumer users to view group events. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                            <li>3.1.2.3 The map feature shall allow consumer users to add event locations. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                            <li>3.1.2.4 The map feature shall allow commercial users to add group event locations. [2.7 (9), Brainstorming 8, Domain Analysis 1]</li>
+                            <li>3.1.2.5 The map feature shall allow consumer users to view their distance from local event locations.</li>
+                            <li>3.1.2.6 The map feature shall allow consumer users to view their distance from local group event locations.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <div class="indent">
-                  <div class="indent">
-                     <ul class="unlabeled">
-                        <li>3.1.2.7 The map feature shall allow consumer users to view directions to local event locations</li>
-                        <li>3.1.2.8 The map feature shall allow consumer users to view directions to local group event locations.</li>
-                     </ul>
-                  </div>
-                  <h3>3.1.3 Facebook</h3>
-                  <div class="indent">
-                     <p>[2.3 (6 & 7), Requirements Workshop 8a, Card Sorting 3]</p>
-                     <p>Facebook’s API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
-                     <ul class="unlabeled">
-                        <li>3.1.3.1 Consumer users shall have the ability to share events on the Facebook platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
-                        <li>3.1.3.2 Commercial users shall have access to information being shared about their business pertaining to group events. [2.3 (6 & 7), Requirements Workshop 8a]</li>
-                        <li>3.1.3.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
-                        <li>3.1.3.4 Group events that do not include a commercial user shall have the availability to upload an image. [Card Sorting 3]</li>
-                     </ul>
-                  </div>
-                  <h3>3.1.4 Instagram </h3>
-                  <div class="indent">
-                     <p>[2.3 (6 & 7), Requirements Workshop 8a, Domain Analysis 2, Card Sorting 3]</p>
-                     <p>Instagram's API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
-                     <ul class="unlabeled">
-                        <li>3.1.4.1 Consumer users shall have the ability to share events on the Instagram platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
-                        <li>3.1.4.2 Commercial users shall have access to information being shared about their business pertaining to group events. [2.3 (6 & 7), Requirements Workshop 8a]</li>
-                        <li>3.1.4.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
-                        <li>3.1.4.4 Group events that do not include a commercial user shall have the availability to upload an image. [2.3 (6 & 7), Card Sorting 3]</li>
-                     </ul>
-                  </div>
-                  <h3>3.1.5 Twitter</h3>
-                  <div class="indent">
-                     <p>[2.3 (6 & 7), Requirements Workshop 8a, Domain Analysis 2, Card Sorting 3]</p>
-                     <p>Twitter’s API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
-                     <ul class="unlabeled">
-                        <li>3.1.5.1 Consumer users shall have the ability to share events on the Twitter platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
-                        <li>3.1.5.2 Commercial users shall have access to information being shared about their business pertaining to shared activities. [2.3 (6 & 7), Requirements Workshop 8a]</li>
-                        <li>3.1.5.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
-                        <li>3.1.5.4 Group events that do not include a commercial user shall have the availability to upload an image. [2.3 (6 & 7), Card Sorting 3]</li>
-                     </ul>
-                  </div>
-               </div>
+                <div class="indent">
+                    <div class="indent">
+                        <ul class="unlabeled">
+                            <li>3.1.2.7 The map feature shall allow consumer users to view directions to local event locations</li>
+                            <li>3.1.2.8 The map feature shall allow consumer users to view directions to local group event locations.</li>
+                        </ul>
+                    </div>
+                    <h3>3.1.3 Facebook</h3>
+                    <div class="indent">
+                        <p>[2.3 (6 & 7), Requirements Workshop 8a, Card Sorting 3]</p>
+                        <p>Facebook’s API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.3.1 Consumer users shall have the ability to share events on the Facebook platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                            <li>3.1.3.2 Commercial users shall have access to information being shared about their business pertaining to group events. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                            <li>3.1.3.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
+                            <li>3.1.3.4 Group events that do not include a commercial user shall have the availability to upload an image. [Card Sorting 3]</li>
+                        </ul>
+                    </div>
+                    <h3>3.1.4 Instagram </h3>
+                    <div class="indent">
+                        <p>[2.3 (6 & 7), Requirements Workshop 8a, Domain Analysis 2, Card Sorting 3]</p>
+                        <p>Instagram's API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.4.1 Consumer users shall have the ability to share events on the Instagram platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                            <li>3.1.4.2 Commercial users shall have access to information being shared about their business pertaining to group events. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                            <li>3.1.4.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
+                            <li>3.1.4.4 Group events that do not include a commercial user shall have the availability to upload an image. [2.3 (6 & 7), Card Sorting 3]</li>
+                        </ul>
+                    </div>
+                    <h3>3.1.5 Twitter</h3>
+                    <div class="indent">
+                        <p>[2.3 (6 & 7), Requirements Workshop 8a, Domain Analysis 2, Card Sorting 3]</p>
+                        <p>Twitter’s API shall be used according to the standards of the stakeholders allowing users to share activities on the social platform.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.5.1 Consumer users shall have the ability to share events on the Twitter platform if logged into the user’s portal. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                            <li>3.1.5.2 Commercial users shall have access to information being shared about their business pertaining to shared activities. [2.3 (6 & 7), Requirements Workshop 8a]</li>
+                            <li>3.1.5.3 An event shall contain a picture of the product or a logo of the commercial user. [2.3 (6 & 7), Card Sorting 3]</li>
+                            <li>3.1.5.4 Group events that do not include a commercial user shall have the availability to upload an image. [2.3 (6 & 7), Card Sorting 3]</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <h3>3.1.6 PayPal</h3>
-               <div class="indent">
-                  <p>PayPal Developer API shall be used by commercial users to place bids.</p>
-                  <ul class="unlabeled">
-                     <li>3.1.6.1 API shall allow commercial users to pay their bids each month. [Requirements Workshop 6, Domain Analysis 2]</li>
-                  </ul>
-               </div>
-               <h3>3.17Google Pay</h3>
-               <div class="indent">
-                  <p>Google Pay API shall be used by commercial users to place bids.</p>
-                  <ul class="unlabeled">
-                     <li>3.1.7.1 API shall allow commercial users to pay their bids each month. [Requirements Workshop 6, Domain Analysis 2]</li>
-                  </ul>
-               </div>
+                <div class="indent">
+                    <h3>3.1.6 PayPal</h3>
+                    <div class="indent">
+                        <p>PayPal Developer API shall be used by commercial users to place bids.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.6.1 API shall allow commercial users to pay their bids each month. [Requirements Workshop 6, Domain Analysis 2]</li>
+                        </ul>
+                    </div>
+                    <h3>3.17Google Pay</h3>
+                    <div class="indent">
+                        <p>Google Pay API shall be used by commercial users to place bids.</p>
+                        <ul class="unlabeled">
+                            <li>3.1.7.1 API shall allow commercial users to pay their bids each month. [Requirements Workshop 6, Domain Analysis 2]</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <h2><span class="id">3.2</span> Functions</h2>
-
+            <a name="Functions"></a>
             <div class="indent">
-               <h3><span class="id">3.2.1</span>Login</h3>
-               <p>This feature shall allow authorized access to the consumer.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.1.1</span>The server shall authenticate the username.</h4>
-                  <h4><span class="id">3.2.1.2</span>The server shall authenticate the password.</h4>
-               </div>
-               <h3><span class="id">3.2.2</span>Create New Account</h3>
-               <p>This feature shall allow the consumer to create their personalized profile.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.2.1</span>Login through social media shall integrate the consumers social media username.</h4>
-                  <h4><span class="id">3.2.2.2</span>Server shall create a new column within the database for a new consumer’s account.</h4>
-                  <h4><span class="id">3.2.2.3</span>A tutorial composed of screenshots shall instruct new consumers how to use the application.</h4>
-                  <h4><span class="id">3.2.2.4</span>Tooltips shall inform new consumers about the application’s consumer features.</h4>
-               </div>
-               <h3><span class="id">3.2.3</span>Logout</h3>
-               <p>This feature shall allow the consumer users to securely sign off from the app. </p>
-               <div class="indent">
-                  <h4><span class="id">3.2.3.1</span>The application shall require the consumer to logout </h4>
-               </div>
-               <h3><span class="id">3.2.4</span>Design</h3>
-               <p>This feature shall allow the consumers to easily navigate through the app.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2..1</span>Logo shall be present on the following pages: Login, Home, Contact List.
-                  </h4>
-                  <h4><span class="id">3.2.4.2</span>Footer shall have navigation tabs: Home, Discover, My Events, Message, Profile.</h4>
-                  <h4><span class="id">3.2.4.3</span>Events shall be colored based on event type. </h4>
-               </div>
+                <h3>Consumer</h3>
             </div>
-         </div>
-      </div>
-      </div>
-      <div class="page">
-         <div class="indent">
             <div class="indent">
-               <h3><span class="id">3.2.5</span>Home</h3>
-               <p>This feature shall allow consumers to browse through their feed allowing them to join/create events.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.5.1</span>Commercial/Consumer events shall be listed on the home page</h4>
-                  <h4><span class="id">3.2.5.2</span>The consumer shall join commercial/consumer events</h4>
-                  <h4><span class="id">3.2.5.3</span>The consumer shall create their own events </h4>
-               </div>
-               <h3><span class="id">3.2.6</span>Discover</h3>
-               <p>This feature shall recommend events to consumers based on their preference. </p>
-               <div class="indent">
-                  <h4><span class="id">3.2.6.1</span>The page shall display suggested events based on the consumer’s interests</h4>
-                  <h4><span class="id">3.2.6.2</span>The page shall show events that share properties in common with past events that the consumer has joined</h4>
-               </div>
-               <h3><span class="id">3.2.7</span>My Events</h3>
-               <p>This feature shall group the list of events that the consumer is linked to.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.7.1</span>The page shall display a list of events that the user has joined</h4>
-                  <h4><span class="id">3.2.7.2</span>The page shall display a list of events created by the consumer</h4>
-
-               </div>
-               <h3><span class="id">3.2.8</span>Message</h3>
-               <p>This feature shall allow the consumer to communicate.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.8.1</span>This consumer shall be able to chat with other individuals from their contact list.</h4>
-                  <h4><span class="id">3.2.8.2</span>The consumer shall be able to create a group chat for the individuals attending the same event.</h4>
-               </div>
-               <h3><span class="id">3.2.9</span>Profile</h3>
-               <p>This feature shall allow the consumer to make changes to their profile.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.9.1</span>The consumer shall be able to edit their own picture.</h4>
-                  <h4><span class="id">3.2.9.2</span>The consumer shall be able to edit their username.</h4>
-               </div>
-               <h3><span class="id">3.2.10</span>Create Event</h3>
-               <p>This feature shall allow the consumer to create events based on their specifications.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.10.1</span>The consumer shall limit the amount of participants able to join. </h4>
-                  <h4><span class="id">3.2.10.2</span>A private chat between the event participants shall be created upon creation of the event</h4>
-               </div>
+                <h3><span class="id">F.1</span>Create New Account</h3>
+                <p>This feature shall allow the consumer to create their personalized profile.</p>
+                <div class="indent">
+                    <h4><span class="id">F.1.1</span>Login through social media shall integrate the consumers social media username.</h4>
+                    <h4><span class="id">F.1.2</span>Server shall create a new row within the database for a new consumer’s account.</h4>
+                    <h4><span class="id">F.1.3</span>A tutorial composed of screenshots shall instruct new consumers how to use the application.</h4>
+                    <h4><span class="id">F.1.4</span>Tooltips shall inform new consumers about the application’s consumer features.</h4>
+                    <h4><span class="id">F.1.5</span>Create New Account shall allow one account per Consumer User.</h4>
+                </div>
+                <h3><span class="id">F.2</span>Home</h3>
+                <p>This feature shall allow consumers to browse through their feed and allow them to join/create events.</p>
+                <div class="indent">
+                    <h4><span class="id">F.2.1</span>Commercial/Consumer events shall be listed on the home page.</h4>
+                    <h4><span class="id">F.2.2</span>Each event shall include a feature to join commercial/consumer events.</h4>
+                    <h4><span class="id">F.2.3</span>Each event shall contain a "create activity" button.</h4>
+                    <h4><span class="id">F.2.4</span>The Home Screen shall display an Event list ranked in order by bidding price.</h4>
+                    <h4><span class="id">F.2.5</span>The Home Screen Events list shall display the Event name for each Event.</h4>
+                    <h4><span class="id">F.2.6</span>The Home Screen Events list shall display the Business name for each Event.</h4>
+                    <h4><span class="id">F.2.7</span>The Home Screen Events list shall display a ‘Learn More’ button for each Event.</h4>
+                    <h4><span class="id">F.2.8</span>The Home Screen shall display a button to 'Find Group Events'.</h4>
+                    <h4><span class="id">F.2.9</span>The Home Screen shall note that each Event is a paid advertisement.</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <h3><span class="id">3.2.11</span>Edit Event</h3>
-               <p>This feature shall allow the consumer to customize the events created by them. </p>
-               <div class="indent">
-                  <h4><span class="id">3.2.11.1</span>The creator of an event shall be able to edit the name of the event</h4>
-                  <h4><span class="id">3.2.11.2</span>The creator of an event shall be able to edit the description of the event</h4>
-                  <h4><span class="id">3.2.11.3</span>The creator of an event shall be able to edit the picture for the event</h4>
-                  <h4><span class="id">3.2.11.4</span>The creator of an event shall be able to accept a request to join the event</h4>
-                  <h4><span class="id">3.2.11.5</span>The creator of an event shall be able to deny a request to join the event</h4>
-                  <h4><span class="id">3.2.11.5</span>The creator of an event shall be able to cancel an event</h4>
+                <div class="indent">
+                    <h4><span class="id">F.2.10</span>Commercial Event</h4>
+                    <p>This feature shall display the commercial event information.</p>
+                    <div class="indent">
+                        <h4><span class="id">F.2.10.1</span>Commercial Event shall display the Event Description.</h4>
+                        <h4><span class="id">F.2.10.2</span>Commercial Event shall display the Event location.</h4>
+                        <h4><span class="id">F.2.10.3</span>Commercial Event shall display the Event price range.</h4>
+                        <h4><span class="id">F.2.10.4</span>Commercial Event shall display the Event Ratings.</h4>
+                        <h4><span class="id">F.2.10.5</span>Commercial Event shall display the Event media (images, videos).</h4>
+                        <h4><span class="id">F.2.10.6</span>Commercial Event shall display a button to 'Create Group Event'.</h4>
+                        <h4><span class="id">F.2.10.7</span>Commercial Event shall display a button to ‘Find Group Event.</h4>
+                    </div>
 
-               </div>
-               <h3><span class="id">3.2.12</span>Accept Invite to Event</h3>
-               <p>This feature shall allow the consumer to accept/decline invitations that they receive for an event.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.12.1</span>A consumer that selects the “accept” option shall be added as a participant to the event</h4>
-                  <h4><span class="id">3.2.12.2</span>A consumer shall have the option to decline invitations</h4>
-               </div>
-               <h3><span class="id">3.2.13</span>Filter/Sorting</h3>
-               <p>This feature shall allow the consumer to search events based on their preference.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.13.1</span>The consumer shall have recommendations based on interest</h4>
-                  <h4><span class="id">3.2.13.2</span>Consumer events shall be separated from commercial events</h4>
+                    <h4><span class="id">F.2.11</span>Group Event</h4>
+                    <p>This feature shall display the group event information.</p>
+                    <div class="indent">
+                        <h4><span class="id">F.2.11.1</span>Group Events shall display a list of Group Events initially ordered by Event proximity.
+                        </h4>
+                        <h4><span class="id">F.2.11.2</span>Group Events shall display a button to Filter/Sort.</h4>
+                        <h4><span class="id">F.2.11.3</span>Group Events shall display a Search Bar.</h4>
+                        <h4><span class="id">F.2.11.4</span>Group Events shall display Group Events created from a specific business if the Consumer User was previously on a Commercial Event page.</h4>
+                    </div>
+                </div>
+                <h3><span class="id">F.3</span>Profile</h3>
+                <p>The Edit Profile page shall allow the consumer to make changes to their profile.</p>
+                <div class="indent">
+                    <h4><span class="id">F.3.1</span>The Edit Profile page shall allow the user to be able to edit their own picture.</h4>
+                    <h4><span class="id">F.3.2</span>The Edit Profile page shall allow the consumer to edit their profile picture.</h4>
+                    <h4><span class="id">F.3.3</span>The Edit Profile page shall allow the consumer to be able to edit their username.</h4>
+                    <h4><span class="id">F.3.4</span>The Edit Profile page shall allow the consumer to include a biography text-field.</h4>
+                </div>
 
-               </div>
-               <h3><span class="id">3.2.14</span>Search Bar</h3>
-               <p>This feature shall allow the consumer to input search queries to find listed events.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.14.1</span>The consumer shall have the ability to narrow desired events based on local businesses</h4>
-                  <h4><span class="id">3.2.14.2</span>The consumer shall have the ability to narrow desired events based on consumer input</h4>
+                <h3><span class="id">F.4</span>Login</h3>
+                <p>The Login shall allow authorized access to the consumer.</p>
+                <div class="indent">
+                    <h4><span class="id">F.4.1</span>The server shall authenticate the username.</h4>
+                    <h4><span class="id">F.4.2</span>The server shall authenticate the password.</h4>
+                </div>
 
-               </div>
-               <h3><span class="id">3.2.15</span>Location</h3>
-               <p>This feature shall allow the consumer to find events based on their location.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.15.1</span>The consumer shall be able to choose a location for an event.</h4>
-                  <h4><span class="id">3.2.15.2</span>The app shall use the consumer’s location to display relevant results.</h4>
-               </div>
-               <h3><span class="id">3.2.16</span>Notification</h3>
-               <p>This feature shall allow the consumer to receive notifications/alerts.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.16.1</span>The consumer shall receive a notification when they are invited to an event.</h4>
-                  <h4><span class="id">3.2.16.2</span>The consumer shall receive a notification when their request to join an event has been accepted.</h4>
-               </div>
+                <h3><span class="id">F.5</span>Discover</h3>
+                <p>The Discover page shall recommend events to consumers based on their preferences.</p>
+                <div class="indent">
+                    <h4><span class="id">F.5.1</span>The Discover page shall display suggested events based on the consumer’s interests.</h4>
+                    <h4><span class="id">F.5.2</span>The Discover page shall show events that share properties in common with past events that the consumer has joined.</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
-            <div class="indent">
-               <h3><span class="id">3.2.17</span>Promos/Discounts</h3>
-               <p>This feature shall allow the consumer to see the available discounts/promos listed for the events.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.17.1</span>The customer shall apply promotional deals/discount codes to services to reduce costs.</h4>
-                  <h4><span class="id">3.2.17.2</span>The customer shall obtain a promo code to get fast track services.</h4>
-               </div>
-               <h3><span class="id">3.2.18</span>Settings</h3>
-               <p>This feature shall allow the consumer to modify the configuration of the app to their liking.</p>
-               <div class="indent">
-                  <h4><span class="id">3.2.18.1</span>This feature shall allow the consumer to opt out of notifications sorted by type</h4>
-                  <h4><span class="id">3.2.18.2</span>This feature shall contain the ‘logout’ option</h4>
 
-               </div>
+        </div>
+    </div>
+
+
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+                <h3><span class="id">F.6</span>Create Group Event</h3>
+                <p>The Create Group Event feature shall allow the consumer to create events based on their specifications.</p>
+                <div class="indent">
+                    <h4><span class="id">F.6.1</span>The “Create Group Event” feature shall have the ability to limit the amount of participants able to join the activity. </h4>
+                    <h4><span class="id">F.6.2</span>A private group chat shall be created.</h4>
+                    <h4><span class="id">F.6.3</span>Commercial events shall be listed for the consumer to choose from.</h4>
+                    <h4><span class="id">F.6.4</span>A Start time shall be required: Day, Month, Year, Time.</h4>
+                    <h4><span class="id">F.6.5</span>A text box labeled “comments” shall display the consumer’s inputted text to other consumers.</h4>
+                    <h4><span class="id">F.6.6</span>The Create Event feature shall add the created event to “My Events”.</h4>
+                </div>
+
+                <h3><span class="id">F.7</span>Edit Event</h3>
+                <p>The Edit Event page shall allow the consumer to customize the events created by them. </p>
+                <div class="indent">
+                    <h4><span class="id">F.7.1</span>The Edit Event page shall allow the consumer to edit the name of the event.</h4>
+                    <h4><span class="id">F.7.2</span>The Edit Event page shall allow the consumer to edit the description of the event.</h4>
+                    <h4><span class="id">F.7.3</span>The Edit Event page shall allow the consumer to edit the picture of the event.</h4>
+                    <h4><span class="id">F.7.4</span>The Edit Event page shall allow the consumer to accept a request to join the event.</h4>
+                    <h4><span class="id">F.7.5</span>The Edit Event page shall allow the consumer to deny a request to join the event.</h4>
+                    <h4><span class="id">F.7.6</span>The Edit Event page shall allow the consumer to cancel an event.</h4>
+                </div>
+
+                <h3><span class="id">F.8</span>Accept Invite to Event</h3>
+                <p>This feature shall allow the consumer to accept/decline invitations that they receive for an event. </p>
+                <div class="indent">
+                    <h4><span class="id">F.8.1</span>The event shall have a accept option that shall add a consumer to the event.</h4>
+                    <h4><span class="id">F.8.2</span>The event shall have the option to decline invitations.</h4>
+                </div>
+                <h3><span class="id">F.9</span>Message</h3>
+                <p>This feature shall allow the consumer to communicate. </p>
+                <div class="indent">
+                    <h4><span class="id">F.9.1</span>The messaging system shall give the ability to chat with other individuals from their contact list.
+                    </h4>
+                    <h4><span class="id">F.9.2</span>The messaging system shall have an option to create a group chat for the consumers attending the same event.</h4>
+                    <h4><span class="id">F.9.3</span>The messaging system shall list messages in order of received times. </h4>
+                    <h4><span class="id">F.9.4</span>The messaging system shall allow the consumer user to begin a new conversation.</h4>
+                    <h4><span class="id">F.9.5</span>The messaging system shall allow the consumer user to resume an existing conversation.</h4>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+                <div class="indent">
+                    <h4><span class="id">F.9.6</span>Conversation.</h4>
+                    <p>This feature shall allow the consumer to communicate. </p>
+                    <div class="indent">
+                        <h4><span class="id">F.9.6.1</span>If the conversation is with a single individual, the Message view shall be able to view the name of the individual in the conversation.
+                        </h4>
+                        <h4><span class="id">F.9.6.2</span>If the conversation is with a group of individuals, the Message view shall be able to view a list of names of individuals in the conversation.</h4>
+                        <h4><span class="id">F.9.6.3</span>The Conversation system shall allow the use of utf-8 characters into the conversation. </h4>
+                        <h4><span class="id">F.9.6.4</span>The Conversation system shall allow the use of Emojis into the conversation.</h4>
+                        <h4><span class="id">F.9.6.5</span>The Conversation system shall allow characters to be input until a maximum number of characters is reached.</h4>
+                        <h4><span class="id">F.9.6.6</span>The Conversation system shall display the number of characters until the maximum number of characters is reached.</h4>
+                        <h4><span class="id">F.9.6.7</span>When the maximum number of characters is reached, the Consumer User will no longer be allowed to input characters.</h4>
+                        <h4><span class="id">F.9.6.8</span>The Conversation system shall be able to send the inputted message.</h4>
+                    </div>
+                </div>
+
+                <h3><span class="id">F.10</span>My Event</h3>
+                <p>This feature shall group the list of events that the consumer is linked to.</p>
+                <div class="indent">
+                    <h4><span class="id">F.10.1</span>The My Events page shall display a list of events that the consumer has joined.</h4>
+                    <h4><span class="id">F.10.2</span>The My Events page shall display a list of events created by the consumer.</h4>
+                </div>
+
+                <h3><span class="id">F.11</span>Design</h3>
+                <p> This feature shall allow the consumers to easily navigate through the app.</p>
+                <div class="indent">
+                    <h4><span class="id">F.11.1</span>Logo shall be present on the following pages: Login, Home, Contact List.</h4>
+                    <h4><span class="id">F.11.2</span>Footer shall have navigation tabs: Home, Discover, My Events, Message, Profile.</h4>
+                    <h4><span class="id">F.11.2</span>Events will be colored based on event type.</h4>
+                </div>
+
+                <h3><span class="id">F.12</span>Notifications</h3>
+                <p> This feature shall allow the consumer to receive notifications/alerts. </p>
+                <div class="indent">
+                    <h4><span class="id">F.12.1</span>A notification will be created when the consumer is invited to an event.</h4>
+                    <h4><span class="id">F.12.2</span>A notification will be created when a consumer's request to join an event has been accepted.</h4>
+                </div>
+
+                <h3><span class="id">F.13</span>Settings </h3>
+                <p> This feature shall allow the consumer to modify the configuration of the app to their liking. </p>
+                <div class="indent">
+                    <h4><span class="id">F.13.1</span>The settings shall allow the consumer to opt out of notifications sorted by type.</h4>
+                    <h4><span class="id">F.13.2</span>The settings shall contain the ‘logout’ option.</h4>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+
+                <h3><span class="id">F.14</span>Ratings</h3>
+                <p>This feature shall allow each consumer event attendee to leave a rating of the event. </p>
+                <div class="indent">
+                    <h4><span class="id">F.14.1</span>After the designated time for a Group Event has surpassed, all Consumer Users will be invited to leave a rating of their experience in the form of a push notification.</h4>
+                    <h4><span class="id">F.14.2</span>The Ratings system shall display an invitation for the Consumer User to leave a rating.</h4>
+                    <h4><span class="id">F.14.3</span>The Ratings system shall display a set of Stars.</h4>
+                    <h4><span class="id">F.14.4</span>The Ratings system shall display a text field.</h4>
+                    <h4><span class="id">F.14.5</span>The Ratings system shall allow feedback to be entered in a single Rating text-field.</h4>
+                    <h4><span class="id">F.14.6</span>The Ratings system shall be dismissed, if the Consumer User does not wish to complete a Rating.</h4>
+                </div>
+
+                <h3><span class="id">F.15</span>Logout </h3>
+                <p> This feature shall allow the consumer users to securely sign off from the app. </p>
+                <div class="indent">
+                    <h4><span class="id">F.15.1</span>The application shall remove event access credentials from the app.</h4>
+                </div>
+
+                <h3><span class="id">F.16</span>Filtering/Sorting </h3>
+                <p> This feature shall allow the consumer to search events based on their preference. </p>
+                <div class="indent">
+                    <h4><span class="id">F.16.1</span>Events shall be shown based on interest.</h4>
+                    <h4><span class="id">F.16.2</span>Group events shall be separated from commercial events.</h4>
+                </div>
+
+                <h3><span class="id">F.17</span>Search Bar</h3>
+                <p> This feature shall allow the consumer to input search queries to find listed events. </p>
+                <div class="indent">
+                    <h4><span class="id">F.17.1</span>The Search bar shall enable the ability to narrow desired events based on local businesses.</h4>
+                    <h4><span class="id">F.17.2</span>The Search bar shall enable the ability to narrow desired events based on consumer input.</h4>
+                </div>
+
+                <h3><span class="id">F.18</span>Location </h3>
+                <p> This feature shall allow the consumer to find events based on their location. </p>
+                <div class="indent">
+                    <h4><span class="id">F.18.1</span>The location feature shall show relevant group events.</h4>
+                    <h4><span class="id">F.18.2</span>The filter feature shall use the consumer’s location to display relevant events.</h4>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+                <h3><span class="id">3.2.11</span>Edit Event</h3>
+                <p>This feature shall allow the consumer to customize the events created by them. </p>
+                <div class="indent">
+                    <h4><span class="id">3.2.11.1</span>The creator of an event shall be able to edit the name of the event</h4>
+                    <h4><span class="id">3.2.11.2</span>The creator of an event shall be able to edit the description of the event</h4>
+                    <h4><span class="id">3.2.11.3</span>The creator of an event shall be able to edit the picture for the event</h4>
+                    <h4><span class="id">3.2.11.4</span>The creator of an event shall be able to accept a request to join the event</h4>
+                    <h4><span class="id">3.2.11.5</span>The creator of an event shall be able to deny a request to join the event</h4>
+                    <h4><span class="id">3.2.11.5</span>The creator of an event shall be able to cancel an event</h4>
+
+                </div>
+                <h3><span class="id">3.2.12</span>Accept Invite to Event</h3>
+                <p>This feature shall allow the consumer to accept/decline invitations that they receive for an event.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.12.1</span>A consumer that selects the “accept” option shall be added as a participant to the event</h4>
+                    <h4><span class="id">3.2.12.2</span>A consumer shall have the option to decline invitations</h4>
+                </div>
+                <h3><span class="id">3.2.13</span>Filter/Sorting</h3>
+                <p>This feature shall allow the consumer to search events based on their preference.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.13.1</span>The consumer shall have recommendations based on interest</h4>
+                    <h4><span class="id">3.2.13.2</span>Consumer events shall be separated from commercial events</h4>
+
+                </div>
+                <h3><span class="id">3.2.14</span>Search Bar</h3>
+                <p>This feature shall allow the consumer to input search queries to find listed events.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.14.1</span>The consumer shall have the ability to narrow desired events based on local businesses</h4>
+                    <h4><span class="id">3.2.14.2</span>The consumer shall have the ability to narrow desired events based on consumer input</h4>
+
+                </div>
+                <h3><span class="id">3.2.15</span>Location</h3>
+                <p>This feature shall allow the consumer to find events based on their location.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.15.1</span>The consumer shall be able to choose a location for an event.</h4>
+                    <h4><span class="id">3.2.15.2</span>The app shall use the consumer’s location to display relevant results.</h4>
+                </div>
+                <h3><span class="id">3.2.16</span>Notification</h3>
+                <p>This feature shall allow the consumer to receive notifications/alerts.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.16.1</span>The consumer shall receive a notification when they are invited to an event.</h4>
+                    <h4><span class="id">3.2.16.2</span>The consumer shall receive a notification when their request to join an event has been accepted.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+                <h3><span class="id">3.2.17</span>Promos/Discounts</h3>
+                <p>This feature shall allow the consumer to see the available discounts/promos listed for the events.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.17.1</span>The customer shall apply promotional deals/discount codes to services to reduce costs.</h4>
+                    <h4><span class="id">3.2.17.2</span>The customer shall obtain a promo code to get fast track services.</h4>
+                </div>
+                <h3><span class="id">3.2.18</span>Settings</h3>
+                <p>This feature shall allow the consumer to modify the configuration of the app to their liking.</p>
+                <div class="indent">
+                    <h4><span class="id">3.2.18.1</span>This feature shall allow the consumer to opt out of notifications sorted by type</h4>
+                    <h4><span class="id">3.2.18.2</span>This feature shall contain the ‘logout’ option</h4>
+
+                </div>
             </div>
             <h2><span class="id">3.3</span> Usability Requirements</h2>
+            <a name="Usability"></a>
             <p>More than HCI Usability, includes Interfaces and fulfilling the users needs</p>
             <div class="indent">
             </div>
 
             <h2><span class="id">3.4</span> Performance requirements</h2>
+            <a name="Performance"></a>
             <p> Specification of the performance requirements of the app. </p>
             <div class="indent">
-               <h3><span class="id">3.4.1</span>Commercial:</h3>
-               <div class="indent">
-                  <h4><span class="id">3.4.1.1</span> The system shall allow the number of accounts to be supported. </h4>
-                  <h4><span class="id">3.4.1.2 </span>The system shall allow the number of events to be supported. </h4>
-                  <h4><span class="id">3.4.1.3 </span>The system shall accommodate event creation in 3 to 4 seconds. </h4>
-                  <h4><span class="id">3.4.1.4 </span>The system shall pull up and display events in 3 to 4 seconds.</h4>
-               </div>
-               <h3><span class="id">3.4.2</span>Consumer:</h3>
-               <div class="indent">
-                  <h4><span class="id">3.4.2.1 </span>The system shall accommodate group event creation in 3 to 4 seconds. </h4>
-                  <h4><span class="id">3.4.2.2 </span>The system shall pull up and display group event in 3 to 4 seconds. </h4>
-                  <h4><span class="id">3.4.2.3 </span>The application shall launch in no more than 3 seconds.</h4>
-                  <h4><span class="id">3.4.2.4 </span>The application shall not restrict the user from shutting down the app.</h4>
-               </div>
+                <h3><span class="id">3.4.1</span>Commercial:</h3>
+                <div class="indent">
+                    <h4><span class="id">3.4.1.1</span> The system shall allow the number of accounts to be supported. </h4>
+                    <h4><span class="id">3.4.1.2 </span>The system shall allow the number of events to be supported. </h4>
+                    <h4><span class="id">3.4.1.3 </span>The system shall accommodate event creation in 3 to 4 seconds. </h4>
+                    <h4><span class="id">3.4.1.4 </span>The system shall pull up and display events in 3 to 4 seconds.</h4>
+                </div>
+                <h3><span class="id">3.4.2</span>Consumer:</h3>
+                <div class="indent">
+                    <h4><span class="id">3.4.2.1 </span>The system shall accommodate group event creation in 3 to 4 seconds. </h4>
+                    <h4><span class="id">3.4.2.2 </span>The system shall pull up and display group event in 3 to 4 seconds. </h4>
+                    <h4><span class="id">3.4.2.3 </span>The application shall launch in no more than 3 seconds.</h4>
+                    <h4><span class="id">3.4.2.4 </span>The application shall not restrict the user from shutting down the app.</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <h2><span class="id">3.5</span> Logical database requirements</h2>
+            <a name="Database"></a>
             <p>Backend and database components</p>
             <div class="indent">
-               <h3><span class="id">3.5.1</span>User Table</h3>
-               <p>The user table shall store all information about a given user and shall be referred to by other tables that involve users. </p>
-               <div class="indent">
-                  <h4><span class="id">3.5.1.1</span>The user table shall contain the user ID column as the primary key. </h4>
-                  <h4><span class="id">3.5.1.2</span>The user table shall contain a first name column.</h4>
-                  <h4><span class="id">3.5.1.3</span>The user table shall contain a last name column</h4>
-                  <h4><span class="id">3.5.1.4</span>The user table shall contain a role column, indicating whether this user is a typical user or business user.</h4>
-                  <h4><span class="id">3.5.1.5</span>The user table shall contain a username (PF 1.9.2)</h4>
-                  <h4><span class="id">3.5.1.6</span>The user table shall contain a column for a user’s Facebook user ID for users who have logged in via Facebook. (PF 1.8.2)</h4>
-                  <h4><span class="id">3.5.1.7</span>The user table shall contain the user's hashed password. (PF 1.1.2)</h4>
-                  <h4><span class="id">3.5.1.8</span>The user table shall contain the user's Email address (for registration and password retrieving).</h4>
-                  <h4><span class="id">3.5.1.9</span>The user table shall contain the user's phone number for registration (for contacting and password retrieving).</h4>
-                  <h4><span class="id">3.5.1.10</span>The user table shall contain a rating column, being reported could harm the user’s rating.</h4>
-                  <h4><span class="id">3.5.1.11</span>The user ID shall have a foreign key relation to the event table, organizer column.</h4>
-                  <h4><span class="id">3.5.1.12</span>The user ID shall have a foreign key relation to the participant table, user ID column.</h4>
-                  <h4><span class="id">3.5.1.13</span>The user ID shall have a foreign key relation to the Friendship table, user ID column.</h4>
-               </div>
+                <h3><span class="id">3.5.1</span>User Table</h3>
+                <p>The user table shall store all information about a given user and shall be referred to by other tables that involve users. </p>
+                <div class="indent">
+                    <h4><span class="id">3.5.1.1</span>The user table shall contain the user ID column as the primary key. </h4>
+                    <h4><span class="id">3.5.1.2</span>The user table shall contain a first name column.</h4>
+                    <h4><span class="id">3.5.1.3</span>The user table shall contain a last name column</h4>
+                    <h4><span class="id">3.5.1.4</span>The user table shall contain a role column, indicating whether this user is a typical user or business user.</h4>
+                    <h4><span class="id">3.5.1.5</span>The user table shall contain a username (PF 1.9.2)</h4>
+                    <h4><span class="id">3.5.1.6</span>The user table shall contain a column for a user’s Facebook user ID for users who have logged in via Facebook. (PF 1.8.2)</h4>
+                    <h4><span class="id">3.5.1.7</span>The user table shall contain the user's hashed password. (PF 1.1.2)</h4>
+                    <h4><span class="id">3.5.1.8</span>The user table shall contain the user's Email address (for registration and password retrieving).</h4>
+                    <h4><span class="id">3.5.1.9</span>The user table shall contain the user's phone number for registration (for contacting and password retrieving).</h4>
+                    <h4><span class="id">3.5.1.10</span>The user table shall contain a rating column, being reported could harm the user’s rating.</h4>
+                    <h4><span class="id">3.5.1.11</span>The user ID shall have a foreign key relation to the event table, organizer column.</h4>
+                    <h4><span class="id">3.5.1.12</span>The user ID shall have a foreign key relation to the participant table, user ID column.</h4>
+                    <h4><span class="id">3.5.1.13</span>The user ID shall have a foreign key relation to the Friendship table, user ID column.</h4>
+                </div>
             </div>
             <div class="indent">
-               <h3><span class="id">3.5.2</span>Event Table</h3>
-               <p>The event table shall store all information about events and shall be referred to by other tables involving events.</p>
-               <div class="indent">
-                  <h4><span class="id">3.5.2.1</span>The event table shall contain the event ID as the primary key.</h4>
-                  <h4><span class="id">3.5.2.2</span>The event table shall contain a date column.</h4>
-                  <h4><span class="id">3.5.2.3</span>The event table shall contain a time column.</h4>
-                  <h4><span class="id">3.5.2.4</span>The event table shall contain a column indicating the maximum participants allowed in the event. (PF 1.10.1)</h4>
-                  <h4><span class="id">3.5.2.5</span>The event table shall contain an event type column.</h4>
-                  <h4><span class="id">3.5.2.6</span>The event table shall contain an event location column.</h4>
-               </div>
+                <h3><span class="id">3.5.2</span>Event Table</h3>
+                <p>The event table shall store all information about events and shall be referred to by other tables involving events.</p>
+                <div class="indent">
+                    <h4><span class="id">3.5.2.1</span>The event table shall contain the event ID as the primary key.</h4>
+                    <h4><span class="id">3.5.2.2</span>The event table shall contain a date column.</h4>
+                    <h4><span class="id">3.5.2.3</span>The event table shall contain a time column.</h4>
+                    <h4><span class="id">3.5.2.4</span>The event table shall contain a column indicating the maximum participants allowed in the event. (PF 1.10.1)</h4>
+                    <h4><span class="id">3.5.2.5</span>The event table shall contain an event type column.</h4>
+                    <h4><span class="id">3.5.2.6</span>The event table shall contain an event location column.</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <div class="indent">
-                  <h4><span class="id">3.5.2.7</span>The event table shall contain a description column. (PF 11.1.2)</h4>
-                  <h4><span class="id">3.5.2.8</span>The event table shall contain an organizer column, which should have a foreign key relation to user table, user ID column. (PF 1.10)</h4>
-                  <h4><span class="id">3.5.2.9</span>The event ID column shall have a foreign key relation to the participant table, event ID column.</h4>
-               </div>
-            </div>
-            <div class="indent">
-               <h3><span class="id">3.5.3</span>Event-Participant Table</h3>
-               <p>The event-participant table shall represent a pairing of a user ID and an event ID to show that the specified user is attending the specified event.</p>
-               <div class="indent">
-                  <h4><span class="id">3.5.3.1</span>The event-participant table shall contain an event-participant ID as the primary key.</h4>
-                  <h4><span class="id">3.5.3.2</span>The participant table shall contain a user ID column, which shall have a foreign key relation to user table, user ID column.</h4>
-                  <h4><span class="id">3.5.3.3</span>The participant table shall contain an event id column, which shall have a foreign key relation to event table, event ID column.</h4>
-                  <h4><span class="id">3.5.3.4</span>The participant table shall contain an approval status column to indicate whether the participate has been approved to join the event or has merely been invited or requested to join. (PF 1.11.4, 1.11.5, 1.12.1)</h4>
-               </div>
+                <div class="indent">
+                    <h4><span class="id">3.5.2.7</span>The event table shall contain a description column. (PF 11.1.2)</h4>
+                    <h4><span class="id">3.5.2.8</span>The event table shall contain an organizer column, which should have a foreign key relation to user table, user ID column. (PF 1.10)</h4>
+                    <h4><span class="id">3.5.2.9</span>The event ID column shall have a foreign key relation to the participant table, event ID column.</h4>
+                </div>
             </div>
             <div class="indent">
-               <h3><span class="id">3.5.4</span>Friendship Table</h3>
-               <p></p>
-               <div class="indent">
-                  <h4><span class="id">3.5.4.1</span>The friendship table shall contain a primary key consisting of the user1 and user 2 IDs (user1 ID, user2 ID). </h4>
-                  <h4><span class="id">3.5.4.2</span>The friendship table shall contain a user1 ID column, which shall have a foreign key relation to user table, user ID column.</h4>
-                  <h4><span class="id">3.5.4.3</span>The friendship table shall contain a user2 ID column, which shall have a foreign key relation to user table, user ID column.</h4>
-               </div>
+                <h3><span class="id">3.5.3</span>Event-Participant Table</h3>
+                <p>The event-participant table shall represent a pairing of a user ID and an event ID to show that the specified user is attending the specified event.</p>
+                <div class="indent">
+                    <h4><span class="id">3.5.3.1</span>The event-participant table shall contain an event-participant ID as the primary key.</h4>
+                    <h4><span class="id">3.5.3.2</span>The participant table shall contain a user ID column, which shall have a foreign key relation to user table, user ID column.</h4>
+                    <h4><span class="id">3.5.3.3</span>The participant table shall contain an event id column, which shall have a foreign key relation to event table, event ID column.</h4>
+                    <h4><span class="id">3.5.3.4</span>The participant table shall contain an approval status column to indicate whether the participate has been approved to join the event or has merely been invited or requested to join. (PF 1.11.4, 1.11.5,
+                        1.12.1)
+                    </h4>
+                </div>
+            </div>
+            <div class="indent">
+                <h3><span class="id">3.5.4</span>Friendship Table</h3>
+                <p></p>
+                <div class="indent">
+                    <h4><span class="id">3.5.4.1</span>The friendship table shall contain a primary key consisting of the user1 and user 2 IDs (user1 ID, user2 ID). </h4>
+                    <h4><span class="id">3.5.4.2</span>The friendship table shall contain a user1 ID column, which shall have a foreign key relation to user table, user ID column.</h4>
+                    <h4><span class="id">3.5.4.3</span>The friendship table shall contain a user2 ID column, which shall have a foreign key relation to user table, user ID column.</h4>
+                </div>
             </div>
 
             <h2><span class="id">3.6</span> Design constraints</h2>
+            <a name="Design"></a>
             <p>The design constraints shall define the constraints for the “Local Activities” application.</p>
             <div class="indent">
-               <h3><span class="id">3.6.1</span>User-Input Constraints</h3>
-               <p>The user input constraints shall define the constraints for information input by a user. </p>
-               <div class="indent">
-                  <h4><span class="id">3.6.1.1</span>The system shall require that user text input is limited to 256
-                     characters
-                     for descriptions, ratings and profile text fields. [2.1.7] </h4>
-                  <h4><span class="id">3.6.1.2</span>The system shall require that user input is limited to 128 characters for
-                     messaging text fields [2.1.7]. </h4>
-                  <h4><span class="id">3.6.1.3</span>The system shall only allow utf-8 characters to be input in messaging
-                     text fields [2.1.7].</h4>
-               </div>
+                <h3><span class="id">3.6.1</span>User-Input Constraints</h3>
+                <p>The user input constraints shall define the constraints for information input by a user. </p>
+                <div class="indent">
+                    <h4><span class="id">3.6.1.1</span>The system shall require that user text input is limited to 256 characters for descriptions, ratings and profile text fields. [2.1.7] </h4>
+                    <h4><span class="id">3.6.1.2</span>The system shall require that user input is limited to 128 characters for messaging text fields [2.1.7]. </h4>
+                    <h4><span class="id">3.6.1.3</span>The system shall only allow utf-8 characters to be input in messaging text fields [2.1.7].</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <div class="indent">
-                  <h4><span class="id">3.6.1.4</span>The system shall only allow description text fields to be submitted while
-                     containing appropriate language, as defined. [2.1.7]</h4>
-                  <h4><span class="id">3.6.1.5</span>The system shall only allow profile text fields to be submitted while
-                     containing appropriate language, as defined. [2.1.7]</h4>
-                  <h4><span class="id">3.6.1.6</span>The system shall only allow rating text fields to be submitted while
-                     containing appropriate language, as defined. [2.1.7] </h4>
-                  <h4><span class="id">3.6.1.7</span>The system shall only allow message text fields to be submitted while
-                     containing appropriate language, as defined. [2.1.7]</h4>
-               </div>
+                <div class="indent">
+                    <h4><span class="id">3.6.1.4</span>The system shall only allow description text fields to be submitted while containing appropriate language, as defined. [2.1.7]</h4>
+                    <h4><span class="id">3.6.1.5</span>The system shall only allow profile text fields to be submitted while containing appropriate language, as defined. [2.1.7]</h4>
+                    <h4><span class="id">3.6.1.6</span>The system shall only allow rating text fields to be submitted while containing appropriate language, as defined. [2.1.7] </h4>
+                    <h4><span class="id">3.6.1.7</span>The system shall only allow message text fields to be submitted while containing appropriate language, as defined. [2.1.7]</h4>
+                </div>
 
-               <h3><span class='id'>3.6.3</span>Account Constraints</h3>
-               <p>The Account Constraints shall define the constraints for account creation. </p>
-               <div class="indent">
-                  <h4><span class="id">3.6.3.1</span>The system shall limit account creation to one Commercial User or one
-                     Consumer User account per one Facebook account. [2.1.3]</h4>
-                  <h4><span class="id">3.6.3.2</span>The system shall limit account creation to one Commercial User or one
-                     Consumer User account per one Google account. [2.1.3]</h4>
-                  <h4><span class="id">3.6.3.3</span>The system shall limit account creation to one Commercial User or one
-                     Consumer User account per one phone number. [2.1.3] </h4>
-               </div>
+                <h3><span class='id'>3.6.3</span>Account Constraints</h3>
+                <p>The Account Constraints shall define the constraints for account creation. </p>
+                <div class="indent">
+                    <h4><span class="id">3.6.3.1</span>The system shall limit account creation to one Commercial User or one Consumer User account per one Facebook account. [2.1.3]</h4>
+                    <h4><span class="id">3.6.3.2</span>The system shall limit account creation to one Commercial User or one Consumer User account per one Google account. [2.1.3]</h4>
+                    <h4><span class="id">3.6.3.3</span>The system shall limit account creation to one Commercial User or one Consumer User account per one phone number. [2.1.3] </h4>
+                </div>
 
             </div>
 
             <h2><span class="id">3.7</span> Software system attributes</h2>
+            <a name="System"></a>
             <p>Requirements that don’t fit neatly in a single component.</p>
             <div class="indent">
-               <h3><span class="id">3.7.1</span>Reliability - Specify the factors required to establish the required reliability of the software system at time of delivery.</h3>
-               <div class="indent">
-                  <h4><span class="id">3.7.1.1</span>Applications Shall not crash</h4>
-                  <h4><span class="id">3.7.1.2</span>System to verify if information is correct on server side and the application side.</h4>
+                <h3><span class="id">3.7.1</span>Reliability - Specify the factors required to establish the required reliability of the software system at time of delivery.</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.1.1</span>Applications Shall not crash</h4>
+                    <h4><span class="id">3.7.1.2</span>System to verify if information is correct on server side and the application side.</h4>
 
-               </div>
+                </div>
 
-               <h3><span class='id'>3.7.2</span>Security</h3>
-               <div class="indent">
-                  <h4><span class="id">3.7.2.1</span>Password protection and encryption</h4>
-                  <div class="indent">
-                     <h5><span class="id">3.7.2.1.1</span>Facial Recognition</h5>
-                     <h5><span class="id">3.7.2.1.2</span>Login and account creation</h5>
-                     <div class="indent">
-                        <h6><span class="id">3.7.2.1.2.1</span>End User information shall only be available to those who should have access to it</p>
-                           <h6><span class="id">3.7.2.1.2.2</span>On account creation end users shall be required to supply gender, age, etc.</h6>
-                     </div>
-                  </div>
-                  <h4><span class="id">3.7.2.2</span>History Database and Saved Events</h4>
-                  <div class="indent">
-                     <h5><span class="id">3.7.2.2.1</span>Events and History shall be saved on a database</h5>
-                  </div>
-                  <h4><span class="id">3.7.2.3</span>Assign certain functions to different modules</h4>
-                  <h4><span class="id">3.7.2.4</span>Profile Blocking</h4>
-                  <div class="indent">
-                     <h5><span class="id">3.7.2.4.1</span>The end user shall be allowed to block messages from another end user</h5>
-                  </div>
-                  <h4><span class="id">3.7.2.5</span>Check data integrity for critical variables</h4>
-               </div>
+                <h3><span class='id'>3.7.2</span>Security</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.2.1</span>Password protection and encryption</h4>
+                    <div class="indent">
+                        <h5><span class="id">3.7.2.1.1</span>Facial Recognition</h5>
+                        <h5><span class="id">3.7.2.1.2</span>Login and account creation</h5>
+                        <div class="indent">
+                            <h6><span class="id">3.7.2.1.2.1</span>End User information shall only be available to those who should have access to it</p>
+                                <h6><span class="id">3.7.2.1.2.2</span>On account creation end users shall be required to supply gender, age, etc.</h6>
+                        </div>
+                    </div>
+                    <h4><span class="id">3.7.2.2</span>History Database and Saved Events</h4>
+                    <div class="indent">
+                        <h5><span class="id">3.7.2.2.1</span>Events and History shall be saved on a database</h5>
+                    </div>
+                    <h4><span class="id">3.7.2.3</span>Assign certain functions to different modules</h4>
+                    <h4><span class="id">3.7.2.4</span>Profile Blocking</h4>
+                    <div class="indent">
+                        <h5><span class="id">3.7.2.4.1</span>The end user shall be allowed to block messages from another end user</h5>
+                    </div>
+                    <h4><span class="id">3.7.2.5</span>Check data integrity for critical variables</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
             <div class="indent">
-               <div class="indent">
-                  <h4><span class="id">3.7.2.6</span>Data privacy</h4>
-                  <div class="indent">
-                     <h5><span class="id">3.7.2.6.1</span>The end user’s data shall be well hidden from other end users and encrypted</h5>
-                  </div>
-               </div>
+                <div class="indent">
+                    <h4><span class="id">3.7.2.6</span>Data privacy</h4>
+                    <div class="indent">
+                        <h5><span class="id">3.7.2.6.1</span>The end user’s data shall be well hidden from other end users and encrypted</h5>
+                    </div>
+                </div>
             </div>
             <div class="indent">
-               <h3><span class="id">3.7.4</span>Maintainability</h3>
-               <div class="indent">
-                  <h4><span class="id">3.7.4.1</span>User Accounts and business accounts shall be separate</h4>
-                  <h4><span class="id">3.7.4.2</span>A reporting feature in order to report fake or scam accounts shall exist</h4>
-                  <h4><span class="id">3.7.4.3</span>There shall be extensive QA testing to ensure a minimal number of crashes upon us</h4>
-                  <h4><span class="id">3.7.4.4</span>There shall be a photo authentication to avoid fake accounts</h4>
-                  <h4><span class="id">3.7.4.5</span>The application shall utilize background threads to retrieve and store information</h4>
-                  <h4><span class="id">3.7.4.6</span>The application shall use error checking throughout the code to keep crashes to a minimum</h4>
-                  <h4><span class="id">3.7.4.7</span>The application shall utilize asynchronous server requests</h4>
-                  <h4><span class="id">3.7.4.8</span>The application shall use polymorphic code</h4>
-                  <h4><span class="id">3.7.4.9</span>The application shall be modular</h4>
-               </div>
+                <h3><span class="id">3.7.4</span>Maintainability</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.4.1</span>User Accounts and business accounts shall be separate</h4>
+                    <h4><span class="id">3.7.4.2</span>A reporting feature in order to report fake or scam accounts shall exist</h4>
+                    <h4><span class="id">3.7.4.3</span>There shall be extensive QA testing to ensure a minimal number of crashes upon us</h4>
+                    <h4><span class="id">3.7.4.4</span>There shall be a photo authentication to avoid fake accounts</h4>
+                    <h4><span class="id">3.7.4.5</span>The application shall utilize background threads to retrieve and store information</h4>
+                    <h4><span class="id">3.7.4.6</span>The application shall use error checking throughout the code to keep crashes to a minimum</h4>
+                    <h4><span class="id">3.7.4.7</span>The application shall utilize asynchronous server requests</h4>
+                    <h4><span class="id">3.7.4.8</span>The application shall use polymorphic code</h4>
+                    <h4><span class="id">3.7.4.9</span>The application shall be modular</h4>
+                </div>
 
-               <h3><span class="id">3.7.5</span>Portability</h3>
-               <div class="indent">
-                  <h4><span class="id">3.7.5.1</span>The system shall store all info on a server.</h4>
-                  <h4><span class="id">3.7.5.2</span>The system shall access the server through application</h4>
-                  <h4><span class="id">3.7.5.3</span>Use of a proven portable language</h4>
-                  <h4><span class="id">3.7.5.4</span>Use of a particular compiler or language subset</h4>
-                  <h4><span class="id">3.7.5.5</span>The system shall run on android and IOS.</h4>
-               </div>
+                <h3><span class="id">3.7.5</span>Portability</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.5.1</span>The system shall store all info on a server.</h4>
+                    <h4><span class="id">3.7.5.2</span>The system shall access the server through application</h4>
+                    <h4><span class="id">3.7.5.3</span>Use of a proven portable language</h4>
+                    <h4><span class="id">3.7.5.4</span>Use of a particular compiler or language subset</h4>
+                    <h4><span class="id">3.7.5.5</span>The system shall run on android and IOS.</h4>
+                </div>
+
+            </div>
+            <h2><span class="id">3.8</span> Supporting Information</h2>
+            <a name="Info"></a>
+            <div class="indent">
+                <p>Kitchen sink, Summary of the Elicitation data</p>
+                <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
+                <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
+                <div class="indent">
+                    <h4><span class="id">3.8.2.1</span>The developer shall utilize salts to encrypt end user passwords and secure information.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <h1><span class="id">4</span>VERIFICATION</h1>
+        <a name="Verification"></a>
+        <div class="indent">
+            <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
+            <p>All performance requierments must be verified.</p>
+            <div class="indent">
+                <h3><span class="id">4.4.1</span>Commercial:</h3>
+                <div class="indent">
+                    <h4><span class="id">4.4.1.1 </span>Verify that the system shall allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
+                    <h4><span class="id">4.4.1.2 </span>Verify that the system shall allow the number of events to be supported. (Req. 3.4.1.2) </h4>
+                    <h4><span class="id">4.4.1.3 </span>Verify that the system shall accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
+                    <h4><span class="id">4.4.1.4 </span>Verify that the system shall pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
+                </div>
+            </div>
+            <h3><span class="id">4.4.2</span>Consumer:</h3>
+            <div class="indent">
+                <h4><span class="id">4.4.2.1 </span>Verify that the system shall accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.3 </span>Verify that the application shall launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
+            </div>
+
+            <h2><span class="id">4.6</span> Design constraints Verification</h2>
+            <p>The design constraints verification shall define the verification for the constraints that pertain to the “Local Activities” application. </p>
+            <div class="indent">
+
+                <h3><span class="id">4.6.1</span>User-Input Constraints Verification</h3>
+                <p>The user input constraints verification shall define the verification for the constraints that pertain to information input by a user. </p>
+                <div class="indent">
+                    <h4><span class="id">4.6.1.1</span>Verify that the system does not allow the user to input more than 256 characters for descriptions, ratings and profile text fields by testing each of these fields and attempting to input 257 or more characters.</h4>
+                    <h4><span class="id">4.6.1.2</span>Verify that the system does not allow the user to input more than 128 characters for messaging text fields by testing these fields and attempting to input 129 or more characters.
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+                <div class="indent">
+                    <h4><span class="id">4.6.1.3</span>Verify that the system shall only allow utf-8 characters to be input in messaging text fields by testing these fields and attempting to input images and files [2.1.7]. </h4>
+                    <h4><span class="id">4.6.1.4</span>Verify that the system shall only allow description text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                        to be excluded and testing this list in each description field by attempting to submit the field while containing the words from the list.</h4>
+                    <h4><span class="id">4.6.1.5</span>Verify that the system shall only allow profiles text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words to
+                        be excluded and testing this list in each profile text field by attempting to submit the field while containing the words from the list. </h4>
+                    <h4><span class="id">4.6.1.6</span>Verify that the system shall only allow ratings text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words to be
+                        excluded and testing this list in each ratings text field by attempting to submit the field while containing the words from the list.</h4>
+                    <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow messaging text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words to
+                        be excluded and testing this list in each messaging text field by attempting to submit the field while containing the words from the list. </h4>
+                </div>
+
+                <h3><span class='id'>3.7.2</span>Security</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.2.1</span>Password protection and encryption</h4>
+                    <div class="indent">
+                        <h5>Photo Authentication</h5>
+                        <div class="indent">
+                            <h6>Commercial user shall be able to login using facial recognition</h6>
+                            <h6>This will utilize apple facial recognition software</h6>
+                        </div>
+                        <h5>Account Information</h5>
+                        <div class="indent">
+                            <h6>End User information shall only be available to those who should have access to it</p>
+                                <h6>On account creation end users shall be required to supply gender, age, etc.</h6>
+                        </div>
+                    </div>
+                    <h4><span class="id">3.7.2.2</span>History Database</h4>
+                    <div class="indent">
+                        <h5>History shall be saved on a database</h5>
+                    </div>
+                    <h4><span class="id">3.7.2.3</span>Profile Blocking</h4>
+                    <div class="indent">
+                        <h5>The end user shall be allowed to block messages from another end user</h5>
+                    </div>
+                    <h4><span class="id">3.7.2.4</span>Check data integrity for critical variables</h4>
+                    <h4><span class="id">3.7.2.5</span>Data privacy</h4>
+                    <div class="indent">
+                        <h5>The end user’s data shall be hidden from other end users and encrypted</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="indent">
+                <h3><span class="id">3.7.3</span>Maintainability</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.3.1</span>User Accounts and business accounts shall be separate</h4>
+                    <h4><span class="id">3.7.3.2</span>A reporting feature that will allow for users to send a report that can then be used to determine if an account is a spam or fake account.</h4>
+                    <div class="indent">
+                        <h5>After an account is reported if it meets the required threshold it will flag the account so an administrator of the app can review the account</h5>
+                    </div>
+                </div>
+
+                <h3><span class="id">3.7.4</span>Portability</h3>
+                <div class="indent">
+                    <h4><span class="id">3.7.4.1</span>The system shall store the information on a server. [1.3.1.1]</h4>
+                    <h4><span class="id">3.7.4.2</span>The user shall access the information through the application. [1.3.1.1]</h4>
+                    <h4><span class="id">3.7.4.3</span>The application shall use Java for Android and Swift for iOS.</h4>
+                    <h4><span class="id">3.7.4.4</span>The application shall run on Android, and iOS. [1.3.1.3]</h4>
+                </div>
 
             </div>
             <h2><span class="id">3.8</span> Supporting Information</h2>
             <div class="indent">
-               <p>Kitchen sink, Summary of the Elicitation data</p>
-               <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
-               <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
-               <div class="indent">
-                  <h4><span class="id">3.8.2.1</span>The developer shall utilize salts to encrypt end user passwords and secure information.</h4>
-               </div>
+                <p>Kitchen sink, Summary of the Elicitation data</p>
+                <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
+                <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
+                <div class="indent">
+                    <h4><span class="id">3.8.2.1</span>The application shall utilize salts to encrypt end user passwords and secure information.</h4>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="page">
-         <h1><span class="id">4</span>VERIFICATION</h1>
-         <div class="indent">
+        </div>
+        <h1><span class="id">4</span>VERIFICATION</h1>
+        <div class="indent">
             <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
             <p>All performance requierments must be verified.</p>
             <div class="indent">
-               <h3><span class="id">4.4.1</span>Commercial:</h3>
-               <div class="indent">
-                  <h4><span class="id">4.4.1.1 </span>Verify that the system shall allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
-                  <h4><span class="id">4.4.1.2 </span>Verify that the system shall allow the number of events to be supported. (Req. 3.4.1.2) </h4>
-                  <h4><span class="id">4.4.1.3 </span>Verify that the system shall accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
-                  <h4><span class="id">4.4.1.4 </span>Verify that the system shall pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
-               </div>
+                <h3><span class="id">4.4.1</span>Commercial:</h3>
+                <div class="indent">
+                    <h4><span class="id">4.4.1.1 </span>Verify that the system shall allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
+                    <h4><span class="id">4.4.1.2 </span>Verify that the system shall allow the number of events to be supported. (Req. 3.4.1.2) </h4>
+                    <h4><span class="id">4.4.1.3 </span>Verify that the system shall accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
+                    <h4><span class="id">4.4.1.4 </span>Verify that the system shall pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
+                </div>
             </div>
             <h3><span class="id">4.4.2</span>Consumer:</h3>
             <div class="indent">
-               <h4><span class="id">4.4.2.1 </span>Verify that the system shall accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
-               <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
-               <h4><span class="id">4.4.2.3 </span>Verify that the application shall launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
-               <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.1 </span>Verify that the system shall accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.3 </span>Verify that the application shall launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
+                <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
+            </div>
+            <h3><span class='id'>4.6.3</span>Account Constraints Verification</h3>
+            <p>The account constraints verification shall define the verification for the constraints that pertain to account creation. </p>
+            <div class="indent">
+                <h4><span class="id">4.6.3.1</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Facebook account by attempting to create a new “Local Activities” account with a previously
+                    used account. [2.1.3]</h4>
+                <h4><span class="id">4.6.3.2</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Google account by attempting to create a new “Local Activities” account with a previously used
+                    account. [2.1.3] </h4>
+                <h4><span class="id">4.6.3.3</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one phone number by attempting to create a new “Local Activities” account with a previously used
+                    phone number. [2.1.3]</h4>
             </div>
 
-            <h2><span class="id">4.6</span> Design constraints Verification</h2>
-            <p>The design constraints verification shall define the verification for the constraints that pertain to the
-               “Local Activities” application. </p>
-            <div class="indent">
-
-               <h3><span class="id">4.6.1</span>User-Input Constraints Verification</h3>
-               <p>The user input constraints verification shall define the verification for the constraints that pertain to
-                  information input by a user. </p>
-               <div class="indent">
-                  <h4><span class="id">4.6.1.1</span>Verify that the system does not allow the user to input more than 256
-                     characters for descriptions, ratings and profile text fields by testing each of these fields and
-                     attempting to input 257 or more characters.</h4>
-                  <h4><span class="id">4.6.1.2</span>Verify that the system does not allow the user to input more than 128
-                     characters for messaging text fields by testing these fields and attempting to input 129 or more
-                     characters.</h4>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
-            <div class="indent">
-               <div class="indent">
-                  <h4><span class="id">4.6.1.3</span>Verify that the system shall only allow utf-8 characters to be input in
-                     messaging text fields by testing these fields and attempting to input images and files [2.1.7]. </h4>
-                  <h4><span class="id">4.6.1.4</span>Verify that the system shall only allow description text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each description field by
-                     attempting to submit the field while containing the words from the list.</h4>
-                  <h4><span class="id">4.6.1.5</span>Verify that the system shall only allow profiles text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each profile text field by
-                     attempting to submit the field while containing the words from the list. </h4>
-                  <h4><span class="id">4.6.1.6</span>Verify that the system shall only allow ratings text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each ratings text field by
-                     attempting to submit the field while containing the words from the list.</h4>
-                  <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow messaging text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each messaging text field by
-                     attempting to submit the field while containing the words from the list. </h4>
-               </div>
-
-            <h3><span class='id'>3.7.2</span>Security</h3>
-            <div class="indent">
-            <h4><span class="id">3.7.2.1</span>Password protection and encryption</h4>
-                <div class="indent">
-                <h5>Photo Authentication</h5>
-                <div class="indent">
-                    <h6>Commercial user shall be able to login using facial recognition</h6>
-                    <h6>This will utilize apple facial recognition software</h6>
-                </div>
-                <h5>Account Information</h5>
-                <div class="indent">
-                    <h6>End User information shall only be available to those who should have access to it</p>
-                    <h6>On account creation end users shall be required to supply gender, age, etc.</h6>
-                </div>
-            </div>
-            <h4><span class="id">3.7.2.2</span>History Database</h4>
-            <div class="indent">
-                <h5>History shall be saved on a database</h5>
-            </div>
-            <h4><span class="id">3.7.2.3</span>Profile Blocking</h4>
-            <div class="indent">
-                <h5>The end user shall be allowed to block messages from another end user</h5>
-            </div>
-            <h4><span class="id">3.7.2.4</span>Check data integrity for critical variables</h4>
-            <h4><span class="id">3.7.2.5</span>Data privacy</h4>
-            <div class="indent">
-                <h5>The end user’s data shall be hidden from other end users and encrypted</h5>
-            </div>
         </div>
-    </div>
-    <div class="indent">
-        <h3><span class="id">3.7.3</span>Maintainability</h3>
-        <div class="indent">
-            <h4><span class="id">3.7.3.1</span>User Accounts and business accounts shall be separate</h4>
-            <h4><span class="id">3.7.3.2</span>A reporting feature that will allow for users to send a report that can then be used to determine if an account is a spam or fake account.</h4>
-            <div class="indent">
-                <h5>After an account is reported if it meets the required threshold it will flag the account so an administrator of the app can review the account</h5>
-            </div>
-        </div>
-
-        <h3><span class="id">3.7.4</span>Portability</h3>
-        <div class="indent">
-            <h4><span class="id">3.7.4.1</span>The system shall store the information on a server. [1.3.1.1]</h4>
-            <h4><span class="id">3.7.4.2</span>The user shall access the information through the application. [1.3.1.1]</h4>
-            <h4><span class="id">3.7.4.3</span>The application shall use Java for Android and Swift for iOS.</h4>
-            <h4><span class="id">3.7.4.4</span>The application shall run on Android, and iOS. [1.3.1.3]</h4>
-        </div>
-
-    </div>
-    <h2><span class="id">3.8</span> Supporting Information</h2>
-    <div class="indent">
-        <p>Kitchen sink, Summary of the Elicitation data</p>
-        <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
-        <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
-        <div class="indent">
-            <h4><span class="id">3.8.2.1</span>The application shall utilize salts to encrypt end user passwords and secure information.</h4>
-        </div>
-    </div>
-    </div>
-    <h1><span class="id">4</span>VERIFICATION</h1>
-    <div class="indent">
-        <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
-        <p>All performance requierments must be verified.</p>
-        <div class="indent">
-            <h3><span class="id">4.4.1</span>Commercial:</h3>
-            <div class="indent">
-                <h4><span class="id">4.4.1.1 </span>Verify that the system shall allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
-                <h4><span class="id">4.4.1.2 </span>Verify that the system shall allow the number of events to be supported. (Req. 3.4.1.2) </h4>
-                <h4><span class="id">4.4.1.3 </span>Verify that the system shall accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
-                <h4><span class="id">4.4.1.4 </span>Verify that the system shall pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
-            </div>
-        </div>
-        <h3><span class="id">4.4.2</span>Consumer:</h3>
-        <div class="indent">
-            <h4><span class="id">4.4.2.1 </span>Verify that the system shall accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
-            <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
-            <h4><span class="id">4.4.2.3 </span>Verify that the application shall launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
-            <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
-        </div>
-               <h3><span class='id'>4.6.3</span>Account Constraints Verification</h3>
-               <p>The account constraints verification shall define the verification for the constraints that pertain to
-                  account creation. </p>
-               <div class="indent">
-                  <h4><span class="id">4.6.3.1</span>Verify that the system shall limit account creation to one Commercial
-                     User or one Consumer User account per one Facebook account by attempting to create a new “Local
-                     Activities” account with a previously used account. [2.1.3]</h4>
-                  <h4><span class="id">4.6.3.2</span>Verify that the system shall limit account creation to one Commercial
-                     User or one Consumer User account per one Google account by attempting to create a new “Local Activities”
-                     account with a previously used account. [2.1.3] </h4>
-                  <h4><span class="id">4.6.3.3</span>Verify that the system shall limit account creation to one Commercial
-                     User or one Consumer User account per one phone number by attempting to create a new “Local Activities”
-                     account with a previously used phone number. [2.1.3]</h4>
-               </div>
-
-            </div>
-
-            <h2>4.7 Software System Attributes Verification</h2>
-            <div class="indent">
-               <h3><span class="id">4.7.3</span>Security</h3>
-               <div class="indent">
-                  <h4><span class="id">4.7.3.1</span>The system fails if it doesn’t have a secure method to store user information. Otherwise it succeeds.</h4>
-
-                  <h4><span class="id">4.7.3.2</span>Verify that the end user shall be able to create their own account and supply important information </h4>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
-            <div class="indent">
-               <div class="indent">
-                  <h4><span class="id">4.7.3.3</span>Verify that history information is stored in a database</h4>
-                  <h4><span class="id">4.7.3.4</span>Verify that end users can block others</h4>
-                  <h4><span class="id">4.7.3.5</span>Verify that certain end user data is hidden from other users</h4>
-               </div>
-               <h3><span class="id">4.7.5</span>Security</h3>
-               <div class="indent">
-                  <h4><span class="id">4.7.5.1</span> Verify that user accounts and commercial accounts have separate logins</h4>
-
-                  <h4><span class="id">4.7.5.2</span>Verify that a reporting feature exists in order to report fake or scam accounts </h4>
-                  <h4><span class="id">4.7.5.3</span>Verify that is done extensive QA testing to ensure a minimal number of crashes upon use </h4>
-                  <h4><span class="id">4.7.5.4</span>Verify that there is photo authentication in order to avoid fake accounts</h4>
-                  <h4><span class="id">4.7.5.5</span>Verify that the application utilizes background threads to retrieve and store information</h4>
-                  <h4><span class="id">4.7.5.6</span>Verify that the application uses error checking throughout the code to keep crashes to a minimum</h4>
-                  <h4><span class="id">4.7.5.7</span>Verify that the application utilizes asynchronous server requests </h4>
-                  <h4><span class="id">4.7.5.8</span>Verify that the application uses polymorphic code</h4>
-                  <h4><span class="id">4.7.5.9</span>Verify that the application is modular</h4>
 
         <h2>4.7 Software System Attributes Verification</h2>
         <div class="indent">
             <h3><span class="id">4.7.3</span>Security</h3>
             <div class="indent">
                 <h4><span class="id">4.7.3.1</span>The system fails if it doesn’t have a secure method to store user information. Otherwise it succeeds.</h4>
-                
-                    <h4><span class="id">4.7.3.2</span>Verify that the end user shall be able to create their own account and supply important information </h4>
+
+                <h4><span class="id">4.7.3.2</span>Verify that the end user shall be able to create their own account and supply important information </h4>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="page">
+        <div class="indent">
+            <div class="indent">
+                <div class="indent">
                     <h4><span class="id">4.7.3.3</span>Verify that history information is stored in a database</h4>
                     <h4><span class="id">4.7.3.4</span>Verify that end users can block others</h4>
                     <h4><span class="id">4.7.3.5</span>Verify that certain end user data is hidden from other users</h4>
-            </div>
-            <h3><span class="id">4.7.5</span>Security</h3>
-            <div class="indent">
-                <h4><span class="id">4.7.5.1</span> Verify that user accounts and commercial accounts have separate logins</h4>
-                
+                </div>
+                <h3><span class="id">4.7.5</span>Security</h3>
+                <div class="indent">
+                    <h4><span class="id">4.7.5.1</span> Verify that user accounts and commercial accounts have separate logins</h4>
+
                     <h4><span class="id">4.7.5.2</span>Verify that a reporting feature exists in order to report fake or scam accounts </h4>
                     <h4><span class="id">4.7.5.3</span>Verify that is done extensive QA testing to ensure a minimal number of crashes upon use </h4>
                     <h4><span class="id">4.7.5.4</span>Verify that there is photo authentication in order to avoid fake accounts</h4>
@@ -1065,78 +1202,106 @@
                     <h4><span class="id">4.7.5.7</span>Verify that the application utilizes asynchronous server requests </h4>
                     <h4><span class="id">4.7.5.8</span>Verify that the application uses polymorphic code</h4>
                     <h4><span class="id">4.7.5.9</span>Verify that the application is modular</h4>
-            
-            </div>
-            <h3><span class="id">4.7.6</span>Portability</h3>
-            <div class="indent">
-                <h4><span class="id">4.7.6.1</span>Verify that the system stores all the information on a server.</h4>
-                <h4><span class="id">4.7.6.2</span>Verify that the user accesses the server through the application.</h4>
-                <h4><span class="id">4.7.6.3</span>Verify that the application has no bugs in the Java for Android and Swift for iOS.</h4>
-                <h4><span class="id">4.7.6.4</span>Verify that the system runs on both Android, and iOS. </h4>
-            </div>
-        </div>
-        <h2><span class="id">4.8 Supporting Information Verification</span></h2>
-        
-    </div>
-    <h1><span class="id">6</span>APPENDICES</h1>
+
+                    <h2>4.7 Software System Attributes Verification</h2>
+                    <div class="indent">
+                        <h3><span class="id">4.7.3</span>Security</h3>
+                        <div class="indent">
+                            <h4><span class="id">4.7.3.1</span>The system fails if it doesn’t have a secure method to store user information. Otherwise it succeeds.</h4>
+
+                            <h4><span class="id">4.7.3.2</span>Verify that the end user shall be able to create their own account and supply important information </h4>
+                            <h4><span class="id">4.7.3.3</span>Verify that history information is stored in a database</h4>
+                            <h4><span class="id">4.7.3.4</span>Verify that end users can block others</h4>
+                            <h4><span class="id">4.7.3.5</span>Verify that certain end user data is hidden from other users</h4>
+                        </div>
+                        <h3><span class="id">4.7.5</span>Security</h3>
+                        <div class="indent">
+                            <h4><span class="id">4.7.5.1</span> Verify that user accounts and commercial accounts have separate logins</h4>
+
+                            <h4><span class="id">4.7.5.2</span>Verify that a reporting feature exists in order to report fake or scam accounts </h4>
+                            <h4><span class="id">4.7.5.3</span>Verify that is done extensive QA testing to ensure a minimal number of crashes upon use </h4>
+                            <h4><span class="id">4.7.5.4</span>Verify that there is photo authentication in order to avoid fake accounts</h4>
+                            <h4><span class="id">4.7.5.5</span>Verify that the application utilizes background threads to retrieve and store information</h4>
+                            <h4><span class="id">4.7.5.6</span>Verify that the application uses error checking throughout the code to keep crashes to a minimum</h4>
+                            <h4><span class="id">4.7.5.7</span>Verify that the application utilizes asynchronous server requests </h4>
+                            <h4><span class="id">4.7.5.8</span>Verify that the application uses polymorphic code</h4>
+                            <h4><span class="id">4.7.5.9</span>Verify that the application is modular</h4>
+
+                        </div>
+                        <h3><span class="id">4.7.6</span>Portability</h3>
+                        <div class="indent">
+                            <h4><span class="id">4.7.6.1</span>Verify that the system stores all the information on a server.</h4>
+                            <h4><span class="id">4.7.6.2</span>Verify that the user accesses the server through the application.</h4>
+                            <h4><span class="id">4.7.6.3</span>Verify that the application has no bugs in the Java for Android and Swift for iOS.</h4>
+                            <h4><span class="id">4.7.6.4</span>Verify that the system runs on both Android, and iOS. </h4>
+                        </div>
+                    </div>
+                    <h2><span class="id">4.8 Supporting Information Verification</span></h2>
+
+                </div>
+                <h1><span class="id">6</span>APPENDICES</h1>
+                <div class="indent">
+                    <h2><span class="id">6.1</span> Assumptions and Dependencies</h2>
+                    <p>Assumptions and Dependencies contains basic assumptions about what the app will have.</p>
+                    <div class="indent">
+                        <h4><span class="id">6.1.1</span>When an account is created, it can be chosen as a business or consumer account.</h4>
+                        <h4><span class="id">6.1.2</span>After an account is created, it can change to be a business or consumer account.</h4>
+                        <h4><span class="id">6.1.3</span>There will be options for what kind of activity will be created.</h4>
+                        <h4><span class="id">6.1.4</span>All third-party programs will be functional when this app is created.</h4>
+                        <h4><span class="id">6.1.5</span>Users will be connected and able to see each other's activities.</h4>
+                        <h4><span class="id">6.1.6</span>A server/cloud storage will be provided to save accounts information.</h4>
+                        <h4><span class="id">6.1.7</span>After an event happens, there will be an events history.</h4>
+                        <h4><span class="id">6.1.8</span>It is assumed that when a user creates an account, a name and email address will be required.</h4>
+                    </div>
+                    <h2><span class="id">6.2</span>Definitions and Abbreviations</h2>
+                    <div class="indent">
+                        <div class="indent">
+                        </div>
+                        <p>TLAs’ home</p>
+                    </div>
+                </div>
+</body>
+</div>
+<h3><span class="id">4.7.6</span>Portability</h3>
+<div class="indent">
+    <h4><span class="id">4.7.6.1</span>Verify that the system stores all info on a server</h4>
+    <h4><span class="id">4.7.6.2</span>Verify that the system accesses the server through application.</h4>
+    <h4><span class="id">4.7.6.3</span>Verify that the system runs on both android, and IOS. </h4>
+</div>
+</div>
+<h2><span class="id">4.8 Supporting Information Verification</span></h2>
+
+</div>
+<h1><span class="id">6</span>APPENDICES</h1>
+<a name="Appendices"></a>
+<div class="indent">
+    <h2><span class="id">6.1</span> Assumptions and Dependencies</h2>
+    <a name="Assumptions"></a>
+    <p>Assumptions and Dependencies contains basic assumptions about what the app will have.</p>
     <div class="indent">
-        <h2><span class="id">6.1</span> Assumptions and Dependencies</h2>
-        <p>Assumptions and Dependencies contains basic assumptions about what the app will have.</p>
+        <h3><span class="id">6.1.1</span>When an account is created, it can be chosen as a business or consumer account.</h3>
+        <h3><span class="id">6.1.2</span>After an account is created, it can change to be a business or consumer account.</h3>
+        <h3><span class="id">6.1.3</span>There will be options for what kind of activity will be created.</h3>
+    </div>
+</div>
+</div>
+<div class="page">
+    <div class="indent">
         <div class="indent">
-            <h4><span class="id">6.1.1</span>When an account is created, it can be chosen as a business or consumer account.</h4>
-            <h4><span class="id">6.1.2</span>After an account is created, it can change to be a business or consumer account.</h4>
-            <h4><span class="id">6.1.3</span>There will be options for what kind of activity will be created.</h4>
-            <h4><span class="id">6.1.4</span>All third-party programs will be functional when this app is created.</h4>
-            <h4><span class="id">6.1.5</span>Users will be connected and able to see each other's activities.</h4>
-            <h4><span class="id">6.1.6</span>A server/cloud storage will be provided to save accounts information.</h4>
-            <h4><span class="id">6.1.7</span>After an event happens, there will be an events history.</h4>
-            <h4><span class="id">6.1.8</span>It is assumed that when a user creates an account, a name and email address will be required.</h4>
+            <h3><span class="id">6.1.4</span>All third-party programs will be functional when this app is created.</h3>
+            <h3><span class="id">6.1.5</span>Users will be connected and able to see each other's activities.</h3>
+            <h3><span class="id">6.1.6</span>A server/cloud storage will be provided to save accounts information.</h3>
+            <h3><span class="id">6.1.7</span>After an event happens, there will be an events history.</h3>
+            <h3><span class="id">6.1.8</span>It is assumed that when a user creates an account, a name and email address will be required.</h3>
         </div>
         <h2><span class="id">6.2</span>Definitions and Abbreviations</h2>
+        <a name="Definitions"></a>
         <div class="indent">
             <div class="indent">
             </div>
             <p>TLAs’ home</p>
         </div>
     </div>
-</body>
-               </div>
-               <h3><span class="id">4.7.6</span>Portability</h3>
-               <div class="indent">
-                  <h4><span class="id">4.7.6.1</span>Verify that the system stores all info on a server</h4>
-                  <h4><span class="id">4.7.6.2</span>Verify that the system accesses the server through application.</h4>
-                  <h4><span class="id">4.7.6.3</span>Verify that the system runs on both android, and IOS. </h4>
-               </div>
-            </div>
-            <h2><span class="id">4.8 Supporting Information Verification</span></h2>
+    </body>
 
-         </div>
-         <h1><span class="id">6</span>APPENDICES</h1>
-         <div class="indent">
-            <h2><span class="id">6.1</span> Assumptions and Dependencies</h2>
-            <p>Assumptions and Dependencies contains basic assumptions about what the app will have.</p>
-            <div class="indent">
-               <h3><span class="id">6.1.1</span>When an account is created, it can be chosen as a business or consumer account.</h3>
-               <h3><span class="id">6.1.2</span>After an account is created, it can change to be a business or consumer account.</h3>
-               <h3><span class="id">6.1.3</span>There will be options for what kind of activity will be created.</h3>
-            </div>
-         </div>
-      </div>
-      <div class="page">
-         <div class="indent">
-            <div class="indent">
-               <h3><span class="id">6.1.4</span>All third-party programs will be functional when this app is created.</h3>
-               <h3><span class="id">6.1.5</span>Users will be connected and able to see each other's activities.</h3>
-               <h3><span class="id">6.1.6</span>A server/cloud storage will be provided to save accounts information.</h3>
-               <h3><span class="id">6.1.7</span>After an event happens, there will be an events history.</h3>
-               <h3><span class="id">6.1.8</span>It is assumed that when a user creates an account, a name and email address will be required.</h3>
-            </div>
-            <h2><span class="id">6.2</span>Definitions and Abbreviations</h2>
-            <div class="indent">
-               <div class="indent">
-               </div>
-               <p>TLAs’ home</p>
-            </div>
-         </div>
-   </body>
 </html>
