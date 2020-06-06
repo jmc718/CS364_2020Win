@@ -1062,125 +1062,158 @@
                     </h4>
                 </div>
             </div>
+            <<<<<<< HEAD </div>
         </div>
-    </div>
-    <div class="page">
-        <div class="indent">
+        <div class="page">
             <div class="indent">
                 <div class="indent">
-                    <h4><span class="id">4.6.1.3</span>Verify that the system shall only allow utf-8 characters to be input in messaging text fields by testing these fields and attempting to input images and files [2.1.7]. </h4>
-                    <h4><span class="id">4.6.1.4</span>Verify that the system shall only allow description text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
-                        to be excluded and testing this list in each description field by attempting to submit the field while containing the words from the list.</h4>
-                    <h4><span class="id">4.6.1.5</span>Verify that the system shall only allow profiles text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words to
-                        be excluded and testing this list in each profile text field by attempting to submit the field while containing the words from the list. </h4>
-                    <h4><span class="id">4.6.1.6</span>Verify that the system shall only allow ratings text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words to be
-                        excluded and testing this list in each ratings text field by attempting to submit the field while containing the words from the list.</h4>
-                    <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow messaging text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words to
-                        be excluded and testing this list in each messaging text field by attempting to submit the field while containing the words from the list. </h4>
-                </div>
-
-                <h3><span class='id'>3.7.2</span>Security</h3>
-                <div class="indent">
-                    <h4><span class="id">3.7.2.1</span>Password protection and encryption</h4>
                     <div class="indent">
-                        <h5>Photo Authentication</h5>
+                        <h4><span class="id">4.6.1.3</span>Verify that the system shall only allow utf-8 characters to be input in messaging text fields by testing these fields and attempting to input images and files [2.1.7]. </h4>
+                        <h4><span class="id">4.6.1.4</span>Verify that the system shall only allow description text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each description field by attempting to submit the field while containing the words from the list.</h4>
+                        <h4><span class="id">4.6.1.5</span>Verify that the system shall only allow profiles text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each profile text field by attempting to submit the field while containing the words from the list. </h4>
+                        <h4><span class="id">4.6.1.6</span>Verify that the system shall only allow ratings text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each ratings text field by attempting to submit the field while containing the words from the list.</h4>
+                        <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow messaging text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each messaging text field by attempting to submit the field while containing the words from the list. </h4>
+                    </div>
+
+                    <h3><span class='id'>3.7.2</span>Security</h3>
+                    <div class="indent">
+                        <h4><span class="id">3.7.2.1</span>Password protection and encryption</h4>
                         <div class="indent">
-                            <h6>Commercial user shall be able to login using facial recognition</h6>
-                            <h6>This will utilize apple facial recognition software</h6>
+                            <h5>Photo Authentication</h5>
+                            <div class="indent">
+                                <h6>Commercial user shall be able to login using facial recognition</h6>
+                                <h6>This will utilize apple facial recognition software</h6>
+                            </div>
+                            <h5>Account Information</h5>
+                            <div class="indent">
+                                <h6>End User information shall only be available to those who should have access to it</p>
+                                    <h6>On account creation end users shall be required to supply gender, age, etc.</h6>
+                            </div>
                         </div>
-                        <h5>Account Information</h5>
+                        <h4><span class="id">3.7.2.2</span>History Database</h4>
                         <div class="indent">
-                            <h6>End User information shall only be available to those who should have access to it</p>
-                                <h6>On account creation end users shall be required to supply gender, age, etc.</h6>
+                            <h5>History shall be saved on a database</h5>
+                        </div>
+                        <h4><span class="id">3.7.2.3</span>Profile Blocking</h4>
+                        <div class="indent">
+                            <h5>The end user shall be allowed to block messages from another end user</h5>
+                        </div>
+                        <h4><span class="id">3.7.2.4</span>Check data integrity for critical variables</h4>
+                        <h4><span class="id">3.7.2.5</span>Data privacy</h4>
+                        <div class="indent">
+                            <h5>The end user’s data shall be hidden from other end users and encrypted</h5>
                         </div>
                     </div>
-                    <h4><span class="id">3.7.2.2</span>History Database</h4>
+                </div>
+                <div class="indent">
+                    <h3><span class="id">3.7.3</span>Maintainability</h3>
                     <div class="indent">
-                        <h5>History shall be saved on a database</h5>
+                        <h4><span class="id">3.7.3.1</span>User Accounts and business accounts shall be separate</h4>
+                        <h4><span class="id">3.7.3.2</span>A reporting feature that will allow for users to send a report that can then be used to determine if an account is a spam or fake account.</h4>
+                        <div class="indent">
+                            <h5>After an account is reported if it meets the required threshold it will flag the account so an administrator of the app can review the account</h5>
+                        </div>
                     </div>
-                    <h4><span class="id">3.7.2.3</span>Profile Blocking</h4>
+
+                    <h3><span class="id">3.7.4</span>Portability</h3>
                     <div class="indent">
-                        <h5>The end user shall be allowed to block messages from another end user</h5>
+                        <h4><span class="id">3.7.4.1</span>The system shall store the information on a server. [1.3.1.1]</h4>
+                        <h4><span class="id">3.7.4.2</span>The user shall access the information through the application. [1.3.1.1]</h4>
+                        <h4><span class="id">3.7.4.3</span>The application shall use Java for Android and Swift for iOS.</h4>
+                        <h4><span class="id">3.7.4.4</span>The application shall run on Android, and iOS. [1.3.1.3]</h4>
                     </div>
-                    <h4><span class="id">3.7.2.4</span>Check data integrity for critical variables</h4>
-                    <h4><span class="id">3.7.2.5</span>Data privacy</h4>
+
+                </div>
+                <h2><span class="id">3.8</span> Supporting Information</h2>
+                <div class="indent">
+                    <p>Kitchen sink, Summary of the Elicitation data</p>
+                    <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
+                    <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
                     <div class="indent">
-                        <h5>The end user’s data shall be hidden from other end users and encrypted</h5>
+                        <h4><span class="id">3.8.2.1</span>The application shall utilize salts to encrypt end user passwords and secure information.</h4>
                     </div>
                 </div>
             </div>
+            <h1><span class="id">4</span>VERIFICATION</h1>
             <div class="indent">
-                <h3><span class="id">3.7.3</span>Maintainability</h3>
+                <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
+                <p>All performance requierments must be verified.</p>
                 <div class="indent">
-                    <h4><span class="id">3.7.3.1</span>User Accounts and business accounts shall be separate</h4>
-                    <h4><span class="id">3.7.3.2</span>A reporting feature that will allow for users to send a report that can then be used to determine if an account is a spam or fake account.</h4>
+                    <h3><span class="id">4.4.1</span>Commercial:</h3>
                     <div class="indent">
-                        <h5>After an account is reported if it meets the required threshold it will flag the account so an administrator of the app can review the account</h5>
+                        <h4><span class="id">4.4.1.1 </span>Verify that the system shall allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
+                        <h4><span class="id">4.4.1.2 </span>Verify that the system shall allow the number of events to be supported. (Req. 3.4.1.2) </h4>
+                        <h4><span class="id">4.4.1.3 </span>Verify that the system shall accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
+                        <h4><span class="id">4.4.1.4 </span>Verify that the system shall pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
                     </div>
                 </div>
-
-                <h3><span class="id">3.7.4</span>Portability</h3>
+                <h3><span class="id">4.4.2</span>Consumer:</h3>
                 <div class="indent">
-                    <h4><span class="id">3.7.4.1</span>The system shall store the information on a server. [1.3.1.1]</h4>
-                    <h4><span class="id">3.7.4.2</span>The user shall access the information through the application. [1.3.1.1]</h4>
-                    <h4><span class="id">3.7.4.3</span>The application shall use Java for Android and Swift for iOS.</h4>
-                    <h4><span class="id">3.7.4.4</span>The application shall run on Android, and iOS. [1.3.1.3]</h4>
+                    <h4><span class="id">4.4.2.1 </span>Verify that the system shall accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+                    <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
+                    <h4><span class="id">4.4.2.3 </span>Verify that the application shall launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
+                    <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
                 </div>
-
-            </div>
-            <h2><span class="id">3.8</span> Supporting Information</h2>
-            <div class="indent">
-                <p>Kitchen sink, Summary of the Elicitation data</p>
-                <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
-                <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
-                <div class="indent">
-                    <h4><span class="id">3.8.2.1</span>The application shall utilize salts to encrypt end user passwords and secure information.</h4>
-                </div>
+                <h3><span class='id'>4.6.3</span>Account Constraints Verification</h3>
+                <p>The account constraints verification shall define the verification for the constraints that pertain to account creation. </p>
+                =======
             </div>
         </div>
-        <h1><span class="id">4</span>VERIFICATION</h1>
-        <div class="indent">
-            <h2><span class="id">4.4</span>Performance Requirements Verification</h2>
-            <p>All performance requierments must be verified.</p>
+        <div class="page">
             <div class="indent">
-                <h3><span class="id">4.4.1</span>Commercial:</h3>
                 <div class="indent">
-                    <h4><span class="id">4.4.1.1 </span>Verify that the system shall allow the number of accounts to be supported. (Req. 3.4.1.1) </h4>
-                    <h4><span class="id">4.4.1.2 </span>Verify that the system shall allow the number of events to be supported. (Req. 3.4.1.2) </h4>
-                    <h4><span class="id">4.4.1.3 </span>Verify that the system shall accommodate event creation in a timely manner. (Req. 3.4.1.3) </h4>
-                    <h4><span class="id">4.4.1.4 </span>Verify that the system shall pull up and display events in a timely manner. (Req. 3.4.1.4)</h4>
+                    <div class="indent">
+                        <h4><span class="id">4.6.1.3</span>Verify that the system shall only allow utf-8 characters to be input in messaging text fields by testing these fields and attempting to input images and files [2.1.7]. </h4>
+                        <h4><span class="id">4.6.1.4</span>Verify that the system shall only allow description text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each description field by attempting to submit the field while containing the words from the list.</h4>
+                        <h4><span class="id">4.6.1.5</span>Verify that the system shall only allow profiles text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each profile text field by attempting to submit the field while containing the words from the list. </h4>
+                        <h4><span class="id">4.6.1.6</span>Verify that the system shall only allow ratings text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each ratings text field by attempting to submit the field while containing the words from the list.</h4>
+                        <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow messaging text fields to be submitted while containing appropriate language, as defined. This shall be done by creating a word comparison list with the words
+                            to be excluded and testing this list in each messaging text field by attempting to submit the field while containing the words from the list. </h4>
+                    </div>
+
+                    <h3><span class='id'>4.6.3</span>Account Constraints Verification</h3>
+                    <p>The account constraints verification shall define the verification for the constraints that pertain to account creation. </p>
+                    <div class="indent">
+                        <h4><span class="id">4.6.3.1</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Facebook account by attempting to create a new “Local Activities” account with a previously
+                            used account. [2.1.3]</h4>
+                        <h4><span class="id">4.6.3.2</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Google account by attempting to create a new “Local Activities” account with a previously
+                            used account. [2.1.3] </h4>
+                        <h4><span class="id">4.6.3.3</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one phone number by attempting to create a new “Local Activities” account with a previously
+                            used phone number. [2.1.3]</h4>
+                    </div>
+
                 </div>
-            </div>
-            <h3><span class="id">4.4.2</span>Consumer:</h3>
-            <div class="indent">
-                <h4><span class="id">4.4.2.1 </span>Verify that the system shall accommodate group event creation in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
-                <h4><span class="id">4.4.2.2 </span>Verify that the system shall pull up and display group event in 3 to 4 seconds. (Req. 3.4.2.1) </h4>
-                <h4><span class="id">4.4.2.3 </span>Verify that the application shall launch in no more than 3 seconds. (Req. 3.4.2.1) </h4>
-                <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
-            </div>
-            <h3><span class='id'>4.6.3</span>Account Constraints Verification</h3>
-            <p>The account constraints verification shall define the verification for the constraints that pertain to account creation. </p>
-            <div class="indent">
-                <h4><span class="id">4.6.3.1</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Facebook account by attempting to create a new “Local Activities” account with a previously
-                    used account. [2.1.3]</h4>
-                <h4><span class="id">4.6.3.2</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Google account by attempting to create a new “Local Activities” account with a previously used
-                    account. [2.1.3] </h4>
-                <h4><span class="id">4.6.3.3</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one phone number by attempting to create a new “Local Activities” account with a previously used
-                    phone number. [2.1.3]</h4>
+
+                <h2>4.7 Software System Attributes Verification</h2>
+                >>>>>>> 045d2538908fdcf764b2145507d469404d211ec4
+                <div class="indent">
+                    <h4><span class="id">4.6.3.1</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Facebook account by attempting to create a new “Local Activities” account with a previously
+                        used account. [2.1.3]</h4>
+                    <h4><span class="id">4.6.3.2</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one Google account by attempting to create a new “Local Activities” account with a previously
+                        used account. [2.1.3] </h4>
+                    <h4><span class="id">4.6.3.3</span>Verify that the system shall limit account creation to one Commercial User or one Consumer User account per one phone number by attempting to create a new “Local Activities” account with a previously
+                        used phone number. [2.1.3]</h4>
+                </div>
+
             </div>
 
+            <<<<<<< HEAD <h2>4.7 Software System Attributes Verification</h2>
+                <div class="indent">
+                    <h3><span class="id">4.7.3</span>Security</h3>
+                    <div class="indent">
+                        <h4><span class="id">4.7.3.1</span>The system fails if it doesn’t have a secure method to store user information. Otherwise it succeeds.</h4>
+
+                        <h4><span class="id">4.7.3.2</span>Verify that the end user shall be able to create their own account and supply important information </h4>
+                    </div>
+                </div>
         </div>
-
-        <h2>4.7 Software System Attributes Verification</h2>
-        <div class="indent">
-            <h3><span class="id">4.7.3</span>Security</h3>
-            <div class="indent">
-                <h4><span class="id">4.7.3.1</span>The system fails if it doesn’t have a secure method to store user information. Otherwise it succeeds.</h4>
-
-                <h4><span class="id">4.7.3.2</span>Verify that the end user shall be able to create their own account and supply important information </h4>
-            </div>
-        </div>
-    </div>
     </div>
     <div class="page">
         <div class="indent">
@@ -1303,5 +1336,16 @@
         </div>
     </div>
     </body>
+    =======
+</div>
+<h3><span class="id">4.7.6</span>Portability</h3>
+<div class="indent">
+    <h4><span class="id">4.7.6.1</span>Verify that the system stores all info on a server</h4>
+    <h4><span class="id">4.7.6.2</span>Verify that the system accesses the server through application.</h4>
+    <h4><span class="id">4.7.6.3</span>Verify that the system runs on both android, and IOS. </h4>
+</div>
+</div>
+<h2><span class="id">4.8 Supporting Information Verification</span></h2>
+>>>>>>> 045d2538908fdcf764b2145507d469404d211ec4
 
 </html>
