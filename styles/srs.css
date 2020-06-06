@@ -187,22 +187,6 @@ span.highlight {
     background-color: yellow;
 }
 
-.s1 {
-    font-size: large;
-    font-weight: bold;
-}
-
-.s2 {
-    font-size: large;
-}
-
-.center {
-    margin: auto;
-    width: 61%;
-    border: 1.5px solid black;
-    padding: 30px;
-}
-
 img {
     max-width: 100%;
 }
