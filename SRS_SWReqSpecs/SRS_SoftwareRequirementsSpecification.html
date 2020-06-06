@@ -389,6 +389,7 @@
             </div>
             <h1><span class="id">3</span>SPECIFICATION</h1>
             <a name="SRequirements"></a>
+            <p>The Specification explains the detailed requirements for the Uvents application. The Specification covers external interfaces, functionality, usability, performance, database, design constraints, and software system attributes requirements for the Uvents application. The Specification also covers supporting information found from using the elicitation techniques.</p>
             <div class="indent">
                <h2><span class="id">3.1</span> External interfaces</h2>
                <a name="Interface"></a>
@@ -800,38 +801,33 @@
                   <div class="indent">
                      <h5>History of events shall be saved on a database</h5>
                   </div>
-                  <h4><span class="id">3.7.2.4</span>Profile Blocking</h4>
+                  <h4><span class="id">3.7.2.3</span>Profile Blocking</h4>
                   <div class="indent">
                      <h5>The end user shall be allowed to block messages from another end user</h5>
                   </div>
-                  <h4><span class="id">3.7.2.5</span>Check data integrity for critical variables</h4>
-                  <h4><span class="id">3.7.2.6</span>Data privacy</h4>
+                  <h4><span class="id">3.7.2.4</span>Check data integrity for critical variables</h4>
+                  <h4><span class="id">3.7.2.5</span>Data privacy</h4>
                   <div class="indent">
-                     <h5><span class="id">3.7.2.6.1</span>The end user’s data shall be well hidden from other end users and encrypted</h5>
+                     <h5>The end user’s data shall be hidden from other end users and encrypted</h5>
                   </div>
                </div>
             </div>
             <div class="indent">
-               <h3><span class="id">3.7.4</span>Maintainability</h3>
+               <h3><span class="id">3.7.3</span>Maintainability</h3>
                <div class="indent">
-                  <h4><span class="id">3.7.4.1</span>User Accounts and business accounts shall be separate</h4>
-                  <h4><span class="id">3.7.4.2</span>A reporting feature in order to report fake or scam accounts shall exist</h4>
-                  <h4><span class="id">3.7.4.3</span>There shall be extensive QA testing to ensure a minimal number of crashes upon us</h4>
-                  <h4><span class="id">3.7.4.4</span>There shall be a photo authentication to avoid fake accounts</h4>
-                  <h4><span class="id">3.7.4.5</span>The application shall utilize background threads to retrieve and store information</h4>
-                  <h4><span class="id">3.7.4.6</span>The application shall use error checking throughout the code to keep crashes to a minimum</h4>
-                  <h4><span class="id">3.7.4.7</span>The application shall utilize asynchronous server requests</h4>
-                  <h4><span class="id">3.7.4.8</span>The application shall use polymorphic code</h4>
-                  <h4><span class="id">3.7.4.9</span>The application shall be modular</h4>
+                  <h4><span class="id">3.7.3.1</span>User Accounts and business accounts shall be separate</h4>
+                  <h4><span class="id">3.7.3.2</span>A reporting feature that will allow for users to send a report that can then be used to determine if an account is a spam or fake account.</h4>
+                  <div class="indent">
+                     <h5>After an account is reported if it meets the required threshold it will flag the account so an administrator of the app can review the account</h5>
+                  </div>
                </div>
 
-               <h3><span class="id">3.7.5</span>Portability</h3>
+               <h3><span class="id">3.7.4</span>Portability</h3>
                <div class="indent">
-                  <h4><span class="id">3.7.5.1</span>The system shall store all info on a server.</h4>
-                  <h4><span class="id">3.7.5.2</span>The system shall access the server through application</h4>
-                  <h4><span class="id">3.7.5.3</span>Use of a proven portable language</h4>
-                  <h4><span class="id">3.7.5.4</span>Use of a particular compiler or language subset</h4>
-                  <h4><span class="id">3.7.5.5</span>The system shall run on android and IOS.</h4>
+                  <h4><span class="id">3.7.4.1</span>The system shall store the information on a server. [1.3.1.1]</h4>
+                  <h4><span class="id">3.7.4.2</span>The user shall access the information through the application. [1.3.1.1]</h4>
+                  <h4><span class="id">3.7.4.3</span>The application shall use Java for Android and Swift for iOS.</h4>
+                  <h4><span class="id">3.7.4.4</span>The application shall run on Android, and iOS. [1.3.1.3]</h4>
                </div>
 
             </div>
@@ -842,7 +838,7 @@
                <h3><span class="id">3.8.1</span>Supporting or background information that can help the readers of the SRS</h3>
                <h3><span class="id">3.8.2</span>Special packaging instructions</h3>
                <div class="indent">
-                  <h4><span class="id">3.8.2.1</span>The developer shall utilize salts to encrypt end user passwords and secure information.</h4>
+                  <h4><span class="id">3.8.2.1</span>The application will utilize salts to encrypt user passwords and secure information.</h4>
                </div>
             </div>
          </div>
@@ -947,9 +943,10 @@
                </div>
                <h3><span class="id">4.7.6</span>Portability</h3>
                <div class="indent">
-                  <h4><span class="id">4.7.6.1</span>Verify that the system stores all info on a server</h4>
-                  <h4><span class="id">4.7.6.2</span>Verify that the system accesses the server through application.</h4>
-                  <h4><span class="id">4.7.6.3</span>Verify that the system runs on both android, and IOS. </h4>
+                  <h4><span class="id">4.7.6.1</span>Verify that the system stores all the information on a server</h4>
+                  <h4><span class="id">4.7.6.2</span>Verify that the user accesses the server through the application</h4>
+                  <h4><span class="id">4.7.6.3</span>Verify that the application has no bugs in the Java for Android and Swift for iOS.</h4>
+                  <h4><span class="id">4.7.6.4</span>Verify that the system runs on both Android, and iOS.</h4>
                </div>
             </div>
             <h2><span class="id">4.8 Supporting Information Verification</span></h2>
