@@ -37,6 +37,23 @@ div.page-number {
     font-size: 14px;
 }
 
+.title-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.title-page h1 {
+    font-size: 25px;
+}
+.title-page hr {
+    width: 100%;
+}
+.title-page h2 {
+    margin: 0;
+}
+
 header {
     padding: 10px 0;
 }
@@ -48,7 +65,8 @@ header>div {
 h1,
 h2,
 h3,
-h4.big {
+h4.big,
+h5.big {
     font-weight: bold;
     margin: 10px 0 0 0;
 }
