@@ -887,9 +887,6 @@
                      <h4><span class="id">LD 2.15.1</span>Promotion points will determine a business-created event’s rank when displayed by other business-created events.</h4>
                   </div>
                   <h4><span class="id">3.5.2.16</span>The event table shall contain a column for a price description of an event.</h4>
-
-
-
                </div>
             </div>
             <div class="indent">
@@ -1005,10 +1002,42 @@
                      <h4><span class="id">LD 12.4.1</span>This will be an integer 1, 2, 3, 4, or 5. representing the rating the consumer user wishes to give the business.</h4>
                   </div>
                   <h4><span class="id">3.5.12.5</span>The rating table shall include a comments column.</h4>
-
                </div>
             </div>
-
+            <div class="indent">
+               <h3><span class="id">3.5.13</span>Notification Table</h3>
+               <p>The notification table shall include the notifications that are sent to each user.</p>
+               <div class="indent">
+                  <h4><span class="id">3.5.13.1</span>The notification table shall include a notification ID column as the primary key.</h4>
+                  <h4><span class="id">3.5.13.2</span>The notification table shall include a receiver column with a foreign key relationship to the user table, user ID column.</h4>
+                  <h4><span class="id">3.5.13.3</span>The notification table shall include a sender column with a foreign key relationship to the user table, user ID column.</h4>
+                  <h4><span class="id">3.5.13.4</span>The notification table shall include an event type column.</h4>
+                  <div class="indent">
+                     <h4><span class="id">LD 13.4.1</span>This will indicate if the notification is a news, a comment, or a friend request.</h4>
+                  </div>
+                  <h4><span class="id">3.5.13.5</span>The notification table shall include a seen column.</h4>
+                  <div class="indent">
+                     <h4><span class="id">LD 13.5.1</span>This will indicate if the notification has been seen by the receiver or not.</h4>
+                  </div>
+               </div>
+            </div>
+            <div class="indent">
+               <h3><span class="id">3.5.14</span>Accounting Table</h3>
+               <p>The accounting table shall include all accounting transaction of the user.</p>
+               <div class="indent">
+                  <h4><span class="id">3.5.14.1</span>The accounting table shall include a transaction ID column as the primary key.</h4>
+                  <h4><span class="id">3.5.14.2</span>The accounting table shall include an even ID column with a foreign key relationship to the even table, even ID column.</h4>
+                  <h4><span class="id">3.5.14.3</span>The accounting table shall include a user ID column with a foreign key relationship to the user table, user ID column.</h4>
+                  <h4><span class="id">3.5.14.4</span>The accounting table shall include an amount column.</h4>
+                  <div class="indent">
+                     <h4><span class="id">LD 14.4.1</span>This will indicate how much did the user spend on each event.</h4>
+                  </div>
+                  <h4><span class="id">3.5.14.5</span>The accounting table shall include a status column.</h4>
+                  <div class="indent">
+                     <h4><span class="id">LD 14.5.1</span>This will indicate if the payment is pending, unpaid, canceled, or paid.</h4>
+                  </div>
+               </div>
+            </div>
             <h2><span class="id">3.6</span> Design constraints</h2>
                <p>The design constraints shall define the constraints for the “Uvents” application. The design constraints shall
                   constrain specific actions users will be capable of completing. </p>
@@ -1258,8 +1287,8 @@
             <p>Assumptions and Dependencies contains basic assumptions about what the app will have.</p>
             <div class="indent">
                <h4><span class="id">5.1.1</span>After it is tested and deployed for iOS, it will become available for Android.</h4>
-               <h4><span class="id">5.1.2</span>It is assumed that users will be connected.</h4>
-               <h4><span class="id">5.1.3</span>It is assumed that after an event happens, there will be an event history.</h4>
+               <h4><span class="id">5.1.2</span>Users will be connected.</h4>
+               <h4><span class="id">5.1.3</span>After an event happens, there will be an event history.</h4>
             </div>
             <h2><span class="id">5.2</span>Acronyms and Abbreviations</h2>
             <p>All Acronyms and Abbreviations will be listed in this section.</p>
