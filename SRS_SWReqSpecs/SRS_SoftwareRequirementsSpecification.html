@@ -1156,58 +1156,69 @@
                <h4><span class="id">4.4.2.4 </span>The application shall not restrict the user from shutting down the app. (Req. 3.4.2.1) </h4>
             </div>
 
-            <h2><span class="id">4.6</span> Design constraints Verification</h2>
-            <p>The design constraints verification shall define the verification for the constraints that pertain to the
-               “Local Activities” application. </p>
+             <h2><span class="id">4.6</span> Design constraints Verification</h2>
+            <p>The design constraints verification shall define the verification for the constraints that pertain to the “Uvents”
+               application.</p>
             <div class="indent">
 
                <h3><span class="id">4.6.1</span>User-Input Constraints Verification</h3>
                <p>The user input constraints verification shall define the verification for the constraints that pertain to
-                  information input by a user. </p>
+                  information input by a user.</p>
                <div class="indent">
-                  <h4><span class="id">4.6.1.1</span>Verify that the system does not allow the user to input more than 256
-                     characters for descriptions, ratings and profile text fields by testing each of these fields and
-                     attempting to input 257 or more characters.</h4>
-                  <h4><span class="id">4.6.1.2</span>Verify that the system does not allow the user to input more than 128
-                     characters for messaging text fields by testing these fields and attempting to input 129 or more
-                     characters.</h4>
-                  <h4><span class="id">4.6.1.3</span>Verify that the system shall only allow utf-8 characters to be input in
-                     messaging text fields by testing these fields and attempting to input images and files [2.1.7]. </h4>
-                  <h4><span class="id">4.6.1.4</span>Verify that the system shall only allow description text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each description field by
-                     attempting to submit the field while containing the words from the list.</h4>
-                  <h4><span class="id">4.6.1.5</span>Verify that the system shall only allow profiles text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each profile text field by
-                     attempting to submit the field while containing the words from the list. </h4>
-                  <h4><span class="id">4.6.1.6</span>Verify that the system shall only allow ratings text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each ratings text field by
-                     attempting to submit the field while containing the words from the list.</h4>
-                  <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow messaging text fields to be
-                     submitted while containing appropriate language, as defined. This shall be done by creating a word
-                     comparison list with the words to be excluded and testing this list in each messaging text field by
-                     attempting to submit the field while containing the words from the list. </h4>
+                  <h4><span class="id">4.6.1.1</span>Verify that the Commercial system does not allow the Commercial User to
+                     input more than a set number of characters for descriptions (Req 3.6.1.1). Through the testing method
+                     we shall test the character limit for description text fields by inputting one more than the maximum number
+                     of characters allowed.</h4>
+                  <h4><span class="id">4.6.1.2</span>Verify that the Ratings system does not allow more than a set number of
+                     characters to be input for rating text fields (Req 3.6.1.2). Through the testing method we shall test the
+                     character limit for rating text fields by inputting one more than the maximum number of characters allowed. 
+                  </h4>
+                  <h4><span class="id">4.6.1.3</span>Verify that the Profile system does not allow does not allow more than a set
+                     number of characters to be input for profile text fields (Req 3.6.1.3). Through the testing method we shall
+                     test the character limit for profile text fields by inputting one more than the maximum number of characters
+                     allowed.</h4>
+                  <h4><span class="id">4.6.1.4</span>Verify that the Conversation system does not allow more than a set number of
+                     characters to be input for conversation text fields (Req 3.6.1.4). Through the testing method we shall test
+                     the character limit for messaging text fields by inputting one more than the maximum number of characters
+                     allowed.</h4>
+                  <h4><span class="id">4.6.1.5</span>Verify that the Conversation system shall allow utf-8 characters to be input
+                     in conversation text fields (Req 3.6.1.5). Through the testing method, we shall test that only utf-8
+                     characters will be able to be input by attempting to input images or files in messaging text fields.</h4>
+                  <h4><span class="id">4.6.1.6</span>Verify that the Conversation system shall allow Emoji characters to be input
+                     in conversation text fields (Req 3.6.1.6). Through the testing method, we shall test that Emoji characters
+                     will be able to be input by attempting to input images or files in messaging text fields.</h4>
+                  <h4><span class="id">4.6.1.7</span>Verify that the system shall only allow description text fields to be
+                     submitted while containing appropriate language, as defined (Req 3.6.1.7). Through the testing
+                     method we shall create a word comparison list with the words to be excluded. In each description field we
+                     will attempt to submit the field while containing the words from the list. </h4>
+                  <h4><span class="id">4.6.1.8</span>Verify that the Profile system shall only allow profile text fields to be
+                     submitted while containing appropriate language, as defined (Req 3.6.1.8). Through the testing method we
+                     shall create a word comparison list with the words to be excluded. In each description field we will attempt
+                     to submit the field while containing the words from the list. </h4>
+                  <h4><span class="id">4.6.1.9</span>Verify that the Ratings system shall only allow ratings text fields to be
+                     submitted while containing appropriate language, as defined (Req 3.6.1.9). Through the testing method we
+                     shall create a word comparison list with the words to be excluded. In each description field we will attempt
+                     to submit the field while containing the words from the list. </h4>
+                  <h4><span class="id">4.6.1.10</span>Verify that the Conversation system shall only allow conversation text
+                     fields to be submitted while containing appropriate language, as defined (Req 3.6.1.10). Through the testing
+                     method we shall create a word comparison list with the words to be excluded. In each description field we
+                     will attempt to submit the field while containing the words from the list. </h4>
+
                </div>
 
-               <h3><span class='id'>4.6.3</span>Account Constraints Verification</h3>
-               <p>The account constraints verification shall define the verification for the constraints that pertain to
-                  account creation. </p>
+               <h3><span class='id'>4.6.2</span>Account Constraints Verification</h3>
+               <p>The account constraints verification shall define the verification for the constraints that pertain to account
+                  creation.  </p>
                <div class="indent">
-                  <h4><span class="id">4.6.3.1</span>Verify that the system shall limit account creation to one Commercial
-                     User or one Consumer User account per one Facebook account by attempting to create a new “Local
-                     Activities” account with a previously used account. [2.1.3]</h4>
-                  <h4><span class="id">4.6.3.2</span>Verify that the system shall limit account creation to one Commercial
-                     User or one Consumer User account per one Google account by attempting to create a new “Local Activities”
-                     account with a previously used account. [2.1.3] </h4>
-                  <h4><span class="id">4.6.3.3</span>Verify that the system shall limit account creation to one Commercial
-                     User or one Consumer User account per one phone number by attempting to create a new “Local Activities”
-                     account with a previously used phone number. [2.1.3]</h4>
+                  <h4><span class="id">4.6.2.1</span>Verify that the system shall limit account creation to one Commercial User
+                     or one Consumer User account per one Third-Party account (Req 3.6.3.1). Through the testing method, we
+                     shall attempt to create a new “Uvents” account with a previously used account. </h4>
+                  <h4><span class="id">4.6.2.2</span>Verify that the system shall limit account creation to one Commercial User
+                     or one Consumer User account per one phone number (Req 3.6.3.2). Through the testing method, we shall
+                     attempt to create a new “Uvents” account with a previously used phone number.</h4>
                </div>
 
             </div>
-
             <h2>4.7 Software System Attributes Verification</h2>
             <div class="indent">
                <h3><span class="id">4.7.3</span>Security</h3>
